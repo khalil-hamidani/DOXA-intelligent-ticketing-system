@@ -17,21 +17,21 @@ Use it to **check items as you work**. Do not add scope mid-hackathon.
 - [x] `/docs/DOXA_Locked_Database_Schema_Solution1.md` committed
 - [x] `/docs/DOXA_ERD_Solution1.pdf` committed
 - [x] Team agreement: NO schema changes
-- [ ] AI confidence threshold agreed (ex: 0.75)
+- [] AI confidence threshold agreed (ex: 0.75)
 
 ---
 
 ## PHASE 1 — PROJECT BOOTSTRAP
 
-- [ ] Python virtual environment created
-- [ ] Dependencies installed (FastAPI, SQLAlchemy, Alembic, Pydantic, JWT)
-- [ ] `.env.example` created
-- [ ] Environment variables loaded correctly
-- [ ] `main.py` created
-- [ ] `/health` endpoint available
-- [ ] API versioning `/api/v1`
-- [ ] CORS enabled
-- [ ] Swagger UI accessible
+- [x] Python virtual environment created
+- [x] Dependencies installed (FastAPI, SQLAlchemy, Alembic, Pydantic, JWT)
+- [x] `.env.example` created
+- [x] Environment variables loaded correctly
+- [x] `main.py` created
+- [x] `/health` endpoint available
+- [x] API versioning `/api/v1`
+- [x] CORS enabled
+- [x] Swagger UI accessible
 
 ---
 
