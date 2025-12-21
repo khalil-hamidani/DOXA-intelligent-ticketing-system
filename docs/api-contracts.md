@@ -205,7 +205,7 @@ Request:
 ## AI Integration (Backend ↔ AI Team)
 
 ### POST /ai/analyze-ticket
-Used only by the AI service.
+Used only by the AI service.test
 
 Request:
 ```json
