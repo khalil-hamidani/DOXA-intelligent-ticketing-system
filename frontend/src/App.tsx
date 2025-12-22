@@ -4,6 +4,9 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import { USER_ROLES } from './config/constants';
 
+// Public pages
+import { LandingPage } from './pages/public/LandingPage';
+
 // Auth pages
 import { LoginPage } from './pages/auth/LoginPage';
 import { RegisterPage } from './pages/auth/RegisterPage';
@@ -38,10 +41,12 @@ const HomeRedirect: React.FC = () => {
     );
   }
 
+  // If not logged in, show the landing page
   if (!user) {
-    return <Navigate to="/login" replace />;
+    return <LandingPage />;
   }
 
+  // If logged in, redirect to appropriate dashboard
   switch (user.role) {
     case USER_ROLES.CLIENT:
       return <Navigate to="/client/tickets" replace />;

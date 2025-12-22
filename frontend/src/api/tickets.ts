@@ -9,7 +9,7 @@ interface TicketFilters {
 }
 
 interface FeedbackData {
-  rating: number;
+  satisfied: boolean;
   comment?: string;
 }
 

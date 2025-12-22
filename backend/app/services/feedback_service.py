@@ -61,16 +61,19 @@ class FeedbackService:
 
     @staticmethod
     def get_feedback(db: Session, ticket_id: UUID, user: User) -> TicketFeedback:
-        # 1. Check User Role (AGENT or ADMIN)
-        if user.role not in [UserRole.AGENT, UserRole.ADMIN]:
-            raise HTTPException(
-                status_code=403, detail="Only agents or admins can view feedback"
-            )
-
-        # 2. Check Ticket Existence
+        # 1. Check Ticket Existence
         ticket = db.query(Ticket).filter(Ticket.id == ticket_id).first()
         if not ticket:
             raise HTTPException(status_code=404, detail="Ticket not found")
+
+        # 2. Check Permissions
+        # Agents/Admins can view any feedback
+        # Clients can only view feedback for their own tickets
+        if user.role == UserRole.CLIENT and ticket.client_id != user.id:
+            raise HTTPException(
+                status_code=403,
+                detail="You can only view feedback for your own tickets",
+            )
 
         # 3. Get Feedback
         feedback = (

@@ -42,7 +42,6 @@ export interface TicketDetail extends Ticket {
 export interface Feedback {
   id: string;
   ticket_id: string;
-  rating: number;
   satisfied: boolean;
   comment: string | null;
   created_at: string;

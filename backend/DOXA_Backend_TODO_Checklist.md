@@ -78,96 +78,96 @@ Use it to **check items as you work**. Do not add scope mid-hackathon.
 ## PHASE 4 — TICKETS CORE
 
 ### Ticket Creation
-- [ ] `POST /tickets`
-- [ ] Ticket reference generation (REF-YYYY-XXXX)
-- [ ] Default status = OPEN
-- [ ] Client ownership enforced
+- [x] `POST /tickets`
+- [x] Ticket reference generation (REF-YYYY-XXXX)
+- [x] Default status = OPEN
+- [x] Client ownership enforced
 
 ### Ticket Listing
-- [ ] `GET /tickets`
-- [ ] CLIENT → own tickets only
-- [ ] AGENT/ADMIN → all tickets
-- [ ] Pagination
-- [ ] Filter by status / category
+- [x] `GET /tickets`
+- [x] CLIENT → own tickets only
+- [x] AGENT/ADMIN → all tickets
+- [x] Pagination
+- [x] Filter by status / category
 
 ### Ticket Details
-- [ ] `GET /tickets/{id}`
-- [ ] Responses included
-- [ ] Access control enforced
+- [x] `GET /tickets/{id}`
+- [x] Responses included
+- [x] Access control enforced
 
 ---
 
 ## PHASE 5 — AI INTEGRATION
 
-- [ ] `POST /ai/analyze-ticket`
-- [ ] Payload validation
-- [ ] AI response stored
-- [ ] Confidence score stored
-- [ ] Status updated based on threshold
-- [ ] Escalation handled correctly
+- [x] `POST /ai/analyze-ticket`
+- [x] Payload validation
+- [x] AI response stored
+- [x] Confidence score stored
+- [x] Status updated based on threshold
+- [x] Escalation handled correctly
 
 ---
 
 ## PHASE 6 — RESPONSES & ESCALATION
 
-- [ ] `POST /tickets/{id}/reply`
-- [ ] AI vs HUMAN source enforced
-- [ ] HUMAN replies only by AGENT
-- [ ] Responses immutable
-- [ ] `PATCH /tickets/{id}/status`
-- [ ] Valid status transitions enforced
+- [x] `POST /tickets/{id}/reply`
+- [x] AI vs HUMAN source enforced
+- [x] HUMAN replies only by AGENT
+- [x] Responses immutable
+- [x] `PATCH /tickets/{id}/status`
+- [x] Valid status transitions enforced
 
 ---
 
 ## PHASE 7 — KNOWLEDGE BASE
 
-- [ ] `POST /kb/articles` (ADMIN only)
-- [ ] `GET /kb/articles`
-- [ ] Filter by category
-- [ ] Search by title
-- [ ] `GET /kb/articles/{id}`
-- [ ] Access rules enforced
+- [x] `POST /kb/articles` (ADMIN only)
+- [x] `GET /kb/articles`
+- [x] Filter by category
+- [x] Search by title
+- [x] `GET /kb/articles/{id}`
+- [x] Access rules enforced
 
 ---
 
 ## PHASE 8 — FEEDBACK
 
-- [ ] `POST /tickets/{id}/feedback`
-- [ ] Ticket must be CLOSED
-- [ ] One feedback per ticket
-- [ ] Satisfaction stored correctly
+- [x] `POST /tickets/{id}/feedback`
+- [x] Ticket must be CLOSED
+- [x] One feedback per ticket
+- [x] Satisfaction stored correctly
 
 ---
 
 ## PHASE 9 — METRICS & DASHBOARD
 
-- [ ] `GET /metrics/overview`
-- [ ] Total tickets computed
-- [ ] AI answered percentage
-- [ ] Escalation rate
-- [ ] Satisfaction rate
-- [ ] Queries efficient
+- [x] `GET /metrics/overview`
+- [x] Total tickets computed
+- [x] AI answered percentage
+- [x] Escalation rate
+- [x] Satisfaction rate
+- [x] Queries efficient
 
 ---
 
 ## PHASE 10 — BONUS (OPTIONAL)
 
-- [ ] User language stored and returned
-- [ ] Category auto-filled by AI
-- [ ] Profile picture URL supported
-- [ ] Attachment table usable
-- [ ] Attachment endpoint (if time)
+- [] User language stored and returned
+- [] Category auto-filled by AI
+- [] Profile picture URL supported
+- [] Attachment table usable
+- [] Attachment endpoint (if time)
 
 ---
 
 ## PHASE 11 — DEMO & STABILITY
 
-- [ ] Demo users seeded (client / agent / admin)
-- [ ] KB articles seeded
-- [ ] Sample tickets created
-- [ ] Full lifecycle tested end-to-end
-- [ ] Swagger clean
-- [ ] Backend runs with one command
+- [x] Demo users seeded (client / agent / admin)
+- [x] KB articles seeded
+- [x] Sample tickets created
+- [x] Full lifecycle tested end-to-end
+- [x] Swagger clean
+- [x] Backend runs with one command
 
 ---
 
