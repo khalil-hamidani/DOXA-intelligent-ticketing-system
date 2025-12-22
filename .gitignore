@@ -1,3 +1,4 @@
 .venv/
 ai/.venv/
+ai/.env
 *.dll
