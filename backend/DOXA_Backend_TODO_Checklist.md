@@ -38,27 +38,27 @@ Use it to **check items as you work**. Do not add scope mid-hackathon.
 ## PHASE 2 — DATABASE
 
 ### Connection & Base
-- [ ] PostgreSQL connection configured
-- [ ] SQLAlchemy engine + session
-- [ ] Base model initialized
+- [x] PostgreSQL connection configured
+- [x] SQLAlchemy engine + session
+- [x] Base model initialized
 
 ### Models (MATCH LOCKED SCHEMA)
-- [ ] User model
-- [ ] Ticket model
-- [ ] TicketResponse model
-- [ ] KBArticle model
-- [ ] TicketFeedback model
-- [ ] TicketAttachment model (optional)
+- [x] User model
+- [x] Ticket model
+- [x] TicketResponse model
+- [x] KBArticle model
+- [x] TicketFeedback model
+- [x] TicketAttachment model (optional)
 
 ### Enums
-- [ ] UserRole
-- [ ] TicketStatus
-- [ ] ResponseSource
+- [x] UserRole
+- [x] TicketStatus
+- [x] ResponseSource
 
 ### Migration
-- [ ] Alembic initialized
-- [ ] Initial migration generated
-- [ ] Migration applied successfully
+- [x] Alembic initialized
+- [x] Initial migration generated
+- [x] Migration applied successfully
 
 ---
 
