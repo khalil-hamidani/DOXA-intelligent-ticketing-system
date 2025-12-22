@@ -64,14 +64,14 @@ Use it to **check items as you work**. Do not add scope mid-hackathon.
 
 ## PHASE 3 — AUTH & SECURITY
 
-- [ ] Password hashing (bcrypt)
-- [ ] JWT creation
-- [ ] JWT validation dependency
-- [ ] Role-based access dependency
-- [ ] `POST /auth/register` (CLIENT only)
-- [ ] `POST /auth/login`
-- [ ] `GET /auth/me`
-- [ ] Route protection verified
+- [x] Password hashing (bcrypt)
+- [x] JWT creation
+- [x] JWT validation dependency
+- [x] Role-based access dependency
+- [x] `POST /auth/register` (CLIENT only)
+- [x] `POST /auth/login`
+- [x] `GET /auth/me`
+- [x] Route protection verified
 
 ---
 
