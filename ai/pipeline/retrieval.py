@@ -288,15 +288,13 @@ class ContextualRetriever:
             query_plan: Query plan
             fallback_enabled: Enable fallback to broader search
             
-    def get_retrieval_explanation(self, retrieval_result: Dict) -> Dict:
+        Returns:
+            Multi-step retrieval result with fallback
         """
-        Generate explanation for why documents ranked in a specific order.
-        
-        Explains:
-        - Why top document ranked first (highest similarity, best match)
-        - Why each subsequent document ranked lower
-        - Gaps in similarity scores (outliers)
-        - Confidence in rankings
+        pass
+    
+    def get_retrieval_explanation(self, retrieval_result: Dict) -> Dict:
+        """Generate explanation for why documents ranked in a specific order.
         
         Args:
             retrieval_result: Result from retrieve() method

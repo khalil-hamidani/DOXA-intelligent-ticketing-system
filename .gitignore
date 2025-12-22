@@ -1,4 +1,6 @@
 .venv/
 ai/.venv/
 ai/.env
+.__pycache__/
+__pycache__/
 *.dll

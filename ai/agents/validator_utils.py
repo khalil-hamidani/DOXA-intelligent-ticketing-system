@@ -288,5 +288,3 @@ def validate_and_normalize_output(
     
     # Default: return empty normalized for agent type
     return result
-
-MISTRAL_API_KEY=jhP09mKu30IaiOqzopwG0jdujcgQZbtg
