@@ -1,0 +1,3 @@
+# Ignore local environment files for AI workspace
+/ai/.env
+.env
