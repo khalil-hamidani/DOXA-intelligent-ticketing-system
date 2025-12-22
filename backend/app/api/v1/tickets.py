@@ -8,10 +8,15 @@ from app.schemas.ticket import (
     TicketRead,
     TicketDetail,
     TicketUpdateStatus,
+    TicketReply,
+    TicketResponseRead,
 )
 from app.services.ticket_service import TicketService
 from app.models.user import User, UserRole
 from app.models.ticket import TicketStatus
+
+from app.schemas.feedback import FeedbackCreate, FeedbackRead
+from app.services.feedback_service import FeedbackService
 
 router = APIRouter()
 
@@ -67,3 +72,54 @@ def update_ticket_status(
     return TicketService.update_ticket_status(
         db=db, ticket_id=ticket_id, status_update=status_update, user=current_user
     )
+
+
+@router.post("/{ticket_id}/reply", response_model=TicketResponseRead)
+def reply_ticket(
+    ticket_id: UUID,
+    reply: TicketReply,
+    db: Session = Depends(deps.get_db),
+    current_user: User = Depends(deps.get_current_user),
+):
+    return TicketService.reply_to_ticket(
+        db=db, ticket_id=ticket_id, content=reply.content, user=current_user
+    )
+
+
+@router.post("/{ticket_id}/escalate", response_model=TicketRead)
+def escalate_ticket(
+    ticket_id: UUID,
+    db: Session = Depends(deps.get_db),
+    current_user: User = Depends(deps.get_current_user),
+):
+    return TicketService.escalate_ticket(db=db, ticket_id=ticket_id, user=current_user)
+
+
+@router.post("/{ticket_id}/close", response_model=TicketRead)
+def close_ticket(
+    ticket_id: UUID,
+    db: Session = Depends(deps.get_db),
+    current_user: User = Depends(deps.get_current_user),
+):
+    return TicketService.close_ticket(db=db, ticket_id=ticket_id, user=current_user)
+
+
+@router.post("/{ticket_id}/feedback", response_model=FeedbackRead)
+def submit_feedback(
+    ticket_id: UUID,
+    feedback_in: FeedbackCreate,
+    db: Session = Depends(deps.get_db),
+    current_user: User = Depends(deps.get_current_user),
+):
+    return FeedbackService.create_feedback(
+        db=db, ticket_id=ticket_id, feedback_in=feedback_in, user=current_user
+    )
+
+
+@router.get("/{ticket_id}/feedback", response_model=FeedbackRead)
+def read_feedback(
+    ticket_id: UUID,
+    db: Session = Depends(deps.get_db),
+    current_user: User = Depends(deps.get_current_user),
+):
+    return FeedbackService.get_feedback(db=db, ticket_id=ticket_id, user=current_user)

@@ -132,3 +132,85 @@ class TicketService:
             db.refresh(ticket)
 
         return ticket
+
+    @staticmethod
+    def reply_to_ticket(db: Session, ticket_id: UUID, content: str, user: User):
+        if user.role not in [UserRole.AGENT, UserRole.ADMIN]:
+            raise HTTPException(
+                status_code=403, detail="Only agents can reply to tickets"
+            )
+
+        ticket = db.query(Ticket).filter(Ticket.id == ticket_id).first()
+        if not ticket:
+            raise HTTPException(status_code=404, detail="Ticket not found")
+
+        if ticket.status == TicketStatus.CLOSED:
+            raise HTTPException(
+                status_code=400, detail="Cannot reply to a closed ticket"
+            )
+
+        response = TicketResponse(
+            ticket_id=ticket.id,
+            source=ResponseSource.HUMAN,
+            content=content,
+            confidence=None,
+        )
+        db.add(response)
+
+        # Update ticket updated_at
+        ticket.updated_at = datetime.now()
+
+        db.commit()
+        db.refresh(response)
+        return response
+
+    @staticmethod
+    def escalate_ticket(db: Session, ticket_id: UUID, user: User):
+        if user.role not in [UserRole.AGENT, UserRole.ADMIN]:
+            raise HTTPException(
+                status_code=403, detail="Only agents can escalate tickets"
+            )
+
+        ticket = db.query(Ticket).filter(Ticket.id == ticket_id).first()
+        if not ticket:
+            raise HTTPException(status_code=404, detail="Ticket not found")
+
+        if ticket.status not in [TicketStatus.OPEN, TicketStatus.AI_ANSWERED]:
+            raise HTTPException(
+                status_code=400, detail="Ticket cannot be escalated from current status"
+            )
+
+        ticket.status = TicketStatus.ESCALATED
+        ticket.assigned_agent_id = user.id
+        ticket.updated_at = datetime.now()
+
+        db.commit()
+        db.refresh(ticket)
+        return ticket
+
+    @staticmethod
+    def close_ticket(db: Session, ticket_id: UUID, user: User):
+        if user.role not in [UserRole.AGENT, UserRole.ADMIN]:
+            raise HTTPException(status_code=403, detail="Only agents can close tickets")
+
+        ticket = db.query(Ticket).filter(Ticket.id == ticket_id).first()
+        if not ticket:
+            raise HTTPException(status_code=404, detail="Ticket not found")
+
+        if ticket.status == TicketStatus.CLOSED:
+            raise HTTPException(status_code=400, detail="Ticket is already closed")
+
+        if ticket.status not in [TicketStatus.ESCALATED, TicketStatus.AI_ANSWERED]:
+            # While requirements say "Ticket must be ESCALATED or AI_ANSWERED",
+            # usually you can close from OPEN too, but we will stick to strict requirements.
+            raise HTTPException(
+                status_code=400,
+                detail="Ticket must be Escalated or AI Answered to close",
+            )
+
+        ticket.status = TicketStatus.CLOSED
+        ticket.updated_at = datetime.now()
+
+        db.commit()
+        db.refresh(ticket)
+        return ticket

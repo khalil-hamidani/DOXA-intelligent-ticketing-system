@@ -29,6 +29,10 @@ class TicketUpdateStatus(BaseModel):
     status: TicketStatus
 
 
+class TicketReply(BaseModel):
+    content: str
+
+
 class TicketRead(TicketBase):
     id: UUID
     reference: str
