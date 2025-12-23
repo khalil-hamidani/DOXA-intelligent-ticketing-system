@@ -130,7 +130,7 @@ export const LandingPage: React.FC = () => {
                 to="/register"
                 className="bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-indigo-700 transition-colors"
               >
-                Get Started
+                Complains
               </Link>
             </div>
             {/* Mobile menu button */}
@@ -139,7 +139,7 @@ export const LandingPage: React.FC = () => {
                 to="/register"
                 className="bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-indigo-700 transition-colors text-sm"
               >
-                Get Started
+                Complains
               </Link>
             </div>
           </div>
@@ -162,15 +162,15 @@ export const LandingPage: React.FC = () => {
               to help your team deliver exceptional support experiences.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/register"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-indigo-600 rounded-xl hover:bg-indigo-700 transition-all duration-200 shadow-lg shadow-indigo-200 hover:shadow-xl hover:shadow-indigo-300"
+              <button
+                type="button"
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-indigo-600 rounded-xl hover:bg-indigo-700 transition-all duration-200 shadow-lg shadow-indigo-200 hover:shadow-xl hover:shadow-indigo-300 cursor-default"
               >
                 Start Free Trial
                 <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
-              </Link>
+              </button>
               <button
                 onClick={() => scrollToSection('overview')}
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-gray-700 bg-white border-2 border-gray-200 rounded-xl hover:border-gray-300 hover:bg-gray-50 transition-all duration-200"
@@ -514,15 +514,15 @@ export const LandingPage: React.FC = () => {
             Join thousands of teams who have already made the switch. 
             Start your free trial today—no credit card required.
           </p>
-          <Link
-            to="/register"
-            className="inline-flex items-center justify-center px-10 py-4 text-lg font-semibold text-indigo-600 bg-white rounded-xl hover:bg-gray-50 transition-all duration-200 shadow-lg hover:shadow-xl"
+          <button
+            type="button"
+            className="inline-flex items-center justify-center px-10 py-4 text-lg font-semibold text-indigo-600 bg-white rounded-xl hover:bg-gray-50 transition-all duration-200 shadow-lg hover:shadow-xl cursor-default"
           >
             Create Your Free Account
             <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
-          </Link>
+          </button>
           <p className="text-indigo-200 mt-6 text-sm">
             Free forever for small teams. Upgrade anytime.
           </p>

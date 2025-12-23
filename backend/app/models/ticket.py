@@ -45,6 +45,7 @@ class Ticket(Base):
     assigned_agent = relationship(
         "app.models.user.User", foreign_keys=[assigned_agent_id]
     )
+    attachments = relationship("TicketAttachment", back_populates="ticket", cascade="all, delete-orphan")
 
 
 class TicketAttachment(Base):
@@ -52,6 +53,12 @@ class TicketAttachment(Base):
 
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     ticket_id = Column(UUID(as_uuid=True), ForeignKey("tickets.id"), nullable=False)
-    file_url = Column(Text, nullable=False)
-    file_type = Column(String(50), nullable=True)
+    filename = Column(String(255), nullable=False)  # Stored filename
+    original_filename = Column(String(255), nullable=False)  # Original uploaded name
+    file_path = Column(Text, nullable=False)  # Full path to file
+    file_type = Column(String(50), nullable=True)  # MIME type
+    file_size = Column(BigInteger, nullable=True)  # Size in bytes
     uploaded_at = Column(DateTime(timezone=True), server_default=func.now())
+
+    # Relationships
+    ticket = relationship("Ticket", back_populates="attachments")

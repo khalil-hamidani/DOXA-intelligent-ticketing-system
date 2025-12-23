@@ -8,6 +8,13 @@ export interface User {
   role: UserRole;
   language: string;
   is_active: boolean;
+  profile_picture_url?: string | null;
+}
+
+export interface UserUpdate {
+  password?: string;
+  language?: string;
+  profile_picture_url?: string;
 }
 
 export interface AuthToken {
@@ -35,8 +42,18 @@ export interface TicketResponse {
   created_at: string;
 }
 
+export interface Attachment {
+  id: string;
+  filename: string;
+  original_filename: string;
+  file_type: string | null;
+  file_size: number | null;
+  uploaded_at: string;
+}
+
 export interface TicketDetail extends Ticket {
   responses: TicketResponse[];
+  attachments: Attachment[];
 }
 
 export interface Feedback {

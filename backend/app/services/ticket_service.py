@@ -1,14 +1,21 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import desc
-from app.models.ticket import Ticket, TicketStatus
+from app.models.ticket import Ticket, TicketStatus, TicketAttachment
 from app.models.ticket_response import TicketResponse, ResponseSource
 from app.schemas.ticket import TicketCreate, TicketUpdateStatus
 from app.models.user import User, UserRole
-from fastapi import HTTPException, status
+from fastapi import HTTPException, status, UploadFile
 from datetime import datetime
 import random
 import string
+import os
+import uuid as uuid_module
 from uuid import UUID
+
+# Base directory for attachments
+ATTACHMENTS_DIR = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "attachments"
+)
 
 
 class TicketService:
@@ -51,6 +58,7 @@ class TicketService:
         limit: int = 100,
         status_filter: TicketStatus = None,
         category_filter: str = None,
+        search_query: str = None,
     ):
         query = db.query(Ticket)
 
@@ -62,6 +70,13 @@ class TicketService:
 
         if category_filter:
             query = query.filter(Ticket.category == category_filter)
+
+        if search_query:
+            search_term = f"%{search_query}%"
+            query = query.filter(
+                (Ticket.reference.ilike(search_term))
+                | (Ticket.subject.ilike(search_term))
+            )
 
         query = query.order_by(desc(Ticket.created_at))
         return query.offset(skip).limit(limit).all()
@@ -200,17 +215,97 @@ class TicketService:
         if ticket.status == TicketStatus.CLOSED:
             raise HTTPException(status_code=400, detail="Ticket is already closed")
 
-        if ticket.status not in [TicketStatus.ESCALATED, TicketStatus.AI_ANSWERED]:
-            # While requirements say "Ticket must be ESCALATED or AI_ANSWERED",
-            # usually you can close from OPEN too, but we will stick to strict requirements.
-            raise HTTPException(
-                status_code=400,
-                detail="Ticket must be Escalated or AI Answered to close",
-            )
-
+        # Allow closing from any non-closed status
         ticket.status = TicketStatus.CLOSED
         ticket.updated_at = datetime.now()
 
         db.commit()
         db.refresh(ticket)
         return ticket
+
+    @staticmethod
+    def add_attachment(
+        db: Session, ticket_id: UUID, file: UploadFile, file_content: bytes, user: User
+    ) -> TicketAttachment:
+        """Add an attachment to a ticket"""
+        # Get ticket and verify access
+        ticket = db.query(Ticket).filter(Ticket.id == ticket_id).first()
+        if not ticket:
+            raise HTTPException(status_code=404, detail="Ticket not found")
+
+        # Only ticket owner or agents/admins can add attachments
+        if user.role == UserRole.CLIENT and ticket.client_id != user.id:
+            raise HTTPException(status_code=403, detail="Not authorized")
+
+        # Create directory for this ticket's attachments
+        ticket_dir = os.path.join(ATTACHMENTS_DIR, ticket.reference)
+        os.makedirs(ticket_dir, exist_ok=True)
+
+        # Generate unique filename
+        file_ext = os.path.splitext(file.filename)[1].lower()
+        unique_filename = f"{uuid_module.uuid4()}{file_ext}"
+        file_path = os.path.join(ticket_dir, unique_filename)
+
+        # Save file
+        with open(file_path, "wb") as f:
+            f.write(file_content)
+
+        # Create attachment record
+        attachment = TicketAttachment(
+            ticket_id=ticket_id,
+            filename=unique_filename,
+            original_filename=file.filename,
+            file_path=file_path,
+            file_type=file.content_type,
+            file_size=len(file_content),
+        )
+
+        db.add(attachment)
+        db.commit()
+        db.refresh(attachment)
+
+        return attachment
+
+    @staticmethod
+    def get_attachments(db: Session, ticket_id: UUID, user: User) -> list:
+        """Get all attachments for a ticket"""
+        ticket = db.query(Ticket).filter(Ticket.id == ticket_id).first()
+        if not ticket:
+            raise HTTPException(status_code=404, detail="Ticket not found")
+
+        # Check access
+        if user.role == UserRole.CLIENT and ticket.client_id != user.id:
+            raise HTTPException(status_code=403, detail="Not authorized")
+
+        return (
+            db.query(TicketAttachment)
+            .filter(TicketAttachment.ticket_id == ticket_id)
+            .all()
+        )
+
+    @staticmethod
+    def get_attachment(
+        db: Session, ticket_id: UUID, attachment_id: UUID, user: User
+    ) -> TicketAttachment:
+        """Get a specific attachment"""
+        ticket = db.query(Ticket).filter(Ticket.id == ticket_id).first()
+        if not ticket:
+            raise HTTPException(status_code=404, detail="Ticket not found")
+
+        # Check access
+        if user.role == UserRole.CLIENT and ticket.client_id != user.id:
+            raise HTTPException(status_code=403, detail="Not authorized")
+
+        attachment = (
+            db.query(TicketAttachment)
+            .filter(
+                TicketAttachment.id == attachment_id,
+                TicketAttachment.ticket_id == ticket_id,
+            )
+            .first()
+        )
+
+        if not attachment:
+            raise HTTPException(status_code=404, detail="Attachment not found")
+
+        return attachment

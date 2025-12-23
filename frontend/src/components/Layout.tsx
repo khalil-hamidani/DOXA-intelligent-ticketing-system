@@ -44,7 +44,14 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
           <div className="flex justify-between h-16">
             <div className="flex">
               <div className="flex-shrink-0 flex items-center">
-                <span className="text-xl font-bold text-indigo-600">DOXA</span>
+                <Link to="/" className="flex items-center space-x-2">
+                  <div className="flex space-x-0.5">
+                    <div className="w-1 h-6 bg-indigo-600 rounded-full"></div>
+                    <div className="w-1 h-6 bg-indigo-500 rounded-full"></div>
+                    <div className="w-1 h-6 bg-indigo-400 rounded-full"></div>
+                  </div>
+                  <span className="text-xl font-bold text-indigo-900">Doxa</span>
+                </Link>
               </div>
               <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                 {getNavLinks().map((link) => (
@@ -61,8 +68,21 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
             <div className="flex items-center space-x-4">
               {user && (
                 <>
-                  <Link to="/profile" className="text-sm text-gray-600 hover:text-gray-900">
-                    {user.email}
+                  <Link to="/profile" className="flex items-center space-x-2 text-sm text-gray-600 hover:text-gray-900">
+                    {user.profile_picture_url ? (
+                      <img 
+                        src={user.profile_picture_url} 
+                        alt="Profile" 
+                        className="w-8 h-8 rounded-full object-cover border-2 border-indigo-200"
+                      />
+                    ) : (
+                      <div className="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center">
+                        <svg className="w-5 h-5 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                      </div>
+                    )}
+                    <span className="hidden md:inline">{user.email}</span>
                   </Link>
                   <span className="text-xs bg-indigo-100 text-indigo-800 px-2 py-1 rounded">
                     {user.role}

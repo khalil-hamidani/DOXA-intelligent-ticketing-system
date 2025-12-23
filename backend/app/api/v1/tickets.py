@@ -1,6 +1,7 @@
 from typing import List, Optional
 from uuid import UUID
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, HTTPException, Query, UploadFile, File
+from fastapi.responses import FileResponse
 from sqlalchemy.orm import Session
 from app.core import deps
 from app.schemas.ticket import (
@@ -10,6 +11,7 @@ from app.schemas.ticket import (
     TicketUpdateStatus,
     TicketReply,
     TicketResponseRead,
+    AttachmentRead,
 )
 from app.services.ticket_service import TicketService
 from app.models.user import User, UserRole
@@ -17,8 +19,14 @@ from app.models.ticket import TicketStatus
 
 from app.schemas.feedback import FeedbackCreate, FeedbackRead
 from app.services.feedback_service import FeedbackService
+import os
+import shutil
 
 router = APIRouter()
+
+# Allowed file types
+ALLOWED_EXTENSIONS = {'.pdf', '.png', '.jpg', '.jpeg', '.gif'}
+MAX_FILE_SIZE = 10 * 1024 * 1024  # 10MB
 
 
 @router.post("/", response_model=TicketRead)
@@ -40,6 +48,7 @@ def read_tickets(
     limit: int = 100,
     status: Optional[TicketStatus] = None,
     category: Optional[str] = None,
+    search: Optional[str] = None,
     db: Session = Depends(deps.get_db),
     current_user: User = Depends(deps.get_current_user),
 ):
@@ -50,6 +59,7 @@ def read_tickets(
         limit=limit,
         status_filter=status,
         category_filter=category,
+        search_query=search,
     )
 
 
@@ -123,3 +133,71 @@ def read_feedback(
     current_user: User = Depends(deps.get_current_user),
 ):
     return FeedbackService.get_feedback(db=db, ticket_id=ticket_id, user=current_user)
+
+
+@router.post("/{ticket_id}/attachments", response_model=AttachmentRead)
+async def upload_attachment(
+    ticket_id: UUID,
+    file: UploadFile = File(...),
+    db: Session = Depends(deps.get_db),
+    current_user: User = Depends(deps.get_current_user),
+):
+    """Upload an attachment to a ticket (images and PDFs only)"""
+    # Check file extension
+    file_ext = os.path.splitext(file.filename)[1].lower()
+    if file_ext not in ALLOWED_EXTENSIONS:
+        raise HTTPException(
+            status_code=400,
+            detail=f"File type not allowed. Allowed types: {', '.join(ALLOWED_EXTENSIONS)}"
+        )
+    
+    # Check file size (read content to check)
+    content = await file.read()
+    if len(content) > MAX_FILE_SIZE:
+        raise HTTPException(
+            status_code=400,
+            detail=f"File too large. Maximum size: {MAX_FILE_SIZE // (1024*1024)}MB"
+        )
+    
+    # Reset file position
+    await file.seek(0)
+    
+    return TicketService.add_attachment(
+        db=db,
+        ticket_id=ticket_id,
+        file=file,
+        file_content=content,
+        user=current_user
+    )
+
+
+@router.get("/{ticket_id}/attachments", response_model=List[AttachmentRead])
+def get_attachments(
+    ticket_id: UUID,
+    db: Session = Depends(deps.get_db),
+    current_user: User = Depends(deps.get_current_user),
+):
+    """Get all attachments for a ticket"""
+    return TicketService.get_attachments(db=db, ticket_id=ticket_id, user=current_user)
+
+
+@router.get("/{ticket_id}/attachments/{attachment_id}/download")
+def download_attachment(
+    ticket_id: UUID,
+    attachment_id: UUID,
+    db: Session = Depends(deps.get_db),
+    current_user: User = Depends(deps.get_current_user),
+):
+    """Download a specific attachment"""
+    attachment = TicketService.get_attachment(
+        db=db, ticket_id=ticket_id, attachment_id=attachment_id, user=current_user
+    )
+    
+    if not os.path.exists(attachment.file_path):
+        raise HTTPException(status_code=404, detail="File not found on server")
+    
+    return FileResponse(
+        path=attachment.file_path,
+        filename=attachment.original_filename,
+        media_type=attachment.file_type
+    )

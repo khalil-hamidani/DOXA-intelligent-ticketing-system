@@ -11,13 +11,12 @@ export const ClientTicketDetailPage: React.FC = () => {
   const { ticketId } = useParams<{ ticketId: string }>();
   const navigate = useNavigate();
   const [ticket, setTicket] = useState<TicketDetail | null>(null);
-  const [feedback, setFeedback] = useState<Feedback[]>([]);
+  const [feedback, setFeedback] = useState<Feedback | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [feedbackRating, setFeedbackRating] = useState<number>(0);
   const [feedbackComment, setFeedbackComment] = useState('');
   const [isSubmittingFeedback, setIsSubmittingFeedback] = useState(false);
-  const [feedbackSubmitted, setFeedbackSubmitted] = useState(false);
 
   const fetchTicket = async () => {
     if (!ticketId) return;
@@ -27,14 +26,9 @@ export const ClientTicketDetailPage: React.FC = () => {
       const data = await ticketsApi.getTicket(ticketId);
       setTicket(data);
       // Check if feedback already exists
-      try {
-        const fbData = await ticketsApi.getFeedback(ticketId);
-        if (fbData && fbData.length > 0) {
-          setFeedback(fbData);
-          setFeedbackSubmitted(true);
-        }
-      } catch {
-        // No feedback yet, that's ok
+      const fbData = await ticketsApi.getFeedback(ticketId);
+      if (fbData) {
+        setFeedback(fbData);
       }
     } catch {
       setError('Failed to load ticket details');
@@ -63,12 +57,11 @@ export const ClientTicketDetailPage: React.FC = () => {
     
     setIsSubmittingFeedback(true);
     try {
-      await ticketsApi.submitFeedback(ticketId, {
-        rating: feedbackRating,
+      const submittedFeedback = await ticketsApi.submitFeedback(ticketId, {
+        satisfied: feedbackRating >= 3,
         comment: feedbackComment || undefined,
       });
-      setFeedbackSubmitted(true);
-      fetchTicket();
+      setFeedback(submittedFeedback);
     } catch {
       alert('Failed to submit feedback');
     } finally {
@@ -125,6 +118,45 @@ export const ClientTicketDetailPage: React.FC = () => {
           <p className="text-gray-700 whitespace-pre-wrap">{ticket.description}</p>
         </div>
 
+        {/* Attachments */}
+        {ticket.attachments && ticket.attachments.length > 0 && (
+          <div className="bg-white shadow rounded-lg p-6 mb-6">
+            <h2 className="text-lg font-medium text-gray-900 mb-4">Attachments</h2>
+            <ul className="space-y-2">
+              {ticket.attachments.map((attachment) => (
+                <li key={attachment.id} className="flex items-center justify-between bg-gray-50 px-4 py-3 rounded-md border">
+                  <div className="flex items-center space-x-3">
+                    {attachment.file_type?.startsWith('image/') ? (
+                      <svg className="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                    ) : (
+                      <svg className="h-6 w-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                      </svg>
+                    )}
+                    <div>
+                      <p className="text-sm font-medium text-gray-700">{attachment.original_filename}</p>
+                      <p className="text-xs text-gray-500">
+                        {attachment.file_size ? `${(attachment.file_size / 1024).toFixed(1)} KB` : ''}
+                      </p>
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => ticketsApi.downloadAttachment(ticket.id, attachment.id, attachment.original_filename)}
+                    className="text-indigo-600 hover:text-indigo-800 text-sm font-medium flex items-center space-x-1"
+                  >
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    <span>Download</span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
         {/* Responses */}
         <div className="bg-white shadow rounded-lg p-6 mb-6">
           <h2 className="text-lg font-medium text-gray-900 mb-4">Responses</h2>
@@ -174,8 +206,8 @@ export const ClientTicketDetailPage: React.FC = () => {
           </div>
         )}
 
-        {/* Feedback Form */}
-        {ticket.status === 'CLOSED' && !feedbackSubmitted && (
+        {/* Feedback Form - only show if ticket is closed AND no feedback exists yet */}
+        {ticket.status === 'CLOSED' && !feedback && (
           <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-6">
             <h3 className="text-lg font-medium text-green-800 mb-4">Rate Your Experience</h3>
             <form onSubmit={handleSubmitFeedback}>
@@ -223,25 +255,19 @@ export const ClientTicketDetailPage: React.FC = () => {
           </div>
         )}
 
-        {/* Feedback Display */}
-        {feedbackSubmitted && feedback.length > 0 && (
+        {/* Feedback Display - show when feedback exists */}
+        {feedback && (
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
             <h3 className="text-lg font-medium text-gray-900 mb-2">Your Feedback</h3>
-            {feedback.map((fb: Feedback) => (
-              <div key={fb.id}>
-                <div className="flex items-center mb-2">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <span
-                      key={star}
-                      className={`text-lg ${star <= fb.rating ? 'text-yellow-400' : 'text-gray-300'}`}
-                    >
-                      ★
-                    </span>
-                  ))}
-                </div>
-                {fb.comment && <p className="text-gray-600">{fb.comment}</p>}
-              </div>
-            ))}
+            <div className="flex items-center mb-2">
+              <span className={`text-lg font-medium ${feedback.satisfied ? 'text-green-600' : 'text-red-600'}`}>
+                {feedback.satisfied ? '👍 Satisfied' : '👎 Not Satisfied'}
+              </span>
+            </div>
+            {feedback.comment && <p className="text-gray-600 italic">"{feedback.comment}"</p>}
+            <p className="text-xs text-gray-500 mt-2">
+              Submitted on {new Date(feedback.created_at).toLocaleString()}
+            </p>
           </div>
         )}
       </div>

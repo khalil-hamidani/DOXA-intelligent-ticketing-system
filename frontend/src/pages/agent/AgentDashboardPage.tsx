@@ -15,12 +15,7 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-  PieChart,
-  Pie,
-  Cell,
 } from 'recharts';
-
-const COLORS = ['#4F46E5', '#10B981', '#F59E0B', '#6B7280'];
 
 export const AgentDashboardPage: React.FC = () => {
   const [metrics, setMetrics] = useState<MetricsOverview | null>(null);
@@ -64,13 +59,6 @@ export const AgentDashboardPage: React.FC = () => {
       </Layout>
     );
   }
-
-  const statusData = [
-    { name: 'Open', value: metrics.tickets_by_status?.OPEN || 0 },
-    { name: 'AI Answered', value: metrics.tickets_by_status?.AI_ANSWERED || 0 },
-    { name: 'Escalated', value: metrics.tickets_by_status?.ESCALATED || 0 },
-    { name: 'Closed', value: metrics.tickets_by_status?.CLOSED || 0 },
-  ];
 
   const categoryData = Object.entries(metrics.tickets_by_category || {}).map(([name, value]) => ({
     name,
@@ -167,26 +155,37 @@ export const AgentDashboardPage: React.FC = () => {
 
       {/* Charts */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-        <div className="bg-white shadow rounded-lg p-6">
-          <h3 className="text-lg font-medium text-gray-900 mb-4">Tickets by Status</h3>
-          <ResponsiveContainer width="100%" height={250}>
-            <PieChart>
-              <Pie
-                data={statusData}
-                cx="50%"
-                cy="50%"
-                outerRadius={80}
-                fill="#8884d8"
-                dataKey="value"
-                label={({ name, value }) => `${name}: ${value}`}
-              >
-                {statusData.map((_, index) => (
-                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                ))}
-              </Pie>
-              <Tooltip />
-            </PieChart>
-          </ResponsiveContainer>
+        {/* Recent Escalated Tickets - moved here */}
+        <div className="bg-white shadow rounded-lg">
+          <div className="px-6 py-4 border-b border-gray-200 flex justify-between items-center">
+            <h3 className="text-lg font-medium text-gray-900">Recent Escalated Tickets</h3>
+            <Link
+              to="/agent/tickets"
+              className="text-sm text-indigo-600 hover:text-indigo-500"
+            >
+              View all →
+            </Link>
+          </div>
+          <ul className="divide-y divide-gray-200">
+            {recentTickets.length === 0 ? (
+              <li className="px-6 py-4 text-gray-500 italic">No escalated tickets</li>
+            ) : (
+              recentTickets.map((ticket) => (
+                <li key={ticket.id}>
+                  <Link to={`/agent/tickets/${ticket.id}`} className="block hover:bg-gray-50 px-6 py-4">
+                    <div className="flex items-center justify-between">
+                      <p className="text-sm font-medium text-indigo-600 truncate">{ticket.reference} - {ticket.subject}</p>
+                      <StatusBadge status={ticket.status} />
+                    </div>
+                    <div className="mt-2 flex justify-between text-sm text-gray-500">
+                      <span>{ticket.category || 'General'}</span>
+                      <span>{new Date(ticket.created_at).toLocaleDateString()}</span>
+                    </div>
+                  </Link>
+                </li>
+              ))
+            )}
+          </ul>
         </div>
 
         <div className="bg-white shadow rounded-lg p-6">
@@ -201,39 +200,6 @@ export const AgentDashboardPage: React.FC = () => {
             </BarChart>
           </ResponsiveContainer>
         </div>
-      </div>
-
-      {/* Recent Escalated Tickets */}
-      <div className="bg-white shadow rounded-lg">
-        <div className="px-6 py-4 border-b border-gray-200 flex justify-between items-center">
-          <h3 className="text-lg font-medium text-gray-900">Recent Escalated Tickets</h3>
-          <Link
-            to="/agent/tickets"
-            className="text-sm text-indigo-600 hover:text-indigo-500"
-          >
-            View all →
-          </Link>
-        </div>
-        <ul className="divide-y divide-gray-200">
-          {recentTickets.length === 0 ? (
-            <li className="px-6 py-4 text-gray-500 italic">No escalated tickets</li>
-          ) : (
-            recentTickets.map((ticket) => (
-              <li key={ticket.id}>
-                <Link to={`/agent/tickets/${ticket.id}`} className="block hover:bg-gray-50 px-6 py-4">
-                  <div className="flex items-center justify-between">
-                    <p className="text-sm font-medium text-indigo-600 truncate">{ticket.subject}</p>
-                    <StatusBadge status={ticket.status} />
-                  </div>
-                  <div className="mt-2 flex justify-between text-sm text-gray-500">
-                    <span>{ticket.category || 'General'}</span>
-                    <span>{new Date(ticket.created_at).toLocaleDateString()}</span>
-                  </div>
-                </Link>
-              </li>
-            ))
-          )}
-        </ul>
       </div>
     </Layout>
   );

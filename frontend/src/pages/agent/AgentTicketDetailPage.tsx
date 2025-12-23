@@ -11,7 +11,7 @@ export const AgentTicketDetailPage: React.FC = () => {
   const { ticketId } = useParams<{ ticketId: string }>();
   const navigate = useNavigate();
   const [ticket, setTicket] = useState<TicketDetail | null>(null);
-  const [feedback, setFeedback] = useState<Feedback[]>([]);
+  const [feedback, setFeedback] = useState<Feedback | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [replyContent, setReplyContent] = useState('');
@@ -25,12 +25,8 @@ export const AgentTicketDetailPage: React.FC = () => {
       const data = await ticketsApi.getTicket(ticketId);
       setTicket(data);
       // Try to get feedback
-      try {
-        const fbData = await ticketsApi.getFeedback(ticketId);
-        setFeedback(fbData || []);
-      } catch {
-        // No feedback yet
-      }
+      const fbData = await ticketsApi.getFeedback(ticketId);
+      setFeedback(fbData);
     } catch {
       setError('Failed to load ticket details');
     } finally {
@@ -155,6 +151,45 @@ export const AgentTicketDetailPage: React.FC = () => {
           </div>
         </div>
 
+        {/* Attachments */}
+        {ticket.attachments && ticket.attachments.length > 0 && (
+          <div className="bg-white shadow rounded-lg p-6 mb-6">
+            <h2 className="text-lg font-medium text-gray-900 mb-4">Attachments</h2>
+            <ul className="space-y-2">
+              {ticket.attachments.map((attachment) => (
+                <li key={attachment.id} className="flex items-center justify-between bg-gray-50 px-4 py-3 rounded-md border">
+                  <div className="flex items-center space-x-3">
+                    {attachment.file_type?.startsWith('image/') ? (
+                      <svg className="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                    ) : (
+                      <svg className="h-6 w-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                      </svg>
+                    )}
+                    <div>
+                      <p className="text-sm font-medium text-gray-700">{attachment.original_filename}</p>
+                      <p className="text-xs text-gray-500">
+                        {attachment.file_size ? `${(attachment.file_size / 1024).toFixed(1)} KB` : ''}
+                      </p>
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => ticketsApi.downloadAttachment(ticket.id, attachment.id, attachment.original_filename)}
+                    className="text-indigo-600 hover:text-indigo-800 text-sm font-medium flex items-center space-x-1"
+                  >
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    <span>Download</span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
         {/* Responses */}
         <div className="bg-white shadow rounded-lg p-6 mb-6">
           <h2 className="text-lg font-medium text-gray-900 mb-4">Conversation History</h2>
@@ -215,30 +250,21 @@ export const AgentTicketDetailPage: React.FC = () => {
         )}
 
         {/* Feedback Display */}
-        {feedback.length > 0 && (
+        {feedback && (
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
             <h3 className="text-lg font-medium text-gray-900 mb-4">Customer Feedback</h3>
-            {feedback.map((fb) => (
-              <div key={fb.id} className="mb-4 last:mb-0">
-                <div className="flex items-center mb-2">
-                  <span className="text-sm font-medium text-gray-700 mr-2">Rating:</span>
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <span
-                      key={star}
-                      className={`text-lg ${star <= fb.rating ? 'text-yellow-400' : 'text-gray-300'}`}
-                    >
-                      ★
-                    </span>
-                  ))}
-                </div>
-                {fb.comment && (
-                  <p className="text-gray-600 italic">"{fb.comment}"</p>
-                )}
-                <p className="text-xs text-gray-500 mt-1">
-                  Submitted: {new Date(fb.created_at).toLocaleString()}
-                </p>
-              </div>
-            ))}
+            <div className="flex items-center mb-2">
+              <span className="text-sm font-medium text-gray-700 mr-2">Satisfaction:</span>
+              <span className={`text-lg font-semibold ${feedback.satisfied ? 'text-green-600' : 'text-red-600'}`}>
+                {feedback.satisfied ? '👍 Satisfied' : '👎 Not Satisfied'}
+              </span>
+            </div>
+            {feedback.comment && (
+              <p className="text-gray-600 italic">"{feedback.comment}"</p>
+            )}
+            <p className="text-xs text-gray-500 mt-1">
+              Submitted: {new Date(feedback.created_at).toLocaleString()}
+            </p>
           </div>
         )}
       </div>

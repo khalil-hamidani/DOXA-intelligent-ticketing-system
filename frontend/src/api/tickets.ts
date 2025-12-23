@@ -1,11 +1,12 @@
 import api from './client';
-import { Ticket, TicketDetail, TicketResponse, Feedback, TicketStatus } from '../types';
+import { Ticket, TicketDetail, TicketResponse, Feedback, TicketStatus, Attachment } from '../types';
 
 interface TicketFilters {
   skip?: number;
   limit?: number;
   status?: TicketStatus | string;
   category?: string;
+  search?: string;
 }
 
 interface FeedbackData {
@@ -21,6 +22,7 @@ export const ticketsApi = {
     if (filters.limit !== undefined) params.append('limit', String(filters.limit));
     if (filters.status) params.append('status', filters.status);
     if (filters.category) params.append('category', filters.category);
+    if (filters.search) params.append('search', filters.search);
     
     const response = await api.get<Ticket[]>(`/tickets/?${params.toString()}`);
     return response.data;
@@ -33,6 +35,7 @@ export const ticketsApi = {
     if (filters.limit !== undefined) params.append('limit', String(filters.limit));
     if (filters.status) params.append('status', filters.status);
     if (filters.category) params.append('category', filters.category);
+    if (filters.search) params.append('search', filters.search);
     
     const response = await api.get<Ticket[]>(`/tickets/?${params.toString()}`);
     return response.data;
@@ -74,9 +77,48 @@ export const ticketsApi = {
     return response.data;
   },
 
-  // Get feedback
-  getFeedback: async (ticketId: string): Promise<Feedback[]> => {
-    const response = await api.get<Feedback[]>(`/tickets/${ticketId}/feedback`);
+  // Get feedback (returns single feedback or null if not found)
+  getFeedback: async (ticketId: string): Promise<Feedback | null> => {
+    try {
+      const response = await api.get<Feedback>(`/tickets/${ticketId}/feedback`);
+      return response.data;
+    } catch {
+      return null;
+    }
+  },
+
+  // Upload attachment
+  uploadAttachment: async (ticketId: string, file: File): Promise<Attachment> => {
+    const formData = new FormData();
+    formData.append('file', file);
+    const response = await api.post<Attachment>(`/tickets/${ticketId}/attachments`, formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    });
     return response.data;
+  },
+
+  // Get attachments
+  getAttachments: async (ticketId: string): Promise<Attachment[]> => {
+    const response = await api.get<Attachment[]>(`/tickets/${ticketId}/attachments`);
+    return response.data;
+  },
+
+  // Download attachment (with authentication)
+  downloadAttachment: async (ticketId: string, attachmentId: string, filename: string): Promise<void> => {
+    const response = await api.get(`/tickets/${ticketId}/attachments/${attachmentId}/download`, {
+      responseType: 'blob',
+    });
+    
+    // Create blob link to download
+    const url = window.URL.createObjectURL(new Blob([response.data]));
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', filename);
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    window.URL.revokeObjectURL(url);
   },
 };

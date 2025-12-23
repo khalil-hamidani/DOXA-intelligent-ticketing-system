@@ -15,6 +15,17 @@ class TicketResponseRead(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
 
+class AttachmentRead(BaseModel):
+    id: UUID
+    filename: str
+    original_filename: str
+    file_type: Optional[str] = None
+    file_size: Optional[int] = None
+    uploaded_at: datetime
+
+    model_config = ConfigDict(from_attributes=True)
+
+
 class TicketBase(BaseModel):
     subject: str
     description: str
@@ -47,3 +58,4 @@ class TicketRead(TicketBase):
 
 class TicketDetail(TicketRead):
     responses: List[TicketResponseRead] = []
+    attachments: List[AttachmentRead] = []

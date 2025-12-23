@@ -1,6 +1,7 @@
-from typing import Any
+from typing import Any, Optional
 
 from fastapi import APIRouter, Depends, HTTPException, status
+from pydantic import BaseModel
 from sqlalchemy.orm import Session
 
 from app.core import deps, security
@@ -9,6 +10,12 @@ from app.schemas.auth import Login, Register, Token
 from app.schemas.user import User as UserSchema
 
 router = APIRouter()
+
+
+class ProfileUpdate(BaseModel):
+    password: Optional[str] = None
+    language: Optional[str] = None
+    profile_picture_url: Optional[str] = None
 
 
 @router.post("/register", response_model=UserSchema)
@@ -71,4 +78,33 @@ def read_users_me(
     """
     Get current user.
     """
+    return current_user
+
+
+@router.put("/me", response_model=UserSchema)
+def update_users_me(
+    *,
+    db: Session = Depends(deps.get_db),
+    current_user: User = Depends(deps.get_current_active_user),
+    profile_update: ProfileUpdate,
+) -> Any:
+    """
+    Update current user profile.
+    """
+    if profile_update.password:
+        current_user.password_hash = security.get_password_hash(profile_update.password)
+
+    if profile_update.language is not None:
+        current_user.language = profile_update.language
+
+    if profile_update.profile_picture_url is not None:
+        current_user.profile_picture_url = (
+            profile_update.profile_picture_url
+            if profile_update.profile_picture_url
+            else None
+        )
+
+    db.add(current_user)
+    db.commit()
+    db.refresh(current_user)
     return current_user

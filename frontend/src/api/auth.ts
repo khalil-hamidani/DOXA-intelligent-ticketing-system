@@ -1,5 +1,5 @@
 import api from './client';
-import { AuthToken, User } from '../types';
+import { AuthToken, User, UserUpdate } from '../types';
 
 export const authApi = {
   login: async (email: string, password: string): Promise<AuthToken> => {
@@ -14,6 +14,11 @@ export const authApi = {
 
   getMe: async (): Promise<User> => {
     const response = await api.get<User>('/auth/me');
+    return response.data;
+  },
+
+  updateProfile: async (data: UserUpdate): Promise<User> => {
+    const response = await api.put<User>('/auth/me', data);
     return response.data;
   },
 };
