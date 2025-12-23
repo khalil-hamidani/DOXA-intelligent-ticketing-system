@@ -1,0 +1,6 @@
+[
+  "tests/test_agents.py::test_classifier",
+  "tests/test_agents.py::test_query_analyzer",
+  "tests/test_agents.py::test_scorer",
+  "tests/test_agents.py::test_validator"
+]

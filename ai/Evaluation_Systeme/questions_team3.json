@@ -1,0 +1,20 @@
+{
+  "Questions": [
+    {
+      "id": "Q001",
+      "query": "quelle est la tarification des entreprises grandes"
+    },
+    {
+      "id": "Q002",
+      "query": "comment exporter les donnees"
+    },
+    {
+      "id": "Q003",
+      "query": "comment configurer equipe par projet"
+    },
+    {
+      "id": "Q004",
+      "query": "cest quoi sso"
+    }
+  ]
+}

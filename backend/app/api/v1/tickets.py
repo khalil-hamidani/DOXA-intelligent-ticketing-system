@@ -126,13 +126,19 @@ def submit_feedback(
     )
 
 
-@router.get("/{ticket_id}/feedback", response_model=FeedbackRead)
+@router.get("/{ticket_id}/feedback", response_model=Optional[FeedbackRead])
 def read_feedback(
     ticket_id: UUID,
     db: Session = Depends(deps.get_db),
     current_user: User = Depends(deps.get_current_user),
 ):
-    return FeedbackService.get_feedback(db=db, ticket_id=ticket_id, user=current_user)
+    """Get feedback for a ticket. Returns null if no feedback exists yet."""
+    try:
+        return FeedbackService.get_feedback(db=db, ticket_id=ticket_id, user=current_user)
+    except HTTPException as e:
+        if e.status_code == 404 and "Feedback not found" in str(e.detail):
+            return None  # No feedback yet - this is normal
+        raise  # Re-raise other errors (ticket not found, permission denied)
 
 
 @router.post("/{ticket_id}/attachments", response_model=AttachmentRead)

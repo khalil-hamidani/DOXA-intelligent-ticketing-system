@@ -1,0 +1,457 @@
+# GUIDE ONBOARDING et DÉMARRAGE RAPIDE
+
+Doxa
+
+# GUIDE ONBOARDING &amp; DÉMARRAGE RAPIDE - Doxa
+
+Getting Started en 30 Minutes
+
+Version 2.0 | Décembre 2025
+
+# 1 DÉMARRAGE INSTANT (5 MINUTES)
+
+## 1.1 Étape 1 : Créer votre compte
+
+1. Allez doxa.dz
+2. Cliquez “Commencer gratuitement”
+3. Entrez email (ex : alice@mycompany.com)
+4. Créez mot de passe fort (min 8 char, 1 majuscule, 1 chiffre)
+- Exemple valide : Doxa2025!
+5. Cliquez “S’inscrire”
+6. Vérifiez email (lien activation)
+7. Connectez-vous
+
+Account créé! Vous êtes maintenant dans Doxa.
+
+## 1.2 Étape 2 : Configurer votre espace de travail (2 min)
+
+Écran d’accueil → formulaire configuration :
+
+1. Nom espace de travail : Votre entreprise/équipe
+- Exemple : “TechStartup Inc”
+2. Sector : Sélectionnez votre industrie
+3. Team size : Nombre de personnes
+4. Logo (optionnel) : Upload image
+
+Cliquez “Créer espace” → Bienvenue!
+
+Doxa
+
+1.3 Étape 3 : Créer votre premier projet (1 min)
+
+Page d'accueil → “+ Nouveau Projet”
+
+Formulaire rapide :
+- Nom : “Mon Premier Projet”
+- Description : “Test et familiarisation”
+- Modèle : Sélectionnez “Kanban” (simple pour débuter)
+- Visibilité : “Privé” (vous seul)
+
+Cliquez “Créer” → Projet créé!
+
+1.4 Étape 4 : Ajouter premières tâches (1 min)
+
+Vous voyez 3 colonnes : To Do | In Progress | Done
+
+Créer tâche rapide :
+1. Colonne “To Do” → Cliquez “+ Ajouter tâche”
+2. Tapez : “Lire guide Doxa”
+3. Appuyez Entrée → Tâche ajoutée!
+4. Créez 2 autres tâches (test)
+
+Exemple tâches test :
+- Lire guide Doxa
+- Créer 2e projet (Agile)
+- Inviter Alice en tant que collaborateur
+
+2 CONFIGURATION ÉQUIPE (5 MINUTES)
+
+2.1 Étape 5 : Inviter collègues
+
+Paramètres espace → “Membres” → “+ Inviter membres”
+
+Formulaire :
+- Email : alice@company.com (ou plusieurs, séparés virgules)
+- Rôle : Sélectionnez
+- Éditeur : peut créer/modifier tâches (défaut)
+- Lecteur : lecture seule
+
+Doxa
+
+- Admin : gère paramètres et membres
+
+Cliquez “Envoyer invitations”
+
+Après :
+- Collègues reçoivent email avec lien
+- Une fois accepté → apparaissent en membres
+- Peuvent immédiatement voir projets
+
+2.2 Étape 6 : Structure équipe recommandée
+
+Pour équipe 10 personnes :
+
+Vous (Propriétaire)
+PM/Lead (Admin) - gère backlogs, sprints
+Dev Lead (Admin) - gère projet dev
+Devs x 4 (Éditeurs) - créent/modifient tâches
+Designer (Éditeur) - tâches design
+Support (Lecteur) - voit uniquement support tickets
+
+Bonnes pratiques :
+- 1 Propriétaire max (responsabilité financière)
+- Admins = les leaders (gestion)
+- Autres = Éditeurs (travail quotidien)
+
+3 WORKFLOWS COURANTS (15 MINUTES)
+
+3.1 Workflow 1 : Gestion projet Agile (Dev)
+
+Étapes :
+
+1. Créer projet Agile
+- Nouveau projet → Modèle “Agile” → Nommez “Sprint Q1 2025”
+
+2. Configurer sprints
+- Paramètres → “Sprints” → “+ Créer sprint”
+- Nom : “Sprint 1” | Durée : “1 semaine” (16-22 déc)
+- Sprint 2, 3, etc.
+
+Doxa
+
+3. Ajouter user stories
+- “+ Nouvelle tâche” → Tapez récit utilisateur
+- Exemple : “En tant que PM, je veux exporter rapports PDF”
+- Assignez dev, set estimation (story points)
+
+4. Démarrer sprint
+- “Sprint 1” → “Démarrer sprint” → visible tableau
+- Tâches du sprint apparaissent
+
+5. Daily standups
+- Chaque jour : regarder tableau
+- Déplacer tâches entre colonnes (To Do → In Progress → Done)
+- Commentez blockers
+
+6. Fin sprint
+- Sprint terminé → “Fin sprint” → Crée retrospective
+- Métriques : tâches complétées, velocity
+
+3.2 Workflow 2 : Gestion support client (Kanban)
+
+Étapes :
+
+1. Créer projet Kanban
+- Nouveau → Kanban → “Support Client”
+
+2. Personnaliser colonnes
+- Paramètres → “Statuts”
+- Renommez colonnes :
+To Do (Nouveau ticket)
+In Progress (Assigné agent)
+Waiting Customer (Réponse attendue client)
+Done (Résolu)
+
+3. Créer labels priorité
+- Paramètres → “Labels”
+
+Doxa
+
+
+
+Créez : Urgent (rouge), Important (orange), Normal (bleu), Low (gris)
+4. Créer tâches depuis email
+- Voir adresse email unique du projet : project-abc@doxa.dz
+- Les clients/agents envoient email → devient tâche auto
+5. SLA reminder
+- Chaque tâche : set date limite (ex : 24h après création)
+- Tâches en retard → affichées rouge
+- Rappels auto envoyés
+6. Analytics
+- Rapports → “Ticket velocity” → voir temps moyen résolution
+
+### 3.3 Workflow 3 : Gestion content marketing
+
+Étapes :
+
+1. Créer projet Timeline
+- Nouveau → Timeline → “Content Calendar 2025”
+2. Ajouter articles/posts
+- “+ Nouvelle tâche” → titre article
+- Set dates (start/end publication)
+- Assign à writer/reviewer
+3. Vue calendrier
+- Basculez vers onglet “Calendar”
+- Voyez publication timeline
+- Identifiez goulots
+4. Dépendances
+- “Article A : Rédaction” bloque “Article A : Review”
+- Drag-drop timeline montre dépendances
+- Évite retards
+
+| | | Doxa
+
+5. Export audience
+- Rapports → Export CSV
+- Partagez avec stakeholders
+
+4 PREMIÈRES AUTOMATISATIONS (5 MINUTES)
+
+4.1 Automation 1 : Auto-progression tâches
+
+Cas : Quand toutes sous-tâches complètes → marquer parent complète
+
+Setup :
+1. Projet → Paramètres → “Automatisations”
+2. “+ Créer règle”
+3. Trigger : “Sous-tâche marquée complète”
+4. Action : “Si TOUTES sous-tâches complètes → status = Complète”
+5. Sauvegardez
+
+Résultat : Parent auto-progresse quand tous enfants faits.
+
+4.2 Automation 2 : Slack notification priorité haute
+
+Cas : Ticket priorité critique → notifier Slack support channel
+
+Setup :
+1. Projet → Paramètres → “Intégrations Slack”
+2. Connectez Slack workspace
+3. Choisissez channel : #support-tickets
+4. Dans Automatisations :
+- Trigger : “Priorité changée à Critique”
+- Action : “Poster Slack message”
+- Format : “@here Nouveau ticket URGENT : {titre}”
+
+Résultat : Slack alert immédiate tickets critiques.
+
+Doxa
+
+4.3 Automation 3 : Auto-archivage tâches fermées
+
+Cas : Tâche complète depuis 30 jours → archiver automatiquement
+
+Setup :
+1. Paramètres → Automatisations → Créer règle
+2. Trigger : “Status = Complète + 30 jours écoulés”
+3. Action : “Archiver tâche”
+
+Résultat : Tableau reste propre, pas tâches anciennes.
+
+5 INTÉGRATIONS ESSENTIELLES (SETUP 10 MIN)
+
+5.1 Integration 1 : Slack
+
+Pourquoi :
+- Notifications tâches dans Slack
+- Créer tâches via /doxa commands
+- Real-time collab
+
+Setup :
+1. Doxa → Paramètres → “Slack”
+2. Cliquez “Connecter Slack”
+3. Autorisez Doxa dans Slack
+4. Choisissez channel(s) pour notifications
+5. Testez : /doxa create task “Test”
+
+Résultat : Slack et Doxa synchronisés.
+
+5.2 Integration 2 : Google Workspace
+
+Pourquoi :
+- Calendrier Google → Project deadlines
+- Google Drive files → Pièces jointes Doxa
+- Partage docs direct dans commentaires
+
+Setup :
+
+1. Paramètres → “Google Workspace”
+2. “Connecter Google”
+3. Autorisez Doxa
+4. Testez : ajoutez Google Drive file à tâche
+
+## 5.3 Integration 3 : GitHub (Dev teams)
+
+### Pourquoi :
+- PR lié à tâches Doxa
+- Auto-progression quand PR merged
+- Code commits reference tasks
+
+### Setup :
+1. Paramètres → “GitHub”
+2. “Connecter GitHub”
+3. Autorisez Doxa app
+4. Select repos
+5. Testez : créer PR avec “Closes #task-123” → auto-link
+
+## 6 CONSEILS PRODUCTIVITÉ
+
+### 6.1 1. Raccourcis clavier
+
+Apprenez ces 5 essentiels :
+
+```
+Ctrl+K → Chercher tâche global
+Ctrl+N → Nouvelle tâche rapide
+Ctrl+Shift+M → Aller "Mes tâches"
+Tab (Kanban) → Cycle colonnes
+Drag-drop → Déplacer tâche
+```
+
+### 6.2 2. Templates réutilisables
+
+Pour tâches récurrentes :
+
+1. Créez tâche modèle parfaite
+
+Doxa
+
+
+
+2. Ajoutez description complète, labels, subtasks
+
+3. Menu “...” → “Dupliquer”
+
+4. Réutilisez pour futures instances
+
+Exemples :
+
+- Template bug report (description structure, labels)
+- Template feature request (champs standard)
+- Template retrospective (sections, questions)
+
+### 6.3 3. Filtres & vues sauvegardées
+
+Créez vue personnelle :
+
+Ma Queue (tâches assignées à moi) :
+
+1. Tableau → “Filtres” → “Assigné = Moi”
+
+2. Trier par “Date limite”
+
+3. “+ Sauvegarder vue” → “Ma Queue”
+
+4. Accès rapide depuis navigation
+
+Résultat : 1 clic pour voir vos tâches prioritaires.
+
+### 6.4 4. Daily standup template
+
+Chaque jour 15 min :
+
+1. Allez projet → onglet “Dashboard”
+
+2. Regardez : “Tâches à risque” (en retard)
+
+3. Regardez : “Complétées aujourd’hui”
+
+4. Équipe ? Quick verbale sur blockers
+
+5. Update tâches status
+
+Budget : 15 minutes, max productivité !
+
+| | | Doxa
+
+
+
+7 TROUBLESHOOTING RAPIDE
+
+## 7.1 Problème : Je n’ai pas reçu email invitation
+
+Solution :
+
+1. Vérifiez spam/promotions
+
+2. Demandez à Admin : Paramètres → Membres → Renvoyer invitation
+
+3. Essayez email alternatif
+
+4. Contact support si toujours pas reçu
+
+## 7.2 Problème : Je n’arrive pas à créer 2e projet
+
+Solution :
+
+1. Vérifiez plan : Starter max 5 projets, Pro illimité
+
+2. Peut-être au limit ? Archivez projets anciens
+
+3. Upgrade plan si besoin : Paramètres → Facturation
+
+## 7.3 Problème : Mon équipe ne voit pas tâches
+
+Solution :
+
+1. Tâche dans projet privé ? Changez permissions
+
+2. Membre pas invité au projet ? Ajouter dans Paramètres projet
+
+3. Membre a rôle lecteur ? Changez en Éditeur si doit modifier
+
+## 7.4 Problème : Intégration Slack non marche
+
+Solution :
+
+1. Déconnectez Slack et refaites
+
+2. Vérifiez Doxa app autorisée dans Slack
+
+3. Vérifiez channel existe et Doxa y a accès
+
+4. Contact support si persiste
+
+
+
+PROCHAINES ÉTAPES
+
+8.1 Après 1 semaine
+
+Équipe complète invitée et active
+
+1-2 projets setup et utilisés
+
+Intégrations Slack/Google configurées
+
+Workflows clairs (qui fait quoi)
+
+Premiers rapports regardés
+
+8.2 Après 1 mois
+
+Automatisations optimisées
+
+Équipe confortable (90% utilisation)
+
+Metrics visibles (velocity, taux complet, satisfaction)
+
+Optimisation : moins de meetings, plus de dashboard
+
+Training équipe complète si besoin
+
+8.3 Après 3 mois
+
+Historique données précieux (patterns, insights)
+
+Improvements continus (workflows itérés)
+
+Considérez upgrade plan si needs grow
+
+ROI visible (productivité +, chaos -)
+
+Vous êtes expert Doxa !
+
+9 SUPPORT ONBOARDING
+
+Questions pendant setup ?
+
+- Email : onboarding@doxa.dz (réponse < 2h)
+- Chat : Cliquez widget chat bas droite (9-18h CET)
+- Docs : guide.doxa.dz
+
+- Vidéos : youtube.com/doxa (tutoriels 5-10 min)
+
+Bienvenue dans Doxa!
+
+Doxa

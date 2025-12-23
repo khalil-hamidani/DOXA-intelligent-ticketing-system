@@ -1,0 +1,2515 @@
+[
+  {
+    "content": "# CONDITIONS GÉNÉRALES &amp; RÈGLES D'UTILISATION\nDoxa",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 0
+    }
+  },
+  {
+    "content": "# CONDITIONS GÉNÉRALES &amp; RÈGLES D'UTILISATION - Doxa\nTermes d'Utilisation et Politique de Confidentialité\n\nEffectif : Janvier 2025\nVersion : 2.1",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 1
+    }
+  },
+  {
+    "content": "# 1 TERMES D'UTILISATION (POUR TOUS)\n",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 2
+    }
+  },
+  {
+    "content": "## 1.1 Acceptation des conditions\nEn utilisant Doxa, vous acceptez ces termes. Si vous n'acceptez pas, n'utilisez pas le service. Si vous utilisez Doxa au nom d'une organisation, cette organisation accepte aussi les termes.",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 3
+    }
+  },
+  {
+    "content": "## 1.2 Accès et autorisation\nVous représentez que :\n- Vous avez au minimum 18 ans\n- Vous avez autorité légale de conclure ces conditions\n- Si vous êtes équipe, leader a autorisé l'accès\n\nDoxa vous autorise à :\n- Créer un compte avec email valide\n- Créer espaces travail, projets, tâches\n- Inviter collègues (avec leur consentement)\n- Utiliser API si plan l'autorise",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 4
+    }
+  },
+  {
+    "content": "## 1.3 Compte et sécurité\nResponsabilités :\n- Vous êtes seul responsable mot de passe et compte\n- Ne partagez pas identifiants\n- Notifiez immédiatement Doxa si accès non autorisé (security@doxa.dz)\n\nDoxa\n\n\n\nDoxa ne demande jamais mot de passe par email\n\nIdentification :\n\n• Vous maintenez info compte à jour\n\n• Email principal = adresse de contact Doxa",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 5
+    }
+  },
+  {
+    "content": "### 1.4 Contenu utilisateur\nPropriété :\n\n• Vous conservez tous les droits sur votre contenu (données, fichiers, messages)\n\n• Doxa n’est propriétaire d’aucun contenu utilisateur\n\nLicence à Doxa :\n\n• Vous accordez à Doxa licence non-exclusive, mondiale pour :\n\n• Héberger et traiter contenu (service la plate-forme)\n\n• Faire copies backup (sécurité)\n\n• Afficher à authorized users (vos équipe membres)\n\n• Analyser patterns (anonymisé, pour amélioration service)",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 6
+    }
+  },
+  {
+    "content": " service)",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 7
+    }
+  },
+  {
+    "content": "### 1.5 Restrictions strictes\nVous n’utiliserez PAS Doxa pour :\n\n1. Contenu illégal ou nuisible :\n\n• Activités criminelles, malveillance, harcèlement, discrimination\n\n• Contenus sexuels non-consentis, exploitation mineurs\n\n• Menaces violence, incitation terrorisme\n\n2. Données confidentielles non-autorisées :\n\n• Données clients/patients sans consentement\n\n• Secrets commerciaux d’autres entreprises\n\n• Données financières/personnelles non-vôtres\n\n3. Sécurité réseau :\n\n• Malwares, virus, trojans\n\n- ",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 8
+    }
+  },
+  {
+    "content": " Sécurité réseau :\n\n• Malwares, virus, trojans\n\n- Attaques DoS/DDoS\n- Accès non-autorisé systèmes Doxa\n- Reverse-engineering, scraping data\n\n4. Spam :\n- Invitations massives non-sollicitées\n- Envoi email marketing non-consentis\n- Commentaires/tâches automatisées spam\n\n5. Abus API/réserves :\n- Utilisation abusive ressources\n- Contournement rate-limits\n- Utilisation pour services concurrents\n\n1.6 Droits Doxa\n\nDoxa se réserve le droit :\n- Suspendre accès immédiatement si violation TOS (pas préavis ",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 9
+    }
+  },
+  {
+    "content": "accès immédiatement si violation TOS (pas préavis si danger)\n- Supprimer contenu violant conditions\n- Modifier service avec notification raisonnable\n- Refuser service à utilisateurs problématiques\n\n2 CONFORMITÉ LÉGALE &amp; NORMES\n\n2.1 Loi 25-11 et Loi 18-07 (Protection des Données Personnelles - Algérie)\n\nCadre légal principal :\nLa Loi n° 25-11 du 24 juillet 2025 modernise la Loi n° 18-07 du 10 juin 2018 relative à la protection des données personnelles en Algérie. Ces lois régissent le traitem",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 10
+    }
+  },
+  {
+    "content": "onnelles en Algérie. Ces lois régissent le traitement de toute donnée à caractère personnel.\n\nSi vous stockez données personnelles :\nDoxa (ou votre plateforme) est Responsable de Traitement, vos utilisateurs sont Propriétaires des Données. Vous décidez quelles données sont traitées, Doxa\n\nDoxa\n\nexécute vos instructions. Accord de Traitement des Données (ATD) disponible automatiquement à l'inscription. Respect : chiffrement, accès limité, audit trails, registre des activités de traitement.",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 11
+    }
+  },
+  {
+    "content": "ails, registre des activités de traitement.",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 12
+    }
+  },
+  {
+    "content": "## Obligations clés en vertu de la Loi 25-11 :\n- Désignation d'un DPD (Délégué à la Protection des Données) : obligation de nommer un professionnel qualifié responsable de la conformité.\n- Registre des activités de traitement : documentation détaillée de tous les traitements (finalités, durée, mesures de sécurité).\n- Carnet d'audit : enregistrement automatisé des accès et modifications aux données.\n- Notification d'incidents : délai de 5 jours pour signaler tout incident de sécurité à l'ANPDP.\n-",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 13
+    }
+  },
+  {
+    "content": "ur signaler tout incident de sécurité à l'ANPDP.\n- Interdiction des décisions entièrement automatisées affectant les droits des personnes sans intervention humaine.",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 14
+    }
+  },
+  {
+    "content": "## Droits des personnes concernées :\n- Droit d'accès : utilisateurs demandent copie de leurs données. Doxa fournit export en 14 jours si demandé.\n- Droit de rectification : correction des données inexactes. Modification effectuée sous 10 jours.\n- Droit à l'oubli / suppression : suppression des données à la demande. Suppression espace travail = suppression toutes données dans 30 jours.\n- Droit à la portabilité : données format portable (JSON/CSV). Export disponible sur demande.\n- Droit d'oppositi",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 15
+    }
+  },
+  {
+    "content": " Export disponible sur demande.\n- Droit d'opposition : refuser un traitement donné.",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 16
+    }
+  },
+  {
+    "content": "## Violations et responsabilités :\n- Vous êtes responsable de la conformité légale.\n- Violation détectée = déclaration immédiate à l'ANPDP (Autorité Nationale de Protection des Données Personnelles).\n- Doxa coopère pleinement avec l'ANPDP pour les enquêtes.\n\nDoxa\n\n- Sanctions : amende administrative jusqu'à 500 000 DA en cas non-conformité.\n- Récidive ou infraction grave = poursuite pénale (prison et amendes supplémentaires).",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 17
+    }
+  },
+  {
+    "content": "## 2.2 Secteurs réglementés en Algérie\n",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 18
+    }
+  },
+  {
+    "content": "### Santé (Loi 18-11 de 2018) :\n- Secret médical obligatoire : les données de santé sont hautement sensibles.\n- Dossier médical électronique (DME) : chaque patient doit avoir un DME unique au niveau national.\n- Consentement explicite requis pour tout accès aux données médicales.\n- Déclarations obligatoires : certaines maladies transmissibles doivent être déclarées aux autorités sanitaires.\n- Accès autorisé uniquement aux professionnels de santé habilités.\n- Non recommandé de stocker données sens",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 19
+    }
+  },
+  {
+    "content": "abilités.\n- Non recommandé de stocker données sensibles de santé dans Doxa sans mesures spécifiques de sécurité renforcée.",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 20
+    }
+  },
+  {
+    "content": "### Finance et Services Bancaires :\n- Cadre réglementaire de la Banque d'Algérie (BA) et de l'ANPDP.\n- Interdiction : stockage des numéros de cartes bancaires ou données de paiement sensibles dans Doxa.\n- Consentement préalable obligatoire pour contact commercial (e-mail, SMS, prospection).\n- Stockage sécurisé obligatoire des informations sensibles.\n- Les services financiers innovants doivent respecter la loi 09-03 (protection du consommateur).",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 21
+    }
+  },
+  {
+    "content": "### Gouvernement et Secteur Public :\n- Contrats gouvernementaux : respect obligatoire de l'ensemble des exigences nationales.\n- Résidence des données en Algérie : exigée dans la plupart des cas pour données sensibles.\n\nDoxa\n\n- Transferts transfrontaliers : soumis à l'approbation préalable de l'ANPDP (sauf coopération judiciaire/commissions rogatoires).\n- Signature d'Accord de Transfert International si données envoyées hors Algérie.",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 22
+    }
+  },
+  {
+    "content": "## 2.3 Transferts Internationaux de Données\nRègle générale (Loi 25-11, articles 45 bis 13-14) :\n\n- Tout transfert de données vers l'étranger doit être pré-approuvé par l'ANPDP.\n- L'ANPDP vérifie que le pays de destination garantit un niveau de protection équivalent.\n- Exceptions : coopération judiciaire, commissions rogatoires, cas d'urgence vitale (avec notification immédiate à l'ANPDP).\n- Sous-transferts : interdits sans accord préalable du pays d'origine.\n\nSi vous utilisez Doxa avec données h",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 23
+    }
+  },
+  {
+    "content": "s d'origine.\n\nSi vous utilisez Doxa avec données hébergées hors Algérie :\n\n- Audit de conformité recommandé auprès de l'ANPDP.\n- Signature d'Accord de Transfert International obligatoire.\n- Documentation : preuves d'approbation ANPDP à conserver.",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 24
+    }
+  },
+  {
+    "content": "## 2.4 Autorité de Contrôle : ANPDP\nCompétences et Pouvoirs (renforcés par Loi 25-11) :\n\n- Vérifications sur site et audits des systèmes de traitement.\n- Accès aux données, documents et registres sans restriction.\n- Ordonnance de conformité : fermeture, retrait ou destruction de fichiers non-conformes.\n- Pôles régionaux : contrôle et accompagnement décentralisés.\n- Avis sur les transferts internationaux (consultation possible avant transfert).\n\nContacts et Signalements :\n\nDoxa\n\n- Organisme respo",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 25
+    }
+  },
+  {
+    "content": "ontacts et Signalements :\n\nDoxa\n\n- Organisme responsable : Autorité Nationale de Protection des Données Personnelles (ANPDP).\n- Violation de données : déclarer dans les 5 jours (nouveau délai Loi 25-11).\n- Demandes des utilisateurs : répondre dans les délais légaux.\n- Refus de coopération = infraction pénale (6 mois à 2 ans + 60 000 à 200 000 DA).",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 26
+    }
+  },
+  {
+    "content": "## 3 SÉCURITÉ &amp; PROTECTION DONNÉES\n",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 27
+    }
+  },
+  {
+    "content": "### 3.1 Mesures sécurité Doxa\n**En transit :**\n- HTTPS/TLS 1.2+ (chiffrement)\n- Pas données en clair sur réseau\n\n**Au repos :**\n- AES-256 chiffrement base données\n- Clés de chiffrement séparées par client\n- Aucun master key centralisé\n\n**Infrastructure :**\n- Data centers Algérie (certifications TIER III/IV)\n- ISO 27001 certified\n- Monitoring 24/7 sécurité\n- Firewalls, IDS/IPS\n\n**Accès :**\n- Authentification 2FA optionnelle (tous)\n- SSO SAML 2.0 (Enterprise)\n- Rate-limiting API\n- Audit logs de to",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 28
+    }
+  },
+  {
+    "content": "Enterprise)\n- Rate-limiting API\n- Audit logs de tous accès (Enterprise)",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 29
+    }
+  },
+  {
+    "content": "### 3.2 Ce que vous devez faire\nSécurité côté vous :\n\nDoxa\n\n\n\nUtilisez mot de passe fort (min 12 caractères, mixte)\n- Activez 2FA (dans Paramètres → Sécurité)\n- Ne réutilisez pas mots de passe d’autres services\n- Signalez activité suspecte : security@doxa.dz\n- Gérez permissions strictement (qui accède à quoi?)",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 30
+    }
+  },
+  {
+    "content": "### 3.3 Notification d’incidents (Loi 25-11)\nSi Doxa détecte incident de sécurité données :\n\n1. Investigation immédiate (< 24h)\n2. Notification à l’ANPDP dans 5 jours (obligation légale Loi 25-11)\n3. Notification utilisateurs affectés dans 30 jours\n4. Rapport détaillé : quelles données, quand, actions\n5. Conseil remediation\n6. Support pour notifications ANPDP si requis",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 31
+    }
+  },
+  {
+    "content": "## 4 POLITIQUE DE CONFIDENTIALITÉ\n",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 32
+    }
+  },
+  {
+    "content": "### 4.1 Quelles données collectons-nous ?\nDonnées compte :\n\n- Email, nom, mot de passe (hashed)\n- Photo profil (optionnel)\n- Préférences (langue, timezone, thème)\n\nDonnées utilisation :\n\n- Projets créés, tâches, timestamps\n- Commentaires, mentions\n- Intégrations connectées\n- API appels (logs)\n- Erreurs/crashs (diagnostique)\n\n| | | Doxa\n\nDonnées paiement (si plan payant) :\n- Numéro carte (jamais stocké Doxa directement, via prestataire certifié)\n- Adresse facturation\n- Historique transactions\n\nDo",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 33
+    }
+  },
+  {
+    "content": " Adresse facturation\n- Historique transactions\n\nDonnées analytiques (anonymisé) :\n- Features utilisées\n- Page views (aggregé)\n- Temps session\n- Crash reports\n\n4.2 Comment utilisons-nous vos données ?\n\nPour fournir le service :\n- Hébergement et traitement\n- Support client (accès avec permission)\n- Sécurité et détection fraude\n\nPour amélioration :\n- Analytics usage (anonymisé)\n- Identifier bugs, features populaires\n- A/B testing new features\n\nLégal :\n- Conformité obligations légales (Loi 25-11, Lo",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 34
+    }
+  },
+  {
+    "content": " :\n- Conformité obligations légales (Loi 25-11, Loi 18-07)\n- Défense poursuites\n- Exécution TOS\n\n4.3 Avec qui partageons-nous ?\n\nPrestataires certifiés :\n- Prestataire paiement : traitement paiements (certifié sécurité)\n- Data centers Algérie : hébergement infrastructure (ISO 27001)\n- Service emails : emails transactionnel\n\nDoxa\n\n- Monitoring erreurs : error monitoring\n- Analytics : analytics usage\n\nTous signent ATD (accord traitement données).\n\n**Jamais partagé :**\n- Données ne sont pas vendues",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 35
+    }
+  },
+  {
+    "content": "**Jamais partagé :**\n- Données ne sont pas vendues\n- Pas partagées marketers tiers\n- Pas partage sans consentement\n\n**Autorités algériennes :**\n- Données peuvent être divulguées si required by law algérienne\n- Doxa contestera demandes excessives\n- Notification utilisateur si légalement possible",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 36
+    }
+  },
+  {
+    "content": "## 4.4 Rétention données\n**Données actives :**\n- Conservées pendant compte actif\n\n**Données archivées :**\n- Après suppression compte : 30 jours de grâce (export possible)\n- Puis suppression permanente\n\n**Backups :**\n- Conservés 90 jours (disaster recovery)\n- Puis suppression sécurisée",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 37
+    }
+  },
+  {
+    "content": "## 5 RÈGLES ACCEPTABLES USE\n",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 38
+    }
+  },
+  {
+    "content": "### 5.1 Usage légitime\n**OK :**\n- Gestion projets internes équipe\n- Collaboration sur livrables\n- Organisation informations\n\nDoxa\n\n- Usage personnel (freelancers)\n- Automatisations légitimes",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 39
+    }
+  },
+  {
+    "content": "## 5.2 Usage problématique (peut entraîner suspension)\n",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 40
+    }
+  },
+  {
+    "content": "### Abus ressources :\nExtraction data en masse (&gt; 1000 requêtes/min)\nStockage fichiers volumineux (films, archives)\nBot automation créant millions tâches\nReverse-engineering interface",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 41
+    }
+  },
+  {
+    "content": "### Contenu illégal/nuisible :\nMatériel copyrighted non-autorisé\nContenu terrorisme, violence, discrimination\nDonnées personnelles sans consentement (doxxing)\nPartage identifiants login",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 42
+    }
+  },
+  {
+    "content": "### Sécurité :\nTentative hack accounts autres\nPhishing par email Doxa\nInstallation malwares\nTesteur pen-testing sans autorisation",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 43
+    }
+  },
+  {
+    "content": "## 5.3 Monitoring &amp; enforcement\n",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 44
+    }
+  },
+  {
+    "content": "### Doxa monitore :\n- Usage API anormal\n- Patterns tâches automatisées\n- Contenu rapporté utilisateurs\n- Signaux sécurité",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 45
+    }
+  },
+  {
+    "content": "### Actions possibles :\n1. Avertissement (premier cas)\n2. Limitation compte (rate-limits)\n3. Suspension (30 jours avertissement généralement)\n4. Suppression définitive\n\nDoxa\n\n5. Signalement autorités légales algériennes (crimes)",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 46
+    }
+  },
+  {
+    "content": "## 6 RESPONSABILITÉ &amp; INDEMNISATION\n",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 47
+    }
+  },
+  {
+    "content": "### 6.1 Disclaimer services\nAS-IS : Doxa fourni \"tel quel\" sans garanties. Incluant : pas garantie performance, uptime, sécurité parfaite, pas perte données.\n\n**Responsabilité limitée :**\n- MaxClaim = 50 000 DA ou montant payé dernier 3 mois (valeur plus petite)\n- Hors : perte données, profits, interruption business (même si avertis)",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 48
+    }
+  },
+  {
+    "content": "### 6.2 Indemnisation\nVous indemnisez Doxa contre réclamations tiers pour :\n- Contenu vous avez posté (copyright, diffamation)\n- Violation tiers propriété intellectuelle\n- Utilisation illégale Doxa",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 49
+    }
+  },
+  {
+    "content": "## 7 MODIFICATION CONDITIONS &amp; TERMINATION\n",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 50
+    }
+  },
+  {
+    "content": "### 7.1 Modifications\nDoxa peut modifier ces conditions.\n- Notification 30 jours email pour changements majeurs\n- Acceptation implicite si continue usage après notification\n- Modifications mineures sans préavis",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 51
+    }
+  },
+  {
+    "content": "### 7.2 Résiliation\n**Par vous :**\n- Anytime : Paramètres → \"Supprimer espace travail\"\n- Données supprimées 30 jours après\n- Pas remboursement si paiement annuel utilisé\n\n**Par Doxa :**\n\nDoxa\n\n- Violation TOS : immédiatement (danger) ou 7 jours avertissement\n- Non-paiement : 7 jours avertissement",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 52
+    }
+  },
+  {
+    "content": "# 8 DROIT APPLICABLE &amp; LITIGE\n",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 53
+    }
+  },
+  {
+    "content": "## 8.1 Loi et juridiction\n- Loi applicable : Droit algérien (Loi 25-11, Loi 18-07, Code civil algérien, Code de commerce)\n- Juridiction : Tribunaux algériens compétents (Tribunal de la wilaya du siège social de Doxa)\n- Ordre juridictionnel : Ordre judiciaire (civil et commercial)",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 54
+    }
+  },
+  {
+    "content": "## 8.2 Résolution conflits\n1. Contact support : support@doxa.dz (5 jours réponse)\n2. Escalade management : ops@doxa.dz (15 jours résolution)\n3. Médiation amiable (optionnel, recommandé)\n4. Tribunal algérien dernier recours",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 55
+    }
+  },
+  {
+    "content": "## 8.3 Arbitrage (Enterprise)\nEnterprise peut accepter arbitrage en Algérie lieu neutre au lieu tribunal ordinaire.",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 56
+    }
+  },
+  {
+    "content": "# 9 FAQ CONDITIONS\nQ : Puis-je utiliser Doxa pour données patients médicaux ?\n\nA : Seulement Enterprise avec conformité Loi 18-11 (santé) et Loi 25-11 (protection données). Secret médical obligatoire. ATD signé requis. Pas recommandé pour données sensibles santé sans mesures sécurité renforcée et validation ANPDP.\n\nQ : Qui est responsable si incident sécurité ?\n\nA : Doxa responsable infrastructure et notification ANPDP (5 jours). Vous responsable who has access/what data et conformité utilisatio",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 57
+    }
+  },
+  {
+    "content": " who has access/what data et conformité utilisation.\n\nQ : Puis-je vendre mes projets Doxa ?\n\nDoxa\n\nA : Données vous appartiennent, mais Doxa license non-transferable. Vous pouvez exporter données, nouvelle personne crée son propre compte.\n\nQ : Puis-je utiliser Doxa pour servir mes propres clients ?\nA : Si vous êtes agence, créez separate workspace par client (isolement données). Pas de white-label sans Enterprise. Conformité ANPDP obligatoire.\n\nQ : Quels langages mon contenu peut être ?\nA : Tous",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 58
+    }
+  },
+  {
+    "content": " : Quels langages mon contenu peut être ?\nA : Tous. Doxa supporte toutes langues/alphabets (arabe, français, anglais, tamazight, etc.).\n\nQ : Comment intégrer Doxa à mon système ?\nA : Utilisez API REST (plan Pro+) ou webhooks. Documentation : api.doxa.dz\n\nQ : Mes données restent-elles en Algérie ?\nA : Oui. Toutes données hébergées data centers Algérie (conformité Loi 25-11). Transferts internationaux nécessitent approbation ANPDP préalable.\n\n10 CONTACT &amp; SUPPORT JURIDIQUE\n\nQuestions termes : ",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 59
+    }
+  },
+  {
+    "content": "NTACT &amp; SUPPORT JURIDIQUE\n\nQuestions termes : legal@doxa.dz\n\nSécurité/Privacy : security@doxa.dz\n\nDemandes droits données (Loi 25-11) : privacy@doxa.dz\n\nAbus report : abuse@doxa.dz\n\nSupport général : support@doxa.dz\n\nANPDP (Autorité Protection Données) : anpdp.dz\n\nDoxa",
+    "meta": {
+      "source": "Doxa Conditions générales.pdf",
+      "chunk_id": 60
+    }
+  },
+  {
+    "content": "# F.A.Q Doxa\n",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 0
+    }
+  },
+  {
+    "content": "# FAQ - Doxa\nPlateforme de Gestion de Projets Collaboratifs\n\nDernière mise à jour : Décembre 2025",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 1
+    }
+  },
+  {
+    "content": "## 1 SECTION 1 : QUESTIONS GÉNÉRALES\n",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 2
+    }
+  },
+  {
+    "content": "### 1.1 Q1. Qu'est-ce que Doxa ?\nDoxa est une plateforme SaaS de gestion de projets collaboratifs qui permet aux équipes de planifier, suivre et collaborer sur des projets en temps réel. Elle combine une grande simplicité d'utilisation avec des fonctionnalités puissantes d'automatisation, de suivi des tâches et de reporting.",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 3
+    }
+  },
+  {
+    "content": "### 1.2 Q2. Quels types d'équipes peuvent utiliser Doxa ?\nDoxa est conçue pour des équipes de toute taille (de 1 à 500+ personnes) et de tous secteurs d'activité : agences marketing, startups tech, équipes produit, équipes RH, équipes de support client, équipes créatives, services internes IT, consultants, etc.",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 4
+    }
+  },
+  {
+    "content": "### 1.3 Q3. Doxa est-elle accessible depuis mobile ?\nOui, Doxa est accessible via une application web responsive (fonctionne sur tous les navigateurs modernes) et dispose d'applications natives iOS et Android. Les applications mobiles offrent l'essentiel des fonctionnalités de la version web, optimisées pour les petits écrans.",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 5
+    }
+  },
+  {
+    "content": "### 1.4 Q4. Doxa supporte-t-elle les intégrations tierces ?\nOui, Doxa s'intègre avec plus de 200 outils populaires : Slack, Microsoft Teams, Google Workspace, Zapier, GitHub, Figma, Stripe, Salesforce, et bien d'autres. Une API REST est également disponible pour les développeurs afin de créer des intégrations personnalisées.",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 6
+    }
+  },
+  {
+    "content": "### 1.5 Q5. Est-ce que je peux tester Doxa gratuitement ?\nOui, nous offrons un essai gratuit de 14 jours sans carte de crédit requise. L'essai gratuit inclut toutes les fonctionnalités du plan Pro. À l'issue des 14 jours, l'espace de travail devient inactif jusqu'à la souscription d'un plan payant.\n\nDoxa",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 7
+    }
+  },
+  {
+    "content": "# 2 SECTION 2 : GESTION DES PROJETS\n",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 8
+    }
+  },
+  {
+    "content": "## 2.1 Q6. Comment créer un nouveau projet ?\n1. Connectez-vous à votre compte Doxa.\n2. Depuis l'accueil, cliquez sur « + Nouveau projet ».\n3. Entrez le nom du projet et une description (optionnelle).\n4. Sélectionnez un modèle (Kanban, Agile, Waterfall) ou commencez avec un projet vide.\n5. Cliquez sur « Créer ».\n6. Invitez les membres de l'équipe par email.",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 9
+    }
+  },
+  {
+    "content": "## 2.2 Q7. Quelle est la différence entre un projet Kanban, Agile et Waterfall ?\n- Kanban : Flux continu, sans sprints. Idéal pour les workflows continus (support client, production, maintenance).\n- Agile/Scrum : Organisation en sprints (1 à 4 semaines) avec planning, daily standups, rétrospectives. Idéal pour le développement logiciel et les projets itératifs.\n- Waterfall : Phases séquentielles (une phase après l'autre). Idéal pour les projets avec cahier des charges fixe (construction, projets",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 10
+    }
+  },
+  {
+    "content": "vec cahier des charges fixe (construction, projets réglementés).",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 11
+    }
+  },
+  {
+    "content": "## 2.3 Q8. Combien de projets puis-je créer avec mon plan ?\n- Plan Starter : jusqu'à 5 projets.\n- Plan Pro : projets illimités.\n- Plan Enterprise : projets illimités + espaces de travail illimités.",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 12
+    }
+  },
+  {
+    "content": "## 2.4 Q9. Comment archiver ou supprimer un projet ?\nLes projets peuvent être archivés (masqués mais conservés) ou supprimés (suppression permanente).\n\n- Pour archiver : Paramètres du projet → « Archiver ce projet ».\n\nDoxa\n\n\n\nPour supprimer : Paramètres du projet → « Supprimer définitivement » (uniquement pour le propriétaire du projet).\n\n- Les projets supprimés ne peuvent pas être récupérés.\n\n2.5 Q10. Puis-je dupliquer un projet ?\n\nOui. Dans les paramètres du projet, cliquez sur « Dupliquer le ",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 13
+    }
+  },
+  {
+    "content": " paramètres du projet, cliquez sur « Dupliquer le projet ». Vous pouvez choisir de dupliquer aussi les tâches, les commentaires et les pièces jointes ou de démarrer avec uniquement la structure (colonnes, statuts, etc.).",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 14
+    }
+  },
+  {
+    "content": "## 3 SECTION 3 : GESTION DES TÂCHES\n3.1 Q11. Qu’est-ce qu’une tâche dans Doxa ?\n\nUne tâche est l’unité de travail élémentaire dans Doxa. Elle peut avoir une description, des responsables (assignés), une date limite, une priorité, des labels, des sous-tâches, des fichiers attachés, des commentaires, des checklists, ainsi que des champs personnalisés selon vos besoins.\n\n3.2 Q12. Comment créer une tâche ?\n\nIl existe plusieurs manières de créer une tâche :\n\n1. Via le tableau : cliquer sur « + Ajoute",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 15
+    }
+  },
+  {
+    "content": "âche :\n\n1. Via le tableau : cliquer sur « + Ajouter tâche » dans une colonne (vue Kanban).\n\n2. Via le formulaire : bouton « + Nouvelle tâche » en haut de la vue.\n\n3. Via l’email : envoyer un email à l’adresse unique du projet (disponible dans les paramètres du projet).\n\n4. Via Slack/Teams : commande /doxa create task \"Nom de la tâche\" si l’intégration est activée.\n\n3.3 Q13. Quel est le système de priorité dans Doxa ?\n\nDoxa utilise 4 niveaux de priorité :\n\n- Critique (rouge) : à traiter immédiate",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 16
+    }
+  },
+  {
+    "content": "iorité :\n\n- Critique (rouge) : à traiter immédiatement, bloque d’autres tâches.\n\n- Haute (orange) : importante, à faire dans la semaine.\n\n- Normale (bleu) : standard, peut être planifiée selon la charge.\n\n- Basse (gris) : nice-to-have, peut être repoussée si nécessaire.\n\n| ||) Doxa\n\n\n\n3.4 Q14. Comment assigner une tâche à quelqu’un ?\n\n1. Ouvrez la tâche.\n\n2. Dans le panneau de droite, cliquez sur « Assignés ».\n\n3. Sélectionnez une ou plusieurs personnes (jusqu’à 5 assignés par tâche).\n\n4. La sau",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 17
+    }
+  },
+  {
+    "content": "rsonnes (jusqu’à 5 assignés par tâche).\n\n4. La sauvegarde est automatique et la ou les personnes reçoivent une notification.",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 18
+    }
+  },
+  {
+    "content": "### 3.5 Q15. Puis-je créer des sous-tâches ?\nOui. Dans une tâche, dans la section « Détails », cliquez sur « + Ajouter sous-tâche ». Chaque sous-tâche peut avoir ses propres assignés, dates limites et statuts. Le pourcentage de progression de la tâche parente est calculé automatiquement en fonction du nombre de sous-tâches complétées.",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 19
+    }
+  },
+  {
+    "content": "### 3.6 Q16. Comment utiliser les labels/tags ?\nLes labels aident à catégoriser les tâches. Chaque projet a ses propres labels.\n\n• Pour créer : Paramètres du projet → « Labels » → « + Créer label » → nommez, choisissez couleur.\n\n• Pour ajouter à une tâche : Ouvrez la tâche → « Labels » → sélectionnez.\n\n• Pour filtrer : Tableau → « Filtres » → sélectionnez labels.",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 20
+    }
+  },
+  {
+    "content": "### 3.7 Q17. Quelles sont les dates importantes dans une tâche ?\n• Date de début : Quand la tâche devrait commencer.\n\n• Date limite : Deadline de la tâche.\n\n• Date d’achèvement : Auto-remplie quand statut = « Terminé ».\n\n• Les tâches en retard (passé la deadline) sont marquées en rouge.",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 21
+    }
+  },
+  {
+    "content": "### 3.8 Q18. Comment commenter sur une tâche ?\nOuvrez la tâche → section « Commentaires » → écrivez → appuyez Entrée.\n\n• Vous pouvez @mentionner des collègues (ex : « @Alice, pouvez-tu vérifier ? »).\n\n• Support Markdown (gras, italique, listes, code).\n\n| | |) Doxa\n\n\n\nLes mentions reçoivent des notifications.\n\n3.9 Q19. Puis-je ajouter des pièces jointes à une tâche ?\n\nOui ! Ouvrez la tâche → section « Pièces jointes » → glissez-déposez ou cliquez « Ajouter fichier ». Supports : documents, images,",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 22
+    }
+  },
+  {
+    "content": "« Ajouter fichier ». Supports : documents, images, vidéos jusqu’à 2 GB par fichier, 10 GB par tâche.\n\n3.10 Q20. Comment dupliquer une tâche ?\n\nOuvrez la tâche → menu « ... » en haut à droite → « Dupliquer ». Vous pouvez choisir les champs à dupliquer (assignés, dates, labels, sous-tâches, etc.).",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 23
+    }
+  },
+  {
+    "content": "## 4 SECTION 4 : COLLABORATION & COMMUNICATIONS\n4.1 Q21. Combien de membres peuvent rejoindre mon espace de travail ?\n\n• Plan Starter : jusqu’à 5 membres.\n\n• Plan Pro : jusqu’à 30 membres.\n\n• Plan Enterprise : nombre de membres illimité.\n\n4.2 Q22. Comment inviter des membres dans mon espace ?\n\n1. Rendez-vous dans « Paramètres de l’espace » → onglet « Membres ».\n\n2. Cliquez sur « + Inviter des membres ».\n\n3. Entrez une ou plusieurs adresses email.\n\n4. Sélectionnez le rôle (Propriétaire, Admin, Éd",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 24
+    }
+  },
+  {
+    "content": "\n\n4. Sélectionnez le rôle (Propriétaire, Admin, Éditeur, Lecteur, Invité).\n\n5. Cliquez sur « Envoyer les invitations ».\n\nLes invités reçoivent un email avec un lien pour rejoindre l’espace de travail.\n\n4.3 Q23. Quels sont les rôles disponibles ?\n\n• Propriétaire : accès complet, peut supprimer l’espace de travail, gérer la facturation et les paramètres globaux.\n\n• Admin : peut gérer les membres, les projets et la plupart des paramètres, mais pas la facturation.\n\n| | |) Doxa\n\n\n\n• Éditeur : peut cr",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 25
+    }
+  },
+  {
+    "content": "a facturation.\n\n| | |) Doxa\n\n\n\n• Éditeur : peut créer et modifier des projets, tâches et commentaires dans les projets auxquels il a accès.\n\n• Lecteur : accès en lecture seule aux projets qui lui sont partagés.\n\n• Invité : accès limité à un ou plusieurs projets spécifiques, généralement en lecture seule.",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 26
+    }
+  },
+  {
+    "content": "### 4.4 Q24. Comment faire des mentions (@)?\nTapez « @ » suivi du prénom dans un commentaire ou description. Les mentions génèrent des notifications à la personne mentionnée. Vous pouvez même « @ » des adresses email hors de votre espace (ils recevront une notification si autorisé).",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 27
+    }
+  },
+  {
+    "content": "### 4.5 Q25. Doxa envoie-t-elle des notifications?\nOui, sur :\n\n• Assignation à une tâche\n\n• Mentions\n\n• Commentaires sur vos tâches\n\n• Rappels de deadline\n\n• Mises à jour de tâches (status, assigné, priorité)\n\n• Notifications Slack/email selon vos préférences",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 28
+    }
+  },
+  {
+    "content": "### 4.6 Q26. Comment configurer les notifications?\nProfil → « Préférences de notification » → Choisissez pour chaque type :\n\n• Email uniquement\n\n• In-app uniquement\n\n• Les deux\n\n• Aucune (mute)\n\n| | | Doxa",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 29
+    }
+  },
+  {
+    "content": "# 5 SECTION 5 : RAPPORTS &amp; ANALYTICS\n",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 30
+    }
+  },
+  {
+    "content": "## 5.1 Q27. Quels rapports sont disponibles dans Doxa ?\n- Rapport d'activité : récapitulatif des tâches créées, en cours, complétées ou bloquées par jour/semaine/mois.\n- Rapport d'équipe : charge de travail par personne, nombre de tâches complétées, goulots d'étranglement.\n- Rapport de capacité : comparaison entre capacité prévue et travail réellement effectué (notamment pour les équipes Agile/sprints).\n- Rapport d'échéance : tâches à risque, en retard, à venir, par projet ou par personne.\n- Rap",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 31
+    }
+  },
+  {
+    "content": "retard, à venir, par projet ou par personne.\n- Rapport personnalisé : création de rapports sur mesure via filtres avancés et export des données.",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 32
+    }
+  },
+  {
+    "content": "## 5.2 Q28. Comment exporter les données ?\nDepuis un tableau ou une vue de liste, ouvrez le menu « ... » puis cliquez sur « Exporter ». Choisissez ensuite le format souhaité :\n\n- CSV : ouvrable dans Excel, Google Sheets, etc.\n- PDF : format prêt à être imprimé ou partagé.\n- JSON : pour les intégrations techniques ou la réutilisation dans d'autres systèmes.\n\nL'export inclut les tâches, les assignés, les dates, les labels et, selon les vues, certains commentaires et champs personnalisés.",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 33
+    }
+  },
+  {
+    "content": "ns commentaires et champs personnalisés.",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 34
+    }
+  },
+  {
+    "content": "## 5.3 Q29. Puis-je créer des dashboards personnalisés ?\nOui. Dans la vue « Dashboard » de la navigation, cliquez sur « + Ajouter widget » puis choisissez parmi :\n\n- Graphiques d'activité (tâches créées, complétées, en retard).\n- Tableau des tâches à risque.\n- Timeline / diagramme de Gantt simplifié.\n- Burndown chart (pour les projets Agile).\n\nDoxa\n\n\n\n- Statistiques personnalisées basées sur des filtres (par projet, par personne, par label, etc.).",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 35
+    }
+  },
+  {
+    "content": ".",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 36
+    }
+  },
+  {
+    "content": "## 5.4 Q30. Est-ce que je peux voir qui a modifié quoi et quand ?\nOui. Chaque tâche dispose d’un « Historique d’activité ». Ouvrez la tâche, puis dans le menu « ... », cliquez sur « Historique ». Vous y verrez tous les changements (qui a changé quoi, et à quel moment).",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 37
+    }
+  },
+  {
+    "content": "## 6 SECTION 6 : SÉCURITÉ & DONNÉES\n",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 38
+    }
+  },
+  {
+    "content": "## 6.1 Q31. Mes données sont-elles sécurisées chez Doxa ?\nOui. Doxa applique des standards de sécurité élevés conformes aux exigences algériennes :\n\n- Chiffrement SSL/TLS pour toutes les données en transit (norme ISO/IEC).\n- Chiffrement AES-256 pour les données au repos (standard international).\n- Centres de données situés en Algérie, certifiés ISO 27001.\n- Sauvegardes régulières et plans de reprise après sinistre (RTO/RPO définis).\n- Tests de sécurité, audits réguliers, et conformité avec Loi 2",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 39
+    }
+  },
+  {
+    "content": "curité, audits réguliers, et conformité avec Loi 25-11 & Loi 18-07.\n- Carnet d’audit automatisé : enregistrement de tous accès, modifications, suppressions de données.\n- Mesures de sécurité documentées dans registre des activités de traitement (art. 41 bis 2-3 Loi 18-07).",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 40
+    }
+  },
+  {
+    "content": "## 6.2 Q32. Qui peut accéder à mes données ?\nSeuls les membres de votre espace de travail avec les permissions appropriées.\n\nPrincipes clés (Loi 25-11 & 18-07) :\n\n- Doxa ne partage jamais vos données avec des tiers, sauf accord juridique écrit (ATD signé).\n- L’équipe Doxa n’a pas accès à vos données (architecture de sécurité par isolement).\n\n| | | Doxa\n\n\n\n- Accès technique uniquement si vous donnez consentement exprès pour debugging/support.\n- Tout accès est enregistré en carnet d’audit (traçabi",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 41
+    }
+  },
+  {
+    "content": "ut accès est enregistré en carnet d’audit (traçabilité complète).\n- Vous conservez contrôle total : vous êtes Responsable de Traitement, Doxa est Sous-traitant (art. 9 Loi 25-11).\n\nConformité ANPDP :\n\n- Doxa coopère pleinement avec l’ANPDP en cas audit/enquête.\n- Aucun transfert de données hors Algérie sans approbation ANPDP préalable (art. 45 bis 13).",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 42
+    }
+  },
+  {
+    "content": "### 6.3 Q33. Pouvez-vous supprimer mes données?\nOui. Vous exercez vos droits selon Loi 25-11 & Loi 18-07 :\n\nDroit à la suppression (« droit à l’oubli ») :\n\n- Paramètres de l’espace → « Supprimer l’espace de travail » → confirmez par email.\n- Doxa supprime toutes vos données dans 30 jours (délai légal).\n- Les données supprimées ne peuvent pas être récupérées.\n- Sauvegardes archivées : conservées 90 jours max, puis destruction sécurisée.\n\nAutres droits exercables :\n\n- Droit d’accès (art. 32 Loi 18",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 43
+    }
+  },
+  {
+    "content": "oits exercables :\n\n- Droit d’accès (art. 32 Loi 18-07) : demandez copie complète vos données. Doxa fournit export JSON/CSV dans 14 jours.\n- Droit de rectification : corrigez données inexactes sous 10 jours.\n- Droit à la portabilité : export format portable (JSON/CSV) sur demande.\n- Droit d’opposition : refusez certains traitements (si fondement non obligatoire).\n\nExercice des droits :\n\n- Contactez privacy@doxa.dz (délai légal : max 30 jours).\n\n| | | ) Doxa\n\n- Doxa traite comme requête prioritair",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 44
+    }
+  },
+  {
+    "content": "| | ) Doxa\n\n- Doxa traite comme requête prioritaire.\n- Si refus : vous pouvez saisir l'ANPDP ou le tribunal algérien.",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 45
+    }
+  },
+  {
+    "content": "## 6.4 Q34. Doxa est-elle conforme aux réglementations algériennes ?\nOui. Doxa respecte strictement les lois algériennes de protection des données :",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 46
+    }
+  },
+  {
+    "content": "### Cadre légal applicable :\n- Loi n° 25-11 du 24 juillet 2025 : modernisation protection données, nouvelles obligations responsables traitement, renforcement ANPDP.\n- Loi n° 18-07 du 10 juin 2018 : protection données personnelles, droits accès/rectification/suppression principes fondamentaux.\n- Code civil &amp; Code commerce algérien : cadre contractuel, responsabilité civile.",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 47
+    }
+  },
+  {
+    "content": "### Obligations Doxa envers vous (Loi 25-11 art. 3-4) :\n- Nommer Délégué à la Protection des Données (DPD) qualifié.\n- Maintenir registre des activités de traitement (transparence complète).\n- Tenir carnet d'audit automatisé (tous accès enregistrés).\n- Notifier incidents sécurité à l'ANPDP dans 5 jours (art. 41 bis 4).\n- Signer Accord de Traitement des Données (ATD) spécifiant responsabilités.\n- Effectuer audit/DPIA (étude impact) si données sensibles (art. 45 bis 9).",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 48
+    }
+  },
+  {
+    "content": "ibles (art. 45 bis 9).",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 49
+    }
+  },
+  {
+    "content": "### Vos droits reconnus légalement :\n- Droit accès : demandez copie données, réponse 14 jours.\n- Droit rectification : corrigez données incorrectes, correction 10 jours.\n- Droit suppression : exercez « droit à l'oubli », suppression 30 jours.\n- Droit portabilité : demandez export format portable (JSON/CSV).\n- Droit opposition : refusez traitement sans fondement obligatoire.\n\nSanctions non-conformité (Loi 25-11 &amp; 18-07) :\n\nDoxa\n\n- Amende administrative jusqu'à 500 000 DA (non-conformité simpl",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 50
+    }
+  },
+  {
+    "content": "istrative jusqu'à 500 000 DA (non-conformité simple).\n- Poursuite pénale : 6 mois à 2 ans emprisonnement + 60 000 à 200 000 DA (infraction grave).\n- Ordonnance ANPDP : fermeture/retrait/destruction fichiers non-conformes.",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 51
+    }
+  },
+  {
+    "content": "## Autorité de contrôle :\n- ANPDP (Autorité Nationale Protection Données Personnelles).\n- Pouvoirs : vérifications sur site, accès données/documents, audits, sanctions.\n- Recours : vous pouvez saisir ANPDP si violation Doxa.\n- Contact ANPDP : anpdp.dz",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 52
+    }
+  },
+  {
+    "content": "## Engagement Doxa :\nDoxa s'engage à respecter intégralement Loi 25-11 et Loi 18-07. En cas violation, vous pouvez exercer recours auprès ANPDP ou des tribunaux algériens (compétence : ordre judiciaire algérien).",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 53
+    }
+  },
+  {
+    "content": "# 7 SECTION 7 : FACTURATION &amp; PLANS\n",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 54
+    }
+  },
+  {
+    "content": "## 7.1 Q35. Quels plans existent ?\n- Starter : 4 350 DZD/mois - 5 projets, 5 membres, Kanban, intégrations basiques.\n- Pro : 11 850 DZD/mois - Projets illimités, 30 membres, tous les types de projets, 200+ intégrations, support prioritaire.\n- Enterprise : Devis personnalisé - Membres illimités, espaces de travail illimités, SLA garanti, support dédié.",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 55
+    }
+  },
+  {
+    "content": "## 7.2 Q36. Puis-je changer de plan ?\nOui ! Paramètres de l'espace → « Facturation » → « Changer de plan ». Si vous montez de niveau, la différence au prorata est facturée. Si vous descendez, crédit appliqué au prochain cycle.",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 56
+    }
+  },
+  {
+    "content": "## 7.3 Q37. Puis-je avoir une facture ?\nOui ! Paramètres → onglet « Facturation » → « Factures » → Téléchargez les PDFs. Chaque facture contient détail du plan, montant, date, TVA si applicable.\n\nDoxa\n\n\n\n7.4 Q38. Acceptez-vous les devis/facturation annuelle ?\n\nOui ! Pour plans Pro et Enterprise, nous offrons paiement annuel avec 20% de réduction. Contactez sales@doxa . dz pour devis.\n\n7.5 Q39. Qu’advient-il de mon accès si je n’ai pas payé ?\n\nAprès 7 jours sans paiement, votre espace passe en mo",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 57
+    }
+  },
+  {
+    "content": "ès 7 jours sans paiement, votre espace passe en mode « lecture seule ». Après 30 jours, l’espace est suspendu. Après 90 jours, suppression automatique. Vous recevez des avertissements avant chaque étape.\n\n7.6 Q40. Comment annuler mon abonnement ?\n\nParamètres → onglet « Facturation » → « Annuler l’abonnement » → confirmez. L’annulation prend effet à la fin du cycle de facturation actuel. Aucuns frais d’annulation.\n\n8 SECTION 8 : INTÉGRATIONS\n\n8.1 Q41. Comment intégrer Slack à Doxa ?\n\n1. Dans Doxa",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 58
+    }
+  },
+  {
+    "content": "Q41. Comment intégrer Slack à Doxa ?\n\n1. Dans Doxa, Paramètres d’intégration → « Slack ».\n\n2. Cliquez « Connecter ».\n\n3. Autorisez Doxa dans Slack.\n\n4. Choisissez les canaux où envoyer les notifications.\n\n5. Configurez les notifications (quels événements ?).\n\n6. Sauvegardez.\n\nAprès, les mises à jour de tâches apparaissent dans Slack, et vous pouvez créer des tâches via /doxa commands.\n\n8.2 Q42. Comment intégrer Microsoft Teams ?\n\nIdentique à Slack : Paramètres → « Microsoft Teams » → Connectez →",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 59
+    }
+  },
+  {
+    "content": "k : Paramètres → « Microsoft Teams » → Connectez → Autorisez → Configurez les canaux → Sauvegardez.\n\n| | | Doxa\n\n\n\n8.3 Q43. Puis-je intégrer Google Workspace ?\n\nOui ! Paramètres → « Google Workspace » → Connectez votre compte Google. Vous pouvez alors :\n\n- Créer des événements Google Calendar à partir de tâches Doxa.\n- Ajouter les pièces jointes Google Drive.\n- Utiliser Google Drive comme stockage cloud pour pièces jointes.\n\n8.4 Q44. Comment utiliser Zapier avec Doxa ?\n\nDoxa a des connecteurs Za",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 60
+    }
+  },
+  {
+    "content": "iser Zapier avec Doxa ?\n\nDoxa a des connecteurs Zapier publics. Vous pouvez créer des « Zaps » qui :\n\n- Créent tâches dans Doxa quand événement externe (email, formulaire web, etc.).\n- Envoient données Doxa ailleurs (CRM, email, feuilles de calcul).\n- Exemples : « Quand formulaire Typeform soumis → créer tâche dans Doxa ».\n\n8.5 Q45. Y a-t-il une API pour développeurs ?\n\nOui ! API REST complète documentée sur api . doxa . io. Vous pouvez :\n\n- Créer/modifier/supprimer tâches programmatiquement.\n- ",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 61
+    }
+  },
+  {
+    "content": "r/modifier/supprimer tâches programmatiquement.\n- Lire données projets, équipes, activité.\n- Construire des intégrations custom.\n- Rate limit : 1000 requêtes/heure pour plan Pro.\n\n9 SECTION 9 : TROUBLESHOOTING TECHNIQUE\n\n9.1 Q46. Je ne reçois pas les invitations par email\n\nVérifiez :\n\n1. Dossier spam/promotions.\n\n2. Email correct ajouté.\n\n3. Paramètres notification activés.\n\nSi toujours pas : contactez support@doxa . dz avec logs (email de l’invité).\n\n| | |) Doxa\n\n9.2 Q47. Je ne vois pas certain",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 62
+    }
+  },
+  {
+    "content": "té).\n\n| | |) Doxa\n\n9.2 Q47. Je ne vois pas certaines tâches\n\nVérifiez :\n1. Filtres appliqués ? Réinitialisez les filtres.\n2. Permissions ? Vous avez accès au projet ?\n3. Tâches archivées ? Affichage archive activé ?\n\nSi toujours pas : rafraîchissez la page ou videz le cache (Ctrl+Shift+Suppr).\n\n9.3 Q48. Les notifications ne s'affichent pas\n\n1. Vérifiez préférences notifications (pas mutées ?).\n2. Navigateur bloquerait notifications ? Autorisez Doxa.\n3. Email activé ? Vérifiez dossier spam.\n4. Te",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 63
+    }
+  },
+  {
+    "content": "xa.\n3. Email activé ? Vérifiez dossier spam.\n4. Testez notification manuellement : Paramètres → « Tester notification ».\n\n9.4 Q49. Je suis lent ou gelé\n\nEssayez :\n1. Réduisez nombre colonnes/filtres affichés.\n2. Réduisez nombre tâches par vue (archivez anciennes).\n3. Videz cache (Ctrl+Shift+Suppr).\n4. Essayez autre navigateur.\n5. Consultez status.doxa.io pour panne.\n\n9.5 Q50. Comment contacter le support ?\n\nEmail : support@doxa.dz (réponse &lt; 24h pour Pro, &lt; 2h pour Enterprise)\n\nChat : Cliq",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 64
+    }
+  },
+  {
+    "content": "4h pour Pro, &lt; 2h pour Enterprise)\n\nChat : Cliquez le chat icon en bas à droite (disponible 9-18h CET, lun-ven)\n\nStatut incident : status.doxa.io\n\nDoxa",
+    "meta": {
+      "source": "FAQ_Doxa.pdf",
+      "chunk_id": 65
+    }
+  },
+  {
+    "content": "# GUIDE ONBOARDING et DÉMARRAGE RAPIDE\nDoxa",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 0
+    }
+  },
+  {
+    "content": "# GUIDE ONBOARDING &amp; DÉMARRAGE RAPIDE - Doxa\nGetting Started en 30 Minutes\n\nVersion 2.0 | Décembre 2025",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 1
+    }
+  },
+  {
+    "content": "# 1 DÉMARRAGE INSTANT (5 MINUTES)\n",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 2
+    }
+  },
+  {
+    "content": "## 1.1 Étape 1 : Créer votre compte\n1. Allez doxa.dz\n2. Cliquez “Commencer gratuitement”\n3. Entrez email (ex : alice@mycompany.com)\n4. Créez mot de passe fort (min 8 char, 1 majuscule, 1 chiffre)\n- Exemple valide : Doxa2025!\n5. Cliquez “S’inscrire”\n6. Vérifiez email (lien activation)\n7. Connectez-vous\n\nAccount créé! Vous êtes maintenant dans Doxa.",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 3
+    }
+  },
+  {
+    "content": "## 1.2 Étape 2 : Configurer votre espace de travail (2 min)\nÉcran d’accueil → formulaire configuration :\n\n1. Nom espace de travail : Votre entreprise/équipe\n- Exemple : “TechStartup Inc”\n2. Sector : Sélectionnez votre industrie\n3. Team size : Nombre de personnes\n4. Logo (optionnel) : Upload image\n\nCliquez “Créer espace” → Bienvenue!\n\nDoxa\n\n1.3 Étape 3 : Créer votre premier projet (1 min)\n\nPage d'accueil → “+ Nouveau Projet”\n\nFormulaire rapide :\n- Nom : “Mon Premier Projet”\n- Description : “Test ",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 4
+    }
+  },
+  {
+    "content": " Nom : “Mon Premier Projet”\n- Description : “Test et familiarisation”\n- Modèle : Sélectionnez “Kanban” (simple pour débuter)\n- Visibilité : “Privé” (vous seul)\n\nCliquez “Créer” → Projet créé!\n\n1.4 Étape 4 : Ajouter premières tâches (1 min)\n\nVous voyez 3 colonnes : To Do | In Progress | Done\n\nCréer tâche rapide :\n1. Colonne “To Do” → Cliquez “+ Ajouter tâche”\n2. Tapez : “Lire guide Doxa”\n3. Appuyez Entrée → Tâche ajoutée!\n4. Créez 2 autres tâches (test)\n\nExemple tâches test :\n- Lire guide Doxa\n- ",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 5
+    }
+  },
+  {
+    "content": "(test)\n\nExemple tâches test :\n- Lire guide Doxa\n- Créer 2e projet (Agile)\n- Inviter Alice en tant que collaborateur\n\n2 CONFIGURATION ÉQUIPE (5 MINUTES)\n\n2.1 Étape 5 : Inviter collègues\n\nParamètres espace → “Membres” → “+ Inviter membres”\n\nFormulaire :\n- Email : alice@company.com (ou plusieurs, séparés virgules)\n- Rôle : Sélectionnez\n- Éditeur : peut créer/modifier tâches (défaut)\n- Lecteur : lecture seule\n\nDoxa\n\n- Admin : gère paramètres et membres\n\nCliquez “Envoyer invitations”\n\nAprès :\n- Collè",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 6
+    }
+  },
+  {
+    "content": "es\n\nCliquez “Envoyer invitations”\n\nAprès :\n- Collègues reçoivent email avec lien\n- Une fois accepté → apparaissent en membres\n- Peuvent immédiatement voir projets\n\n2.2 Étape 6 : Structure équipe recommandée\n\nPour équipe 10 personnes :\n\nVous (Propriétaire)\nPM/Lead (Admin) - gère backlogs, sprints\nDev Lead (Admin) - gère projet dev\nDevs x 4 (Éditeurs) - créent/modifient tâches\nDesigner (Éditeur) - tâches design\nSupport (Lecteur) - voit uniquement support tickets\n\nBonnes pratiques :\n- 1 Propriétair",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 7
+    }
+  },
+  {
+    "content": "upport tickets\n\nBonnes pratiques :\n- 1 Propriétaire max (responsabilité financière)\n- Admins = les leaders (gestion)\n- Autres = Éditeurs (travail quotidien)\n\n3 WORKFLOWS COURANTS (15 MINUTES)\n\n3.1 Workflow 1 : Gestion projet Agile (Dev)\n\nÉtapes :\n\n1. Créer projet Agile\n- Nouveau projet → Modèle “Agile” → Nommez “Sprint Q1 2025”\n\n2. Configurer sprints\n- Paramètres → “Sprints” → “+ Créer sprint”\n- Nom : “Sprint 1” | Durée : “1 semaine” (16-22 déc)\n- Sprint 2, 3, etc.\n\nDoxa\n\n3. Ajouter user stories",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 8
+    }
+  },
+  {
+    "content": "- Sprint 2, 3, etc.\n\nDoxa\n\n3. Ajouter user stories\n- “+ Nouvelle tâche” → Tapez récit utilisateur\n- Exemple : “En tant que PM, je veux exporter rapports PDF”\n- Assignez dev, set estimation (story points)\n\n4. Démarrer sprint\n- “Sprint 1” → “Démarrer sprint” → visible tableau\n- Tâches du sprint apparaissent\n\n5. Daily standups\n- Chaque jour : regarder tableau\n- Déplacer tâches entre colonnes (To Do → In Progress → Done)\n- Commentez blockers\n\n6. Fin sprint\n- Sprint terminé → “Fin sprint” → Crée retr",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 9
+    }
+  },
+  {
+    "content": "sprint\n- Sprint terminé → “Fin sprint” → Crée retrospective\n- Métriques : tâches complétées, velocity\n\n3.2 Workflow 2 : Gestion support client (Kanban)\n\nÉtapes :\n\n1. Créer projet Kanban\n- Nouveau → Kanban → “Support Client”\n\n2. Personnaliser colonnes\n- Paramètres → “Statuts”\n- Renommez colonnes :\nTo Do (Nouveau ticket)\nIn Progress (Assigné agent)\nWaiting Customer (Réponse attendue client)\nDone (Résolu)\n\n3. Créer labels priorité\n- Paramètres → “Labels”\n\nDoxa\n\n\n\nCréez : Urgent (rouge), Important (",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 10
+    }
+  },
+  {
+    "content": "bels”\n\nDoxa\n\n\n\nCréez : Urgent (rouge), Important (orange), Normal (bleu), Low (gris)\n4. Créer tâches depuis email\n- Voir adresse email unique du projet : project-abc@doxa.dz\n- Les clients/agents envoient email → devient tâche auto\n5. SLA reminder\n- Chaque tâche : set date limite (ex : 24h après création)\n- Tâches en retard → affichées rouge\n- Rappels auto envoyés\n6. Analytics\n- Rapports → “Ticket velocity” → voir temps moyen résolution",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 11
+    }
+  },
+  {
+    "content": "### 3.3 Workflow 3 : Gestion content marketing\nÉtapes :\n\n1. Créer projet Timeline\n- Nouveau → Timeline → “Content Calendar 2025”\n2. Ajouter articles/posts\n- “+ Nouvelle tâche” → titre article\n- Set dates (start/end publication)\n- Assign à writer/reviewer\n3. Vue calendrier\n- Basculez vers onglet “Calendar”\n- Voyez publication timeline\n- Identifiez goulots\n4. Dépendances\n- “Article A : Rédaction” bloque “Article A : Review”\n- Drag-drop timeline montre dépendances\n- Évite retards\n\n| | | Doxa\n\n5. Ex",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 12
+    }
+  },
+  {
+    "content": "tre dépendances\n- Évite retards\n\n| | | Doxa\n\n5. Export audience\n- Rapports → Export CSV\n- Partagez avec stakeholders\n\n4 PREMIÈRES AUTOMATISATIONS (5 MINUTES)\n\n4.1 Automation 1 : Auto-progression tâches\n\nCas : Quand toutes sous-tâches complètes → marquer parent complète\n\nSetup :\n1. Projet → Paramètres → “Automatisations”\n2. “+ Créer règle”\n3. Trigger : “Sous-tâche marquée complète”\n4. Action : “Si TOUTES sous-tâches complètes → status = Complète”\n5. Sauvegardez\n\nRésultat : Parent auto-progresse q",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 13
+    }
+  },
+  {
+    "content": "5. Sauvegardez\n\nRésultat : Parent auto-progresse quand tous enfants faits.\n\n4.2 Automation 2 : Slack notification priorité haute\n\nCas : Ticket priorité critique → notifier Slack support channel\n\nSetup :\n1. Projet → Paramètres → “Intégrations Slack”\n2. Connectez Slack workspace\n3. Choisissez channel : #support-tickets\n4. Dans Automatisations :\n- Trigger : “Priorité changée à Critique”\n- Action : “Poster Slack message”\n- Format : “@here Nouveau ticket URGENT : {titre}”\n\nRésultat : Slack alert immé",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 14
+    }
+  },
+  {
+    "content": "ket URGENT : {titre}”\n\nRésultat : Slack alert immédiate tickets critiques.\n\nDoxa\n\n4.3 Automation 3 : Auto-archivage tâches fermées\n\nCas : Tâche complète depuis 30 jours → archiver automatiquement\n\nSetup :\n1. Paramètres → Automatisations → Créer règle\n2. Trigger : “Status = Complète + 30 jours écoulés”\n3. Action : “Archiver tâche”\n\nRésultat : Tableau reste propre, pas tâches anciennes.\n\n5 INTÉGRATIONS ESSENTIELLES (SETUP 10 MIN)\n\n5.1 Integration 1 : Slack\n\nPourquoi :\n- Notifications tâches dans S",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 15
+    }
+  },
+  {
+    "content": " : Slack\n\nPourquoi :\n- Notifications tâches dans Slack\n- Créer tâches via /doxa commands\n- Real-time collab\n\nSetup :\n1. Doxa → Paramètres → “Slack”\n2. Cliquez “Connecter Slack”\n3. Autorisez Doxa dans Slack\n4. Choisissez channel(s) pour notifications\n5. Testez : /doxa create task “Test”\n\nRésultat : Slack et Doxa synchronisés.\n\n5.2 Integration 2 : Google Workspace\n\nPourquoi :\n- Calendrier Google → Project deadlines\n- Google Drive files → Pièces jointes Doxa\n- Partage docs direct dans commentaires\n",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 16
+    }
+  },
+  {
+    "content": "ntes Doxa\n- Partage docs direct dans commentaires\n\nSetup :\n\n1. Paramètres → “Google Workspace”\n2. “Connecter Google”\n3. Autorisez Doxa\n4. Testez : ajoutez Google Drive file à tâche",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 17
+    }
+  },
+  {
+    "content": "## 5.3 Integration 3 : GitHub (Dev teams)\n",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 18
+    }
+  },
+  {
+    "content": "### Pourquoi :\n- PR lié à tâches Doxa\n- Auto-progression quand PR merged\n- Code commits reference tasks",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 19
+    }
+  },
+  {
+    "content": "### Setup :\n1. Paramètres → “GitHub”\n2. “Connecter GitHub”\n3. Autorisez Doxa app\n4. Select repos\n5. Testez : créer PR avec “Closes #task-123” → auto-link",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 20
+    }
+  },
+  {
+    "content": "## 6 CONSEILS PRODUCTIVITÉ\n",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 21
+    }
+  },
+  {
+    "content": "### 6.1 1. Raccourcis clavier\nApprenez ces 5 essentiels :\n\n```\nCtrl+K → Chercher tâche global\nCtrl+N → Nouvelle tâche rapide\nCtrl+Shift+M → Aller \"Mes tâches\"\nTab (Kanban) → Cycle colonnes\nDrag-drop → Déplacer tâche\n```",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 22
+    }
+  },
+  {
+    "content": "### 6.2 2. Templates réutilisables\nPour tâches récurrentes :\n\n1. Créez tâche modèle parfaite\n\nDoxa\n\n\n\n2. Ajoutez description complète, labels, subtasks\n\n3. Menu “...” → “Dupliquer”\n\n4. Réutilisez pour futures instances\n\nExemples :\n\n- Template bug report (description structure, labels)\n- Template feature request (champs standard)\n- Template retrospective (sections, questions)",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 23
+    }
+  },
+  {
+    "content": "### 6.3 3. Filtres & vues sauvegardées\nCréez vue personnelle :\n\nMa Queue (tâches assignées à moi) :\n\n1. Tableau → “Filtres” → “Assigné = Moi”\n\n2. Trier par “Date limite”\n\n3. “+ Sauvegarder vue” → “Ma Queue”\n\n4. Accès rapide depuis navigation\n\nRésultat : 1 clic pour voir vos tâches prioritaires.",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 24
+    }
+  },
+  {
+    "content": "### 6.4 4. Daily standup template\nChaque jour 15 min :\n\n1. Allez projet → onglet “Dashboard”\n\n2. Regardez : “Tâches à risque” (en retard)\n\n3. Regardez : “Complétées aujourd’hui”\n\n4. Équipe ? Quick verbale sur blockers\n\n5. Update tâches status\n\nBudget : 15 minutes, max productivité !\n\n| | | Doxa\n\n\n\n7 TROUBLESHOOTING RAPIDE",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 25
+    }
+  },
+  {
+    "content": "## 7.1 Problème : Je n’ai pas reçu email invitation\nSolution :\n\n1. Vérifiez spam/promotions\n\n2. Demandez à Admin : Paramètres → Membres → Renvoyer invitation\n\n3. Essayez email alternatif\n\n4. Contact support si toujours pas reçu",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 26
+    }
+  },
+  {
+    "content": "## 7.2 Problème : Je n’arrive pas à créer 2e projet\nSolution :\n\n1. Vérifiez plan : Starter max 5 projets, Pro illimité\n\n2. Peut-être au limit ? Archivez projets anciens\n\n3. Upgrade plan si besoin : Paramètres → Facturation",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 27
+    }
+  },
+  {
+    "content": "## 7.3 Problème : Mon équipe ne voit pas tâches\nSolution :\n\n1. Tâche dans projet privé ? Changez permissions\n\n2. Membre pas invité au projet ? Ajouter dans Paramètres projet\n\n3. Membre a rôle lecteur ? Changez en Éditeur si doit modifier",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 28
+    }
+  },
+  {
+    "content": "## 7.4 Problème : Intégration Slack non marche\nSolution :\n\n1. Déconnectez Slack et refaites\n\n2. Vérifiez Doxa app autorisée dans Slack\n\n3. Vérifiez channel existe et Doxa y a accès\n\n4. Contact support si persiste\n\n\n\nPROCHAINES ÉTAPES\n\n8.1 Après 1 semaine\n\nÉquipe complète invitée et active\n\n1-2 projets setup et utilisés\n\nIntégrations Slack/Google configurées\n\nWorkflows clairs (qui fait quoi)\n\nPremiers rapports regardés\n\n8.2 Après 1 mois\n\nAutomatisations optimisées\n\nÉquipe confortable (90% utilisa",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 29
+    }
+  },
+  {
+    "content": "ations optimisées\n\nÉquipe confortable (90% utilisation)\n\nMetrics visibles (velocity, taux complet, satisfaction)\n\nOptimisation : moins de meetings, plus de dashboard\n\nTraining équipe complète si besoin\n\n8.3 Après 3 mois\n\nHistorique données précieux (patterns, insights)\n\nImprovements continus (workflows itérés)\n\nConsidérez upgrade plan si needs grow\n\nROI visible (productivité +, chaos -)\n\nVous êtes expert Doxa !\n\n9 SUPPORT ONBOARDING\n\nQuestions pendant setup ?\n\n- Email : onboarding@doxa.dz (répon",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 30
+    }
+  },
+  {
+    "content": "ndant setup ?\n\n- Email : onboarding@doxa.dz (réponse < 2h)\n- Chat : Cliquez widget chat bas droite (9-18h CET)\n- Docs : guide.doxa.dz\n\n- Vidéos : youtube.com/doxa (tutoriels 5-10 min)\n\nBienvenue dans Doxa!\n\nDoxa",
+    "meta": {
+      "source": "Guide_Onboarding.pdf",
+      "chunk_id": 31
+    }
+  },
+  {
+    "content": "# GUIDE SÉCURITÉ &amp; COMPLIANCE - Doxa\nMeilleures Pratiques de Protection des Données\n\nVersion 1.5 | Décembre 2025",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 0
+    }
+  },
+  {
+    "content": "## 1 SECTION 1 : SÉCURITÉ INFRASTRUCTURE\n",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 1
+    }
+  },
+  {
+    "content": "### 1.1 1.1 Architecture sécurité Doxa\n**Chiffrement en transit :**\n- Tous transferts via HTTPS TLS 1.2 minimum\n- Certificats SSL validés (Let's Encrypt)\n- Perfect Forward Secrecy activé\n- Pas de downgrade à HTTP possible\n\n**Chiffrement au repos :**\n- Base données : AES-256 chiffrement\n- Files uploads : AES-256 chiffrement\n- Clés chiffrement stockées séparément (KMS)\n- Pas clé universelle (compromission = 1 client, pas tous)\n\n**Infrastructure :**\n- Hébergement data centers Algérie (certification",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 2
+    }
+  },
+  {
+    "content": "\n- Hébergement data centers Algérie (certifications TIER III/IV)\n- Auto-scaling + load balancing\n- DDoS protection via Cloudflare\n- IDS/IPS (Intrusion Detection/Prevention)\n- WAF (Web Application Firewall)\n- Monitoring 24/7\n\n**Audits sécurité :**\n- Audits externes annuels (pen-testing)\n- Bug bounty program (security.doxa.dz)\n\nDoxa\n\n\n\nSOC 2 Type II audit (pro/enterprise)\n- ISO 27001 certification",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 3
+    }
+  },
+  {
+    "content": "### 1.2 1.2 Espace de travail isolement\nIsolation données par workspace :\n- Chaque espace travail = données séparées complètement\n- Utilisateur A (workspace 1) ne peut pas voir workspace 2 même avec même email\n- Database queries isolées par tenant\n- Impossible data leakage entre clients même avec bug\nIsolation réseau :\n- Chaque workspace sur subnet séparé (logiquement)\n- Règles firewall par workspace\n- Rate-limiting par workspace",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 4
+    }
+  },
+  {
+    "content": "## 2 SECTION 2 : AUTHENTIFICATION & ACCÈS\n",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 5
+    }
+  },
+  {
+    "content": "### 2.1 2.1 Authentification utilisateur\nStandard (tous) :\n- Email + Password\n- Min 8 caractères, 1 majuscule, 1 chiffre\n- Password hashed via bcrypt (salt randomisé)\n- Session cookies httpOnly (pas accès JavaScript)\n- Expiration session 30 jours\n\n2FA - Authentification Double Facteur (activable) :\n- TOTP (Time-based OTP) via Google Authenticator, Microsoft Authenticator, Authy\n- Backup codes générés (10 codes, single-use)\n- SMS OTP NOT disponible (moins sécurisé)\n\n| | | | | | | | | | | | | | | ",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 6
+    }
+  },
+  {
+    "content": "e (moins sécurisé)\n\n| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |\n\n\n\nSSO - Single Sign-On (Enterprise) :\n\n- SAML 2.0\n- OAuth 2.0 (Google, Microsoft)\n- OpenID Connect\n- Okta, Azure AD, Ping Identity compatible",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 7
+    }
+  },
+  {
+    "content": "### 2.2 2.2 Gestion permissions\nRôles & Permissions :\n\n```\nPropriétaire\n Accès complet + supprimer espace + facturation\n\nAdmin\n Gérer membres, paramètres, mais pas facturation\n\nÉditeur (par projet)\n Créer/modifier/comenter dans projet assigné\n\nLecteur (par projet)\n Lecture seule\n\nInvité (single project)\n Lecture seule + commentaires optionnel\n```\n\nBest practices permissions :\n\n- Principe moindre privilège : donnez minimum accès requis\n- Audit régulier qui a quels accès\n- Révoquez accès immédiate",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 8
+    }
+  },
+  {
+    "content": "ulier qui a quels accès\n- Révoquez accès immédiatement quand personne quitte",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 9
+    }
+  },
+  {
+    "content": "### 2.3 2.3 API security\nAPI Keys :\n\n- Générées par utilisateur (Paramètres → API)\n- Format : sk_live_[32 char random]\n- Jamais exposez clés (commit repos, client JavaScript)\n\n| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |\n\n- Rotez tous les 90 jours minimum",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 10
+    }
+  },
+  {
+    "content": "## Rate-limiting :\n- Pro : 1000 requêtes/heure par API key\n- Enterprise : custom (négocié)\n- Dépasse limit = réponse 429 Too Many Requests",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 11
+    }
+  },
+  {
+    "content": "## Webhooks :\n- HMAC-SHA256 signature sur chaque webhook\n- Timestamp incluse (récente/ancienne)\n- Vous vérifiez signature (code exemple fourni)\n- Retry automatique si timeout (exponentiel backoff)",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 12
+    }
+  },
+  {
+    "content": "# 3 SECTION 3 : DONNÉES PERSONNELLES &amp; CONFORMITÉ ALGÉRIENNE\n",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 13
+    }
+  },
+  {
+    "content": "## 3.1 3.1 Conformité Loi 25-11 &amp; Loi 18-07\n",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 14
+    }
+  },
+  {
+    "content": "### Si vous stockez données personnelles :\n- Vous = Responsable de Traitement (décidez quelles données)\n- Doxa = Sous-traitant (traite per instructions)\n- ATD (Accord Traitement Données) disponible\n- Conformité obligations Loi 25-11 &amp; 18-07 (transparence, consentement, sécurité)",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 15
+    }
+  },
+  {
+    "content": "### 7 principes clés Loi 25-11 &amp; 18-07 :\n",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 16
+    }
+  },
+  {
+    "content": "#### 1. Légalité :\n- Base légale pour chaque traitement données\n- Exemples : consentement, contrat, obligation légale\n- Documentez base légale",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 17
+    }
+  },
+  {
+    "content": "#### 2. Transparence :\n- Dites aux utilisateurs quelles données, quoi vous faites\n- Politique confidentialité accessible\n\nDoxa\n\n- Clauses confidentialité visibles\n\n3. Limitation finalité :\n- Données utilisées UNIQUEMENT pour purpose déclaré\n- Pas utilisation secondaire sans consentement\n- Exemple : données support ≠ marketing sans accord\n\n4. Exactitude :\n- Données à jour et exactes\n- Permettre correction si incorrect\n- Supprimez données obsolètes\n\n5. Limitation durée :\n- Gardez données aussi lon",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 18
+    }
+  },
+  {
+    "content": "\n\n5. Limitation durée :\n- Gardez données aussi longtemps que nécessaire\n- Supprimez quand pas utiles\n- Définir politique rétention avant collecting\n\n6. Intégrité &amp; Confidentialité :\n- Protégez données (chiffrement, accès contrôlé)\n- Prévenez perte, destruction, accès non-autorisé\n- Plan réaction incidents\n\n7. Responsabilité :\n- Documentez conformité (registre, audits)\n- DPD désigné (obligation Loi 25-11)\n- Notification incidents ANPDP (5 jours)\n\n3.2 3.2 Droits des personnes (données subjects",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 19
+    }
+  },
+  {
+    "content": "s)\n\n3.2 3.2 Droits des personnes (données subjects)\n\nDroit d'accès (art. 32 Loi 18-07) :\n- Personne peut demander : quelles données vous avez sur moi ?\n- Vous DEVEZ répondre dans 14 jours\n- Format : copie de données (ex : email, export CSV)\n\nDoxa\n\nDroit rectification :\n\n- Si données inexactes, correction doit être possible\n- Exemple : email vieux → personne change à nouveau\n- Vous faciliter (formulaire, self-service)\n- Correction effectuée sous 10 jours\n\nDroit suppression (\"droit être oublié\") :",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 20
+    }
+  },
+  {
+    "content": "0 jours\n\nDroit suppression (\"droit être oublié\") :\n\n- Personne peut demander suppression données\n- Vous devez supprimer (sauf exception : obligation légale, archive, etc.)\n- Doxa : via “Supprimer compte” → données effacées 30j\n\nDroit portabilité :\n\n- Données format lisible (CSV, JSON, etc.)\n- Facilite migration services autres\n- Doxa : export disponible\n\nDroit opposition :\n\n- Personne peut s'opposer traitement données\n- Exemple : pas marketing par email\n- Vous respectez\n\n3.3 3.3 Incident données",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 21
+    }
+  },
+  {
+    "content": "r email\n- Vous respectez\n\n3.3 3.3 Incident données &amp; notification (Loi 25-11)\n\nSi breach (données non-autorisées accédées) :\n\nDoxa actions :\n\n1. Investigation immédiate (&lt; 24h)\n2. Containment (arrêter accès non-autorisé)\n3. Notification ANPDP dans 5 jours (obligation Loi 25-11)\n4. Notification utilisateurs affectés (&lt; 30j)\n5. Rapport détaillé breach\n\nVos actions recommandées :\n\n- Notifiez autorités algériennes (ANPDP) si sérieux\n\nDoxa\n\n- Communiquez transparently à utilisateurs\n- Prene",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 22
+    }
+  },
+  {
+    "content": "- Communiquez transparently à utilisateurs\n- Prenez measures remediation",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 23
+    }
+  },
+  {
+    "content": "# 4 SECTION 4 : CONFORMITÉ SECTEURS SPÉCIFIQUES\n",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 24
+    }
+  },
+  {
+    "content": "## 4.1 4.1 Santé (Loi 18-11 - Algérie)\nLoi 18-11 = Loi relative à la santé (Algérie, 2 juillet 2018)\n\nDoxa standard = PAS compatible données patients sensibles sans mesures renforcées.\n\nSi besoin données patients (DME, santé) :\n- Enterprise plan uniquement\n- Signature Accord Traitement Données (ATD) OBLIGATOIRE\n- Coûts additionnels (devis custom)\n- Conformité garantie : chiffrement, audit logs, notification incidents\n- Secret médical OBLIGATOIRE (art. 24 Loi 18-11)\n\nNon recommandé :\n- Store iden",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 25
+    }
+  },
+  {
+    "content": "(art. 24 Loi 18-11)\n\nNon recommandé :\n- Store identifiants patients sans ATD signé\n- Patient records sensibles\n- Protected Health Information (PHI) sans sécurité renforcée",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 26
+    }
+  },
+  {
+    "content": "## 4.2 4.2 Finance (PCI-DSS)\nPCI-DSS = Payment Card Industry Data Security Standard\n\nNiveau compliance Doxa : Level 1 (passerelle paiement uniquement)\n\nRésumé :\n- Jamais stockez numéros cartes (credit card) dans Doxa\n- Paiements passent prestataire certifié (PCI Level 1 compliant)\n- Doxa ne voit jamais numéros cartes complets\n\nOK :\n- Stocker \"Customer paid 50,000 DZD on 2025-01-15\"\n\nDoxa\n\n\n\n• Stocker facture (montant, date, items)\n\nPAS OK :\n\n• 4532-XXXX-XXXX-1234 numéro visible\n\n• CVV stocké any",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 27
+    }
+  },
+  {
+    "content": "32-XXXX-XXXX-1234 numéro visible\n\n• CVV stocké anywhere\n\n• Track 1/2 data",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 28
+    }
+  },
+  {
+    "content": "### 4.3 4.3 Gouvernement & Transferts Internationaux\nContrats gouvernement / données sensibles :\n\n• Vérifiez requirements avant utilisation\n\n• Certification nationale possiblement requise\n\n• Data residency Algérie OBLIGATOIRE (Loi 25-11 art. 45 bis)\n\n• Enterprise peut négocier conformité stricte\n\n• Contactez sales@doxa.dz pour feasibility\n\nTransferts Internationaux (Loi 25-11 art. 45 bis 13-14) :\n\n• Doxa data centers = Algérie (par défaut)\n\n• Tout transfert données hors Algérie = approbation ANP",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 29
+    }
+  },
+  {
+    "content": "t transfert données hors Algérie = approbation ANPDP PRÉALABLE\n\n• L’ANPDP vérifie niveau protection adéquat du pays destination\n\n• Exceptions : coopération judiciaire, commissions rogatoires",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 30
+    }
+  },
+  {
+    "content": "## 5 SECTION 5 : SÉCURITÉ ÉQUIPE & BONNES PRATIQUES\n",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 31
+    }
+  },
+  {
+    "content": "### 5.1 5.1 Mots de passe forts\nCritères mot de passe fort :\n\n• Min 12-16 caractères (plus = meilleur)\n\n• Majuscules + minuscules + chiffres + symboles\n\n• Pas mot dictionnaire courant\n\n• Pas informations personnelles (nom, date naissance, etc.)\n\n• Unique (pas réutiliser)\n\nExemples :\n\n| | Doxa\n\nFaible : password, 123456, alice2024\nBon : Kj$9pL@2mQ!xRs8vB\nMeilleur : Tr0pic@lSunset#2024$Sky9zKp",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 32
+    }
+  },
+  {
+    "content": "## 5.2 5.2 Authentication 2FA\n**Fortement recommandé :**\n1. Paramètres profil → “Sécurité”\n2. “Activer authentication 2FA”\n3. Scannez QR code avec Google Authenticator/Authy\n4. Entrez code (6 chiffres) pour confirmer\n5. Sauvegardez codes de backup 10 (stockez sécurisé)\n\n**À chaque login :**\n- Email + password → code 2FA (depuis authenticator app)\n- Biométrique optionnel si app mobile",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 33
+    }
+  },
+  {
+    "content": "## 5.3 5.3 Gestion accès utilisateurs\n**Pour admin/propriétaire :**\n- Audit régulier : qui est dans espace ?\n- Supprimez collègues qui partent\n- Changez permissions si responsabilités changent\n- Recertification semestrielle recommandée (cochez boxes)\n\n**Processus offboarding :**\n1. Révokez accès jour départ\n2. Téléchargez ses données (export)\n3. Supprimez compte\n4. Changez mots de passe partagés (ex : Slack intégration)",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 34
+    }
+  },
+  {
+    "content": "## 5.4 5.4 Monitoring &amp; alertes\n**Activer notifications sécurité :**\n- Paramètres → “Notifications sécurité”\n\nDoxa\n\n- Alerte nouveau login location\n- Alerte IP nouvelle\n- Alerte 2FA désactivé\n\n**Logs d'activité :**\n- Admins peuvent voir audit logs par user (Enterprise)\n- Qui a accédé quand, quelle action\n- Conservation 12 mois minimum",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 35
+    }
+  },
+  {
+    "content": "# 6 SECTION 6 : INCIDENTS SÉCURITÉ\n",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 36
+    }
+  },
+  {
+    "content": "## 6.1 6.1 Signaler breach/vulnérabilité\n**Découvrez faille sécurité?**\nEmail immédiatement : security@doxa.dz\n\n**Ne pas :**\n- Publier sur social media\n- Partager publiquement avant patch\n- Exploiter vulnérabilité\n- Tester sur production sans autorisation\n\n**Faire :**\n- Description claire\n- Steps pour reproduire\n- Impact potentiel\n- Données exemple si possible\n\n**Réponse :**\n- Confirmation dans 24h\n- Patch dans 7 jours (critique) ou 30 jours (normal)\n- Credit sécurité chercheur si découverte val",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 37
+    }
+  },
+  {
+    "content": "mal)\n- Credit sécurité chercheur si découverte valide (bug bounty)\n\nDoxa\n\n6.2 6.2 Response breach détecté\n\nSi Doxa détecte intrusion :\n\n1. Isolate → arrêter accès non-autorisé\n2. Investigate → quelles données, depuis quand?\n3. Notify → ANPDP et vous (5 jours), affectés (30j)\n4. Remediate → patch vulnérabilité, upgrade sécurité\n5. Document → rapport incident complet\n\n7 SECTION 7 : CHECKLIST SÉCURITÉ\n\n7.1 Pour Propriétaire / Admin\n\nPremière configuration :\n\n- Changez password fort (min 16 char)\n- ",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 38
+    }
+  },
+  {
+    "content": "ration :\n\n- Changez password fort (min 16 char)\n- Activez 2FA (authenticator app)\n- Configurez adresse billing correct\n- Vérifiez authorized members\n\nMensuel :\n\n- Revoyez qui a accès (Admin audit)\n- Vérifiez aucune activité suspecte\n- Confirmez integrations toujours utilisées\n- Rotation API keys (90 jours min)\n\nTrimestriel :\n\n- Revoquer accès utilisateurs partis\n- Audit logs review (Enterprise)\n- Test disaster recovery (backup restoration)\n- Mettre à jour données membres\n\nAnnuel :\n\n- Security as",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 39
+    }
+  },
+  {
+    "content": "re à jour données membres\n\nAnnuel :\n\n- Security assessment (self ou tiers)\n\nDoxa\n\n\n\nUpdate ATD si Loi 25-11 changes\n\nCompliance check (Loi 18-11 si applicable, transfers data)\n\nRecertification permissions",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 40
+    }
+  },
+  {
+    "content": "### 7.2 Pour tous les utilisateurs\nUne fois :\n\nMot de passe fort changé\n\n2FA activé\n\nPolitique confidentialité lue\n\nPas partager credentials\n\nRégulier :\n\nLogout après usage public\n\nNe pas laisser onglets ouvertes\n\nVérifier email phishing Doxa\n\nSignaler activité suspecte",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 41
+    }
+  },
+  {
+    "content": "## 8 SECTION 8 : DISASTER RECOVERY\n",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 42
+    }
+  },
+  {
+    "content": "### 8.1 8.1 Backups Doxa\nBackups automatiques :\n\n- Quotidiens (1 backup/jour)\n\n- Conservés 90 jours (rolling window)\n\n- Testés régulièrement restoration\n\n- Géographiquement distribués (fault tolerance, data centers Algérie)\n\nRécupération :\n\n- Perte accidentelle données ≤ 24h ? Contact support\n\n- Data recovery possible jusqu’à 90j back\n\n- Enterprise : restore point custom\n\n8.2 8.2 Vos backups (recommandé)\n\nMême si Doxa backup, export vos données :\n\n1. Mensuel export : Paramètres → “Exporter donné",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 43
+    }
+  },
+  {
+    "content": "\n\n1. Mensuel export : Paramètres → “Exporter données” → CSV/JSON\n2. Archivez localement (encrypted external drive)\n3. Test restauration annuel\n\nDonnées critiques :\n\n- Projets actifs (export tous les mois)\n- Historique tickets support (archive annuel)\n- Documents relatifs tâches (pièces jointes zip)\n\n9 SUPPORT SÉCURITÉ\n\nQuestions sécurité ?\nsecurity@doxa.dz\n\nSignaler vulnérabilité ?\nsecurity.doxa.dz (bug bounty)\n\nDemande données (Loi 25-11 droit accès) ?\nprivacy@doxa.dz\n\nIncident/Breach ?\nemergen",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 44
+    }
+  },
+  {
+    "content": "ccès) ?\nprivacy@doxa.dz\n\nIncident/Breach ?\nemergency@doxa.dz (24h response)\n\nDoxa",
+    "meta": {
+      "source": "Guide_Securite.pdf",
+      "chunk_id": 45
+    }
+  },
+  {
+    "content": "# GUIDE UTILISATEUR\nDoxa",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 0
+    }
+  },
+  {
+    "content": "# GUIDE UTILISATEUR - Doxa\nManuel Complet de Prise en Main\n\nVersion 3.2 | Décembre 2025",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 1
+    }
+  },
+  {
+    "content": "## Table des matières\n1 CHARITRE 1 : DÉMARRAGE RAPIDE 4\n1.1 1.1 Créer votre compte 4\n1.2 1.2 Premières étapes 4\n1.3 1.3 Structure d'une équipe optimale 5\n\n2 CHARITRE 2 : INTERFACE PRINCIPALE 5\n2.1 2.1 Navigation générale 5\n2.2 2.2 Recherche globale (Ctrl+K) 6\n2.3 2.3 Personnalisation interface 6\n\n3 CHARITRE 3 : GESTION DES PROJETS 7\n3.1 3.1 Créer un projet structuré 7\n3.2 3.2 Configurer projet pour équipe 7\n3.3 3.3 Vues et perspectives 8\n3.4 3.4 Préférences de projet par équipe 9\n\n4 CHARITRE 4 :",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 2
+    }
+  },
+  {
+    "content": "Préférences de projet par équipe 9\n\n4 CHARITRE 4 : ORGANISATION DES TÂCHES 9\n4.1 4.1 Anatomie d'une tâche complète 9\n4.2 4.2 Création avancée de tâches 9\n4.3 4.3 Hiérarchie et dépendances 10\n4.4 4.4 Champs personnalisés 10\n\n5 CHARITRE 5 : COLLABORATION EN TEMPS RÉEL 11\n5.1 5.1 Commentaires et @mentions 11\n5.2 5.2 Historique et audit 12\n5.3 5.3 Real-time collaboration 12\n\n6 CHARITRE 6 : WORKFLOWS ET AUTOMATISATIONS 12\n6.1 6.1 Automatisations simple 12\n6.2 6.2 Templates de projets réutilisables 13",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 3
+    }
+  },
+  {
+    "content": "e 12\n6.2 6.2 Templates de projets réutilisables 13\n\n7 CHARITRE 7 : REPORTING ET ANALYTICS 13\n7.1 7.1 Rapports intégrés 13\n\nDoxa\n\n7.2 7.2 Dashboards personnalisés 14\n7.3 7.3 Export et partage rapports 15",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 4
+    }
+  },
+  {
+    "content": "## 8 CHAPITRE 8 : INTÉGRATIONS AVANCÉES 15\n8.1 8.1 Intégrations courantes 15\n8.2 8.2 API REST pour développeurs 15",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 5
+    }
+  },
+  {
+    "content": "## 9 CONSEILS D'EXPERT 16\n9.1 Productivité maximale 16\n9.2 Bonnes pratiques équipe 17\n\nDoxa\n\n\n\n1 CHAPITRE 1 : DÉMARRAGE RAPIDE",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 6
+    }
+  },
+  {
+    "content": "## 1.1 1.1 Créer votre compte\n1. Allez sur www.doxa.dz\n\n2. Cliquez “Commencer gratuitement”\n\n3. Entrez email et créez mot de passe (min 8 caractères, 1 majuscule, 1 chiffre)\n\n4. Vérifiez votre email (lien d’activation)\n\n5. Connectez-vous\n\n6. Créez votre premier espace de travail (nom entreprise, secteur)\n\nConseils sécurité :\n\n- Ne partagez jamais votre mot de passe\n\n- Utilisez authentification 2FA (Paramètres → Sécurité → “Activer 2FA”)\n\n- Changez mot de passe tous les 3 mois",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 7
+    }
+  },
+  {
+    "content": "z mot de passe tous les 3 mois",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 8
+    }
+  },
+  {
+    "content": "## 1.2 1.2 Premières étapes\nÉtape 1 : Configurer l’espace de travail\n\n- Allez Paramètres → Logo & Avatar\n\n- Changez couleur et logo de l’espace\n\n- Invitez premier membre (+ 3 clics)\n\nÉtape 2 : Créer premier projet\n\n- Cliquez “+ Nouveau Projet”\n\n- Nommez “Mon Premier Projet”\n\n- Choisissez modèle “Kanban” (plus simple pour débuter)\n\n- Cliquez “Créer”\n\nÉtape 3 : Ajouter premières tâches\n\n- Colonne “To Do” → “+ Ajouter tâche”\n\n- Écrivez “Accueillir Alice” (assignez-vous)\n\n- Appuyez Entrée\n\n\n\n• Créez",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 9
+    }
+  },
+  {
+    "content": "lice” (assignez-vous)\n\n- Appuyez Entrée\n\n\n\n• Créez 2-3 autres tâches (test)\n\nÉtape 4 : Inviter équipe\n\n• Paramètres → “Membres”\n\n• “+ Inviter membres”\n\n• Entrez emails de votre équipe (ex : alice@company.com)\n\n• Attendez qu’ils acceptent\n\nFélicitations ! Vous êtes prêt.",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 10
+    }
+  },
+  {
+    "content": "### 1.3 1.3 Structure d’une équipe optimale\nRôles typiques :\n\n• 1 Propriétaire : Gère facturation, suppression\n\n• 1-2 Admins : Gèrent paramètres, membres\n\n• Reste Éditeurs : Créent/modifient tâches\n\nExemple pour équipe 10 personnes :\n\n```\nCEO/Fondateur (Propriétaire)\n PM (Admin) - gère projets, backlogs\n Dev Lead (Admin) - gère projet dev\n Devs x 3 (Éditeurs)\n QA (Éditeur)\n Design Lead (Éditeur)\n Support (Lecteur) - accès lecture uniquement\n```",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 11
+    }
+  },
+  {
+    "content": "## 2 CHAPITRE 2 : INTERFACE PRINCIPALE\n",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 12
+    }
+  },
+  {
+    "content": "### 2.1 2.1 Navigation générale\nBarre latérale gauche :\n\n• Logo Doxa\n\n• Menu navigation (Accueil, Favoris, Inbox, ...)\n\n• Liste projets (avec ∗) par favori\n\n• “+ Nouveau Projet” bouton\n\n• Settings, Profil, Logout\n\nEn-tête supérieur :\n\n- Barre recherche globale (Ctrl+K ou Cmd+K)\n- Icône notifications (U + 1F514)\n- Paramètres espace (U + 1F527)\n- Profil menu (avatar)\n\nContenu principal :\n\n- Vue sélectionnée (Tableau, Liste, Timeline, Dashboard, etc.)\n- Barre d'outils (Filtres, Trier, Ajouter colon",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 13
+    }
+  },
+  {
+    "content": ".)\n- Barre d'outils (Filtres, Trier, Ajouter colonne, etc.)\n\n2.2 2.2 Recherche globale (Ctrl+K)\n\nLa recherche globale trouve :\n\n- Tâches : “Bug login page” → liste tous les tâches qui contiennent “bug login”\n- Projets : “Doxa v2” → trouve projet\n- Membres : “Alice” → trouve tous les membres avec ce nom\n- Documentations : “Comment archiver?” → lien aide\n\nRaccourcis clavier dans recherche :\n\n```\nCtrl+K Ouvrir recherche\n↑↓ arrows Naviguer résultats\nEntrée Ouvrir sélection\nEsc Fermer recherche\n/ + c",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 14
+    }
+  },
+  {
+    "content": "Entrée Ouvrir sélection\nEsc Fermer recherche\n/ + command Recherche avancée (filtres)\n```\n\n2.3 2.3 Personnalisation interface\n\nThème clair/sombre :\n\nAvatar → Préférences → “Apparence” → Clair / Sombre / Automatique\n\nLangue :\n\nAvatar → Préférences → “Langue” → sélectionnez (FR, EN, ES, DE, IT, PT, JA, ZH)\n\nFuseau horaire :\n\nAvatar → Préférences → “Fuseau horaire” → auto-détecté ou manuel\n\nDensité affichage :\n\nDoxa\n\nVue Tableau → menu “...” → “Densité” → Compact / Normal / Spacieux",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 15
+    }
+  },
+  {
+    "content": "té” → Compact / Normal / Spacieux",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 16
+    }
+  },
+  {
+    "content": "# 3 CHAPITRE 3 : GESTION DES PROJETS\n",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 17
+    }
+  },
+  {
+    "content": "## 3.1 3.1 Créer un projet structuré\nChoix du modèle :\n\n[tbl-0.md](tbl-0.md)",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 18
+    }
+  },
+  {
+    "content": "## Bonnes pratiques :\n- Un projet = une équipe + un objectif\n- Pas plus de 50 colonnes/statuts par projet (gestion lourde)\n- Archivez projets terminés (ne supprimez pas)",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 19
+    }
+  },
+  {
+    "content": "## 3.2 3.2 Configurer projet pour équipe\n",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 20
+    }
+  },
+  {
+    "content": "### Après création :\n1. Paramètres du projet → “Général”\n- Modifiez description, icône\n- Changez visibilité (“Public” = consultable hors espace, “Privé” = uniquement membres)\n\n2. Paramètres → “Membres du projet”\n- Ajoutez seulement membres pertinents\n- Assignez rôles (voir tableau rôles)\n\n3. Paramètres → “Labels”\n- Créez labels projet (ex : “Frontend”, “Backend”, “Urgent”, “Feature”)\n\n4. Paramètres → “Statuts”\n- Modifiez colonnes (ex : pour Kanban : “To Do”, “In Progress”, “Review”, “Done”)\n\nDox",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 21
+    }
+  },
+  {
+    "content": "n : “To Do”, “In Progress”, “Review”, “Done”)\n\nDoxa\n\n\n\n3.3 3.3 Vues et perspectives\n\nChaque projet peut avoir plusieurs vues :\n\nVue Tableau (Kanban style) :\n\n• Colonnes = statuts\n\n• Cartes = tâches\n\n• Déplacez cartes entre colonnes (drag-drop)\n\n• Idéal pour overview continu\n\nVue Liste :\n\n• Tableau avec colonnes (nom, assigné, date, priorité)\n\n• Trier par n’importe quelle colonne\n\n• Filtrer rapidement\n\n• Mieux pour voir détails\n\nVue Timeline :\n\n• Diagramme Gantt\n\n• Visualisez dépendances, chevauc",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 22
+    }
+  },
+  {
+    "content": "Diagramme Gantt\n\n• Visualisez dépendances, chevauchements\n\n• Idéal pour planification long-terme\n\nVue Calendrier :\n\n• Vue calendrier des tâches\n\n• Colorisées par assigné\n\n• Parfait pour deadlines\n\nVue Dashboard :\n\n• Widgets personnalisés (graphiques, statistiques)\n\n• KPIs en temps réel\n\n• Idéal pour rapports\n\nCréer nouvelle vue :\n\nEn haut du projet → “+ Ajouter vue” → choisissez type → nommez.\n\n| | | > Doxa\n\n\n\n3.4 3.4 Préférences de projet par équipe\n\nPour chaque projet, équipe peut configurer :",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 23
+    }
+  },
+  {
+    "content": "uipe\n\nPour chaque projet, équipe peut configurer :\n\nParamètres → “Notifications”\n\n- Quels événements notifier ?\n- Email ou in-app ?\n\nParamètres → “Intégrations”\n\n- Slack channel pour ce projet\n- Webhooks pour événements\n\nParamètres → “Automatisations”\n\n- Règles automatiques (ex : “Si priorité = Critique → notifier Slack”)",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 24
+    }
+  },
+  {
+    "content": "## 4 CHAPITRE 4 : ORGANISATION DES TÂCHES\n",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 25
+    }
+  },
+  {
+    "content": "### 4.1 4.1 Anatomie d’une tâche complète\n```\nTitre de la tâche [Priorité] [Status]\nAssignés: Alice, Bob\nDates: 15 déc 2025 (début) - 20 déc 2025 (fin)\nLabels: Frontend, Urgent, MVP\nDescription: (Markdown support)\nSous-tâches: 3/5 complétées (60%)\nDépendances: Bloque \"Tâche B\", bloquée par \"Tâche A\"\nCommentaires: 8 messages\nPièces jointes: 2 fichiers\nHistorique: Créée 10 déc, modifiée 15 déc\nChamps custom: (définis par projet)\n```",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 26
+    }
+  },
+  {
+    "content": "### 4.2 4.2 Création avancée de tâches\nOption 1 : Formulaire détaillé\n\nTableau → “+ Nouvelle tâche” (en haut) → remplissez tous les champs\n\nOption 2 : Création rapide\n\nColonne → “+ Ajouter tâche” → écrivez titre + Entrée → ouvrez pour détails\n\nOption 3 : Duplication\n\nTâche existante → menu “…” → “Dupliquer” → modifiez\n\nOption 4 : Import email\n\nChaque projet a une adresse email unique (ex : project-abc123@doxa.dz)\n\nEnvoyez email : sujet = titre tâche, corps = description.\n\nLa tâche est créée auto",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 27
+    }
+  },
+  {
+    "content": "che, corps = description.\n\nLa tâche est créée automatiquement dans \"Inbox\".\n\nOption 5 : API ou Zapier\n\nPour intégrations (voir Chapitre 8).\n\n4.3 4.3 Hiérarchie et dépendances\n\nSous-tâches :\n\nTâche → Ajouter sous-tâche → écrivez titre → Entrée\n\n- Chaque sous-tâche a son propre assigné, dates, priorité\n- Parent suit automatiquement : % complété = % sous-tâches complétées\n- Max 3 niveaux de profondeur (tâche → sous-tâche → sous-sous-tâche)\n\nDépendances :\n\nOuvrez tâche → \"Dépendances\" → \"+ Ajouter\"\n",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 28
+    }
+  },
+  {
+    "content": "ces :\n\nOuvrez tâche → \"Dépendances\" → \"+ Ajouter\"\n\n- \"Bloque\" : Cette tâche doit être finie avant la suivante\n- \"Bloquée par\" : Cette tâche attend une autre\n- Timeline visualise automatiquement dépendances\n\nExemple :\n\nTâche A: Concevoir API (5 jours)\nBloque → Tâche B: Implémenter Frontend (3 jours)\nBloque → Tâche C: Tester intégration (2 jours)\n\n4.4 4.4 Champs personnalisés\n\nPour adapter Doxa à votre processus :\n\nParamètres projet → \"Champs custom\"\n\nCliquez \"+ Ajouter champ\"\n\nChoisissez type :\n\n",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 29
+    }
+  },
+  {
+    "content": "m\"\n\nCliquez \"+ Ajouter champ\"\n\nChoisissez type :\n\n- Texte : Description courte\n- Nombre : Estimation effort, story points\n\nDoxa\n\n- Sélection : Choix unique (ex : Phase : Discovery/Dev/QA)\n- Multi-sélection : Plusieurs choix\n- Checkbox : Oui/Non\n- Date : Deadline custom\n- Dropdown : Liste déroulante\n\nExemples champs custom :\n\nProjet Dev :\n- Sprint (dropdown: S1, S2, S3...)\n- Story Points (nombre: 1-13)\n- Phase (sélection: Discovery/Design/Dev/Review/Deploy)\n\nProjet Marketing :\n- Campagne (dropdow",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 30
+    }
+  },
+  {
+    "content": "ew/Deploy)\n\nProjet Marketing :\n- Campagne (dropdown: Email/Social/Event/PR)\n- Budget alloué (nombre en DZD)\n- ROI estimé (nombre en %)",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 31
+    }
+  },
+  {
+    "content": "# 5 CHAPITRE 5 : COLLABORATION EN TEMPS RÉEL\n",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 32
+    }
+  },
+  {
+    "content": "## 5.1 Commentaires et @mentions\nChaque tâche a section \"Commentaires\".",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 33
+    }
+  },
+  {
+    "content": "### Écrire commentaire :\n1. Cliquez \"Ajouter un commentaire\"\n2. Tapez message (support Markdown)\n3. Tapez \"@\" pour mentionner (ex : \"@Alice vérifies la logique?\")\n4. Cliquez \"Envoyer\" (ou Ctrl+Entrée)",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 34
+    }
+  },
+  {
+    "content": "### Mentions :\n- @nom_membre : notifie la personne\n- @role_label : notifie tous du groupe (ex : @developers)\n- Les mentionnés reçoivent notification immédiate\n\nMarkdown dans commentaires :\n\n**Gras** : **texte**\n\nDoxa\n\n\n\n*Italique* : *texte*\n'Code' : 'var x = 5'\n\nBloc code :\ndef hello():\nprint(\"Hi\")\n\nLien : [Google](https://google.com)\nListe : - Item 1, - Item 2\n```",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 35
+    }
+  },
+  {
+    "content": "### 5.2 5.2 Historique et audit\nChaque tâche trace toutes les modifications.\n\nMenu “…” → “Historique” → voir :\n\n- Qui a modifié quoi, quand\n- Avant/après pour chaque changement\n- Peut révertir vieille version (Admin seulement)\n\nExemple log :\n\n```\n15 déc 14:30 - Alice a changé assigné de \"Bob\" à \"Alice\"\n15 déc 14:25 - Bob a changé statut de \"To Do\" à \"In Progress\"\n14 déc 09:00 - Alice a créé la tâche\n```",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 36
+    }
+  },
+  {
+    "content": "### 5.3 5.3 Real-time collaboration\nDoxa supporte collaboration simultanée :\n\n- Plusieurs personnes voient mises à jour en direct (< 1 sec)\n- Curseurs des autres apparaissent si vous éditez ensemble\n- Pas de conflit (dernière modification gagne)\n\nConseil : Si deux personnes modifient même champ, Doxa détecte et montre alert “Changement depuis dernière actualisation”.",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 37
+    }
+  },
+  {
+    "content": "## 6 CHAPITRE 6 : WORKFLOWS ET AUTOMATISATIONS\n",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 38
+    }
+  },
+  {
+    "content": "### 6.1 6.1 Automatisations simple\nParamètres projet → “Automatisations”\n\n| | | | | | | | | | | | | | | | | | | | |\n\nCréer nouvelle règle :",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 39
+    }
+  },
+  {
+    "content": "## Exemple 1 : Auto-progression\n```txt\nQuand: Sous-tâche marquée complète\nAlors: Si TOUTES sous-tâches complètes → marquer tâche parent Complète\n```",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 40
+    }
+  },
+  {
+    "content": "## Exemple 2 : Escalade critique\n```txt\nQuand: Priorité changée à \"Critique\"\nAlors: Notifier Slack #urgent-channel + assigner au Lead\n```",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 41
+    }
+  },
+  {
+    "content": "## Exemple 3 : Rappel deadline\n```txt\nQuand: Date limite demain\nAlors: Notifier tous les assignés par email\n```",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 42
+    }
+  },
+  {
+    "content": "## Exemple 4 : Nettoyage\n```txt\nQuand: Statut = \"Complète\" + 7 jours écoulés\nAlors: Archiver tâche automatiquement\n```",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 43
+    }
+  },
+  {
+    "content": "## 6.2 6.2 Templates de projets réutilisables\nUne fois projet bien configuré, créez template.\n\nParamètres → “Sauvegarder comme template”\n\nPuis pour projets futurs :\n\n“+ Nouveau projet” → choisissez template → copie structure complète.",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 44
+    }
+  },
+  {
+    "content": "### Templates prédéfinis Doxa :\n- Agile Sprint (avec sprints préconfigurés)\n- Product Roadmap (timeline long-terme)\n- Bug Tracking (priorités, assignation)\n- Content Calendar (dates, statuts)\n- Event Planning (sections par étape)",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 45
+    }
+  },
+  {
+    "content": "## 7 CHAPITRE 7 : REPORTING ET ANALYTICS\n",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 46
+    }
+  },
+  {
+    "content": "### 7.1 7.1 Rapports intégrés\nProjet → onglet “Rapports”",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 47
+    }
+  },
+  {
+    "content": "### Rapport d'activité :\nDoxa\n\n\n\nGraphique tâches complétées par jour/semaine\n- Filtrables par assigné, label\n- Identifiez patterns (quoi est rapide vs lent)\n\nRapport d’équipe :\n- Barre par membre : tâches assignées, complétées, en retard\n- Voir qui est chargé vs libre\n- Identifier goulots\n\nRapport de dates limite :\n- Calendrier : quand elles arrivent?\n- En retard vs à risque vs ok\n- Plan pour crises à venir\n\nRapport burndown (Agile uniquement) :\n- Graphique sprint vs travail restant\n- Prédire s",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 48
+    }
+  },
+  {
+    "content": "\n- Graphique sprint vs travail restant\n- Prédire si sprint sur cible\n- Historique sprints précédents",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 49
+    }
+  },
+  {
+    "content": "### 7.2 7.2 Dashboards personnalisés\nProjet → onglet “Dashboard”\n\nCréez widgets :\n- KPI boxes (nb tâches, taux complète)\n- Graphiques (camembert, barres, histogrammes)\n- Tableaux top N (top 5 tâches prioritaires, personnes)\n- Burndown/velocity\n\nDashboard stratégique pour executives :\n\n```\nWidget 1: % Projet complété (85%)\nWidget 2: Risques (tâches en retard: 3)\nWidget 3: Prochaines étapes (timeline graphique)\nWidget 4: Charge par équipe (équilibré?)\n\n7.3 7.3 Export et partage rapports\n\nRapport →",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 50
+    }
+  },
+  {
+    "content": "é?)\n\n7.3 7.3 Export et partage rapports\n\nRapport → menu “...” → “Exporter”\n\n- CSV : Ouvrable Excel/Sheets\n- PDF : Imprimable, partage formels\n- JSON : Pour outils BI externes\n\n8 CHAPITRE 8 : INTÉGRATIONS AVANCÉES\n\n8.1 8.1 Intégrations courantes\n\nSlack :\n\nParamètres espace → “Intégrations” → Slack\n\n- Notifications tâches dans channel\n- Créer tâches via /doxa slash commands\n- Snippets commentaires dans Slack\n\nGoogle Workspace :\n\n- Créer Google Calendar events de tâches Doxa\n- Ajouter Google Drive ",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 51
+    }
+  },
+  {
+    "content": "ndar events de tâches Doxa\n- Ajouter Google Drive files à pièces jointes\n- Partager documents Google dans commentaires\n\nGitHub/GitLab :\n\n- Lier pull requests à tâches Doxa\n- Auto-progression quand PR mergée\n- Reference commits dans commentaires\n\nZapier :\n\n- Créer tâches depuis formulaires externes\n- Envoyer données Doxa à CRM, emails, sheets\n- Déclencher workflows multi-apps\n\n8.2 8.2 API REST pour développeurs\n\nDocumentation : api.doxa.dz\n\nEndpoints principaux :\n\nDoxa\n\nGET /api/workspaces/{id}/p",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 52
+    }
+  },
+  {
+    "content": "nts principaux :\n\nDoxa\n\nGET /api/workspaces/{id}/projects\nGET /api/projects/{id}/tasks\nPOST /api/projects/{id}/tasks\nPUT /api/tasks/{id}\nDELETE /api/tasks/{id}\nGET /api/tasks/{id}/comments\nPOST /api/tasks/{id}/comments",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 53
+    }
+  },
+  {
+    "content": "## Exemple avec cURL :\n```c\ncurl -H \"Authorization: Bearer YOUR_API_TOKEN\" \\\nhttps://api.doxa.dz/api/projects/proj_123/tasks \\\n-H \"Content-Type: application/json\" \\\n-d '{\"title\": \"New task\", \"priority\": \"high\"}'\n```",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 54
+    }
+  },
+  {
+    "content": "## 9 CONSEILS D'EXPERT\n",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 55
+    }
+  },
+  {
+    "content": "### 9.1 Productivité maximale\n1. **Keyboard shortcuts :**\n- Ctrl+K : Recherche globale\n- Ctrl+N : Nouvelle tâche\n- Ctrl+Shift+M : Aller à mes tâches\n- Tab : Cycle colonnes (Kanban)\n\n2. **Templating :**\n- Créez templates de description (ex : bug report template)\n- Réutilisez pour consistency\n\n3. **Nettoyage régulier :**\n- Archivez tâches complétées &gt; 30j\n- Mettez à jour descriptions obsolètes\n- Supprimez labels/statuts inutilisés\n\n4. **Vue personnelle :**\n- Créez \"Ma queue\" : vue filtrée mes t",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 56
+    }
+  },
+  {
+    "content": "onnelle :**\n- Créez \"Ma queue\" : vue filtrée mes tâches assignées\n- Sauvegardez vue pour accès rapide\n\nDoxa\n\n9.2 Bonnes pratiques équipe\n\n1. Nommage clair :\n- Mauvais : “Fix stuff”, “Update page”\n- Bon : “Fix bug auth redirect on /dashboard”, “Update pricing page copy”\n\n2. Descriptions structurées :\n- Utilisez template : “Contexte | Problème | Solution proposée”\n\n3. Assignation claire :\n- 1 assigné = responsable principal\n- Si plusieurs = collaborateurs\n- Pas assigné = pas clair qui fait\n\n4. Pri",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 57
+    }
+  },
+  {
+    "content": "rateurs\n- Pas assigné = pas clair qui fait\n\n4. Priorité meaningful :\n- Max 20% Critique (sinon perd de sens)\n- Révoyez priorités hebdomadaire\n\n5. Réunions courtes avec Doxa :\n- Stand-up 15min : regardez les tâches\n- Planning : filtrez par priorité, dates\n- Rétrospective : rapport complète/velocity\n\nDoxa",
+    "meta": {
+      "source": "Guide_Utilisateur_Doxa.pdf",
+      "chunk_id": 58
+    }
+  },
+  {
+    "content": "# TARIFICATIONS des OFFRES\nDoxa",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 0
+    }
+  },
+  {
+    "content": "# TARIFICATION &amp; OFFRES - Doxa\nPlans, Pricing et Conditions Commerciales\n\nEffectif : Janvier 2025",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 1
+    }
+  },
+  {
+    "content": "## 1 PLANS DISPONIBLES\n",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 2
+    }
+  },
+  {
+    "content": "### 1.1 PLAN SIMPLE - 4 350 DZD / mois\nPour : Équipes &lt; 5 personnes, tests initiaux, petits projets\n\n**Fonctionnalités incluses :**\n\n- Jusqu'à 5 projets\n- Jusqu'à 5 membres (incluant propriétaire)\n- Types de projets : Kanban + Liste\n- Intégrations basiques : Slack, email-to-task\n- Support email (réponse &lt; 48h)\n- Stockage 5 GB pièces jointes\n- Historique données : 3 mois\n- Exports : CSV uniquement\n\n**Limitations :**\n\n- Pas d'Agile/Sprints\n- Pas de Waterfall\n- Pas de WebSocket real-time\n- Pa",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 3
+    }
+  },
+  {
+    "content": "Pas de Waterfall\n- Pas de WebSocket real-time\n- Pas d'API accès\n- Pas de SSO\n- Automatisations simples uniquement (max 5 règles)\n\n**Cas d'usage typique :**\n\nStartup 4 personnes en phase idéation.\n\nTestent Doxa pour PM, 2 devs, 1 designer.\n\nBesoin simple : Kanban basique + quelques intégrations.\n\nDoxa\n\nEssai gratuit : 14 jours plein accès.",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 4
+    }
+  },
+  {
+    "content": "## 1.2 PLAN PRO - 11 850 DZD / mois\nPour : Équipes 5-30 personnes, usage productif, startups",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 5
+    }
+  },
+  {
+    "content": "### Fonctionnalités incluses :\n- Projets illimités\n- Jusqu'à 30 membres\n- Tous les types de projets : Kanban, Agile/Scrum, Waterfall, Timeline, Dashboard\n- Intégrations avancées : 200+ outils (Slack, Teams, GitHub, Google, Zapier, etc.)\n- API REST accès complet (1000 req/heure)\n- Support prioritaire email (réponse &lt; 24h)\n- Chat support (9-18h CET, lun-ven)\n- Stockage 50 GB pièces jointes\n- Historique données : 12 mois\n- Exports : CSV, PDF, JSON\n- Automatisations avancées : jusqu'à 50 règles\n-",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 6
+    }
+  },
+  {
+    "content": "N\n- Automatisations avancées : jusqu'à 50 règles\n- Rapports et dashboards custom\n- Webhooks pour événements\n- Champs custom illimités\n- WebSocket real-time collaboration\n- Sauvegarde quotidienne garantie",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 7
+    }
+  },
+  {
+    "content": "### Cas d'usage typique :\nAgence web 15 personnes (devs, designers, PMs).\n3 projets principaux (Dev, Marketing, Support).\nBesoin : Agile pour dev, Kanban pour support, intégration GitHub.",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 8
+    }
+  },
+  {
+    "content": "### Recommandé pour :\n- Startups B2B/B2C\n- Agences\n\nDoxa\n\n\n\nÉquipes en croissance\n\n- Besoin d’automatisations",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 9
+    }
+  },
+  {
+    "content": "### 1.3 PLAN ENTERPRISE - Devis sur demande\nPour : Équipes 50-500+, besoins custom, exigences compliance strictes\n\nFonctionnalités incluses :\n\n- Tout du plan Pro +\n\n- Membres illimités\n\n- Espaces de travail illimités (structuration complexe)\n\n- SLA garanti (uptime 99.9%)\n\n- Support dédié : dedicated account manager + Slack channel prioritaire\n\n- Chat support 24/7\n\n- Stockage illimité\n\n- Conformité avancée :\n\n- SSO (Single Sign-On) via Okta, Azure AD\n\n- SAML 2.0\n\n- Conformité Loi 25-11 & Loi 18-0",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 10
+    }
+  },
+  {
+    "content": " AD\n\n- SAML 2.0\n\n- Conformité Loi 25-11 & Loi 18-07 audit\n\n- Loi 18-11 (santé) compliance (option)\n\n- SOC 2 Type II report\n\n- Audit logs avancés (qui a accédé quand, changements détaillés)\n\n- Advanced permissions (permissions granulaires par champ)\n\n- Data residency (données hébergées Algérie)\n\n- Webhook sécurisés avec signature\n\n- Rate limiting custom (API)\n\n- Migration assistance depuis autre outil\n\n- Onboarding training (équipe Doxa forme votre équipe)\n\n| | Doxa\n\n- Feature prioritaire (nouvel",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 11
+    }
+  },
+  {
+    "content": "e équipe)\n\n| | Doxa\n\n- Feature prioritaire (nouvelles features selon priorités)",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 12
+    }
+  },
+  {
+    "content": "## Cas d'usage typique :\nGrosse entreprise SaaS B2B 200+ salariés.\nÉquipes distribués : Algérie, EU, international.\nBesoins : SSO Azure, conformité Loi 25-11 stricte, audit logs avancés.\nSupport dédié pour implémentation.",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 13
+    }
+  },
+  {
+    "content": "## Process Enterprise :\n1. Contact sales@doxa.dz\n2. Discovery call (30 min) avec solutions engineer\n3. Devis personnalisé + proposal\n4. Négociation (paiement annuel typiquement -20%)\n5. Onboarding + migration données",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 14
+    }
+  },
+  {
+    "content": "## 2 TABLEAU COMPARATIF\n[tbl-0.md](tbl-0.md)",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 15
+    }
+  },
+  {
+    "content": "## 3 FACTURATION &amp; PAIEMENT\n",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 16
+    }
+  },
+  {
+    "content": "### 3.1 Cycle de facturation\nPaiement mensuel (défaut) :\n\nDoxa\n\n- Facturé le même jour chaque mois\n- Annulation possible à tout moment\n- Crédit au prorata si change plan\n\n**Paiement annuel (économies) :**\n- 20% de réduction\n- Débit annuel unique\n- Idéal si long engagement",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 17
+    }
+  },
+  {
+    "content": "## 3.2 Méthode de paiement\n**Acceptées :**\n- Carte crédit (Visa, Mastercard)\n- Transfert bancaire\n- PayPal\n- CCP",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 18
+    }
+  },
+  {
+    "content": "## 3.3 Facturation &amp; TVA\n- Génération automatique factures PDF\n- Adresse de facturation configurable\n- TVA auto-calculée selon localisation",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 19
+    }
+  },
+  {
+    "content": "## 3.4 Essai gratuit\n- 14 jours complet accès (plan Pro)\n- Pas de carte crédit requise\n- Auto-conversion plan Simple si pas paiement après 14j",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 20
+    }
+  },
+  {
+    "content": "## 3.5 Remboursement\nPolitique \"30 jours satisfaction garantie\" :\n- Remboursement intégral si pas satisfait\n- Aucune question posée\n\nDoxa\n\n- Contactez support@doxa.dz",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 21
+    }
+  },
+  {
+    "content": "# 4 CAS DE FACTURATION SPÉCIFIQUES\n",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 22
+    }
+  },
+  {
+    "content": "## 4.1 Change plan pendant mois\n**Exemple :**\n\n- Vous êtes sur plan Simple (4 350 DZD/mois)\n- Le 15 du mois, vous montez en Pro (11 850 DZD/mois)\n- Crédit = 4 350 DZD déjà payé pour 15 jours\n- Montant à payer = (11 850 DZD × 30) / 30 - 2 175 DZD crédit = 7 575 DZD\n- Prochaine facturation = 11 850 DZD complet le 15 du mois prochain",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 23
+    }
+  },
+  {
+    "content": "## 4.2 Usage dépassement (Enterprise)\nEnterprise : pas de limitation d'usage. Votre devis inclut usage restreint ?\n\n- Vérifiez contrat\n- Dépassement peut entraîner facturation supplémentaire\n- Alert par account manager avant dépassement",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 24
+    }
+  },
+  {
+    "content": "## 4.3 Changer de plan\nParamètres → “Facturation” → “Plan actuel” → “Changer plan”\n\n- Montée de niveau : effectif immédiat (crédit prorata)\n- Baisse : effectif fin de cycle actuel",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 25
+    }
+  },
+  {
+    "content": "# 5 OFFRES SPÉCIALES &amp; RÉDUCTIONS\n",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 26
+    }
+  },
+  {
+    "content": "## 5.1 Pour startups / organisations\n**Startup Program (si levée de fonds &lt; 18 mois) :**\n\n- 50% de réduction pendant 1 an\n- Puis tarif normal\n- Conditions : envoyer preuve financement\n\nDoxa\n\nOrganisation gouvernementale / Association :\n- 30% discount permanent\n- Contactez nonprofit@doxa.dz\n- Preuve statut requise",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 27
+    }
+  },
+  {
+    "content": "## 5.2 Pour étudiants / enseignants\nAcademic Program :\n- Plan Pro gratuit pendant durée études\n- Valide email .edu ou certification étudiant\n- Enroll : academic.doxa.dz",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 28
+    }
+  },
+  {
+    "content": "## 5.3 Pour partenaires / resellers\nPartner Program :\n- Marge 20% sur plans mensuels vendus\n- Matériel marketing fourni\n- Contactez partners@doxa.dz",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 29
+    }
+  },
+  {
+    "content": "## 5.4 Volume discount (Enterprise)\n- 20-50 utilisateurs : -10%\n- 50-100 utilisateurs : -15%\n- 100+ utilisateurs : custom",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 30
+    }
+  },
+  {
+    "content": "## 6 CONDITIONS GÉNÉRALES DE FACTURATION\n",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 31
+    }
+  },
+  {
+    "content": "### 6.1 Modalités de paiement\n1. Paiement d'avance :\n- Facturation au premier de chaque mois\n- Service actif dès le paiement confirmé\n\n2. Résiliation :\n- Paiement mensuel : résiliable à tout moment (effet fin mois)\n\nDoxa\n\n- Paiement annuel : résiliable (remboursement prorata des jours restants)",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 32
+    }
+  },
+  {
+    "content": "## 3. Durée minimale engagement :\n- Mensuel : aucune (résiliable immédiatement)\n- Annuel : 12 mois (résiliation anticipée = perte réduction)",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 33
+    }
+  },
+  {
+    "content": "## 6.2 Suspension de service\nDoxa peut suspendre service si :\n\n- Paiement en retard &gt; 7 jours\n- Violation TOS (termes d'utilisation)\n- Usage excessif (spamming, abuse)\n\nProcess :\n\n- Avertissement 7 jours avant suspension\n- Opportunité paiement/correction\n- Après 30j suspension = suppression données",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 34
+    }
+  },
+  {
+    "content": "## 6.3 Données après résiliation\n- Espace travail devient lecture-seule pendant 30 jours\n- Export possible durant 30j\n- Après 30j : suppression définitive données (non-récupérable)",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 35
+    }
+  },
+  {
+    "content": "## 7 OFFRES &amp; BUNDLES\n",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 36
+    }
+  },
+  {
+    "content": "## 7.1 Bundle Agence (pour agences web/marketing)\nVous : Agence 10-25 personnes, 5-10 projets clients\n\nOffre : Plan Pro + 2 espaces supplémentaires (séparation clients)\n\nPrix : 28 500 DZD/mois (vs 11 850 DZD × 3 = 35 550 DZD)\n\nÉconomie : 7 050 DZD/mois = 84 600 DZD/an\n\nContactez : bundles@doxa.dz\n\nDoxa\n\n7.2 Bundle Startup (pour startups accélérateur)\n\nVous : Startup seed/Series A, croissance rapide\n\nOffre : Plan Pro première année + upgrade Enterprise gratuit année 2\n\nPrix : Année 1 = 11 850 DZD",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 37
+    }
+  },
+  {
+    "content": "prise gratuit année 2\n\nPrix : Année 1 = 11 850 DZD/mois (défaut), Année 2 selon negotiation\n\nBenefit : Test usage Pro, upgrade sans risque\n\n8 SUPPORT FACTURATION\n\n8.1 Questions facturation ?\n\nEmail : billing@doxa.dz\n\nRéponse : &lt; 24h\n\n8.2 Changer infos facturation\n\nParamètres → “Facturation” → “Adresse facturation” → modifiez\n\n8.3 Recevoir facture précédente\n\nParamètres → “Facturation” → “Factures” → “Télécharger PDF”\n\nToutes les factures conservées 5 ans minimum.\n\n8.4 Devis ?\n\nPour Enterprise",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 38
+    }
+  },
+  {
+    "content": "rvées 5 ans minimum.\n\n8.4 Devis ?\n\nPour Enterprise ou négociation annuelle :\n\nsales@doxa.dz → devis personnalisé\n\n9 GARANTIES &amp; SLA\n\n9.1 Pour plan Pro &amp; Enterprise\n\nUptime SLA :\n\n- Pro : Best effort (99.0% cible, non garanti)\n- Enterprise : 99.9% garanti (30 min compensation par % manquant)\n\nPerformance SLA :\n\n- API response &lt; 200ms (p99)\n\nDoxa\n\n- Frontend load &lt; 2 sec (p99)\n- Escalade à engineering si dégradation",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 39
+    }
+  },
+  {
+    "content": "## 9.2 Crédits SLA (Enterprise uniquement)\nSi service dégradé = crédits appliqués :\n- 99.5% ≤ uptime &lt; 99.9% = 10% crédit\n- 99.0% ≤ uptime &lt; 99.5% = 25% crédit\n- uptime &lt; 99.0% = 50% crédit\n\nCrédits appliqués facture suivante (automatiquement).",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 40
+    }
+  },
+  {
+    "content": "## 10 CONFORMITÉ &amp; CONTRATS\n",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 41
+    }
+  },
+  {
+    "content": "### 10.1 Contrats disponibles\n**Conditions d'Utilisation (ToS) :**\n- Standard pour tous (Simple, Pro)\n- Lisible sur doxa.dz/terms\n\n**Accord Traitement Données (ATD) :**\n- Pour Pro &amp; Enterprise\n- Conformité Loi 25-11 &amp; Loi 18-07\n- Disponible après signup\n\n**Custom NDA / Contrats :**\n- Enterprise seulement\n- Négociable avec legal@doxa.dz\n\nDoxa",
+    "meta": {
+      "source": "Tarification_Offres.pdf",
+      "chunk_id": 42
+    }
+  },
+  {
+    "content": "# TROUBLESHOOTING SUPPORT\n",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 0
+    }
+  },
+  {
+    "content": "# TROUBLESHOOTING &amp; SUPPORT - Doxa\nSolutions aux Problèmes Courants\n\nVersion 2.3 | Décembre 2025",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 1
+    }
+  },
+  {
+    "content": "## 1 AUTHENTIFICATION &amp; ACCÈS\n",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 2
+    }
+  },
+  {
+    "content": "### 1.1 Problème : “Email non reconnu” ou “Mot de passe incorrect”\nSymptôme : Erreur lors login.\n\n**Solutions :**\n\n1. **Vérifiez email**\n- Compte avec email exact? (même casse compte)\n- Exemple : alice@company.com ≠ Alice@Company.com\n- Compte créé avec Google/Microsoft? Utilisez même option\n\n2. **Réinitialisez mot de passe**\n- Page login → “Mot de passe oublié?”\n- Email reçu : cliquez lien\n- Créez nouveau mot de passe (min 8 char, majuscule, chiffre)\n- Réessayez login\n\n3. **Compte pas activé?**\n",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 3
+    }
+  },
+  {
+    "content": "fre)\n- Réessayez login\n\n3. **Compte pas activé?**\n- Devriez recevoir email “Vérifiez votre email”\n- Vérifiez spam/promotions\n- Lien expiré (24h)? Cliquez “Renvoyer email”\n\n4. **Compte avec SSO?**\n- Si company utilise SSO (Azure AD, Okta), allez login SSO (pas email/password)\n- Contact IT company si lien SSO absent\n\nSi rien marche : → support@doxa.dz (indiquez email, tentatives)\n\nDoxa\n\n1.2 Problème : “Vous n'avez pas accès à ce projet/espace”\n\nSymptôme : Page fermée, permission refusée.\n\nCauses p",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 4
+    }
+  },
+  {
+    "content": "ptôme : Page fermée, permission refusée.\n\nCauses probables :\n\n1. Pas membre de l'espace\n- Admin pas vous a invité\n- Action : Demandez à admin : Paramètres → Membres → Inviter\n\n2. Pas membre du projet\n- Admin vous a invité espace, mais pas ce projet\n- Action : Admin → Projet → Paramètres → Ajouter vous\n\n3. Mauvaise rolle\n- Vous “Lecteur” mais besoin “Éditeur” (créer tâches)\n- Action : Admin change votre rôle\n\n4. Compte suspendu\n- Paiement en retard ? Espace passe “lecture seule”\n- Action : Paramè",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 5
+    }
+  },
+  {
+    "content": "d ? Espace passe “lecture seule”\n- Action : Paramètres → Facturation → Payer facturation\n\n5. URL vieille/cassée\n- Lien projet ancien (projet supprimé/archivé)\n- Action : Allez accueil → cherchez projet\n\nRapide test :\n- Allez accueil (doxa.dz/dashboard)\n- Voyez vous AUCUN projet/espace ?\n- Si oui → contact admin\n\n1.3 Problème : “2FA bloqué” ou “Code d'authentification invalide”\n\nSymptôme : Ne peut pas entrer code 2FA.\n\nSolutions :\n\n1. Code incorrect ?\n\nDoxa\n\n\n\nTOTP codes changent chaque 30 second",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 6
+    }
+  },
+  {
+    "content": "ct ?\n\nDoxa\n\n\n\nTOTP codes changent chaque 30 secondes\n- Entrez rapidement (pas plus de 30s après génération)\n- Ré-essayez nouveau code\n2. Horloge synchronisation\n- Votre téléphone horloge décalée = code invalide\n- Solution : Synchronisez l’heure (Paramètres téléphone → Date & Heure)\n- Puis regénérez code\n3. Utilisez code de secours\n- Avez codes de secours (10 codes, reçus activation 2FA) ?\n- Utilisez un code (single-use)\n- Gardez remaining codes safe\n4. 2FA cassé/Authenticator app perdu\n- Si perd",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 7
+    }
+  },
+  {
+    "content": "afe\n4. 2FA cassé/Authenticator app perdu\n- Si perdu téléphone = problème !\n- Contact support@doxa.dz\n- Vérification identité requise (email account, autre proof)\nPrévention :\n- Sauvegardez codes de secours safe (password manager, papier)\n- Testez 2FA après activation (logout/login test)",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 8
+    }
+  },
+  {
+    "content": "## 2 PROJETS & TÂCHES\n",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 9
+    }
+  },
+  {
+    "content": "### 2.1 Problème : “Je n’arrive pas à créer/modifier tâches”\nSymptôme : Boutons grisés, “Accès refusé”, ou tâches pas sauvegardées.\n\nSolutions :\n\n1. Rôle insuffisant\n- Vous “Lecteur” ? Besoin “Éditeur”\n- Contactez admin pour upgrade rôle\n2. Projet archivé\n\n\n\nProjet archivé = lecture seule automatiquement\n- Action : Admin → Paramètres projet → Déarchiver\n\n3. Espace suspendu (paiement retard)\n- Espace dépasse plan limit?\n- Exemples : Starter max 5 projets, 5 membres\n- Action : Upgrade plan ou arch",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 10
+    }
+  },
+  {
+    "content": "projets, 5 membres\n- Action : Upgrade plan ou archivez tâches/projets\n\n4. Navigateur problème\n- Cache vieux, JavaScript désactivé\n- Solutions :\n- Vider cache (Ctrl+Shift+Suppr) → site Doxa seul\n- Reload page (Ctrl+F5)\n- Essayer autre navigateur (Chrome, Firefox, Edge)\n\n5. Offline\n- Pas internet connection?\n- Doxa nécessite connexion (pas offline mode)\n\nDiagnostic :\n1. Essayez créer tâche test simple (1 mot, pas attachments)\n2. Si échoue → navigateur/connexion problem\n3. Si succès mais avant non ",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 11
+    }
+  },
+  {
+    "content": "eur/connexion problem\n3. Si succès mais avant non → data tâche (trop grande, char spécial?)\n\n2.2 Problème : “Mes tâches disparues” ou “Tâches archivées non visibles”\n\nSymptôme : Tâches existaient, plus là.\n\nSolutions :\n\n1. Filtres appliqués\n- Vue tableau → “Filtres” active?\n- Exemple : filtre “Assigné = Alice” → vous ne voyez pas vôtres\n- Action : Cliquez “Réinitialiser filtres”\n\n| | |) Doxa\n\n2. Archivage automatique\n- Quelqu'un a setup automation : \"Complète + 30j → Archiver\"?\n- Tâches archivée",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 12
+    }
+  },
+  {
+    "content": "n : \"Complète + 30j → Archiver\"?\n- Tâches archivées = hidden par défaut\n- Solution : Tableau → Settings → \"Afficher tâches archivées\"\n\n3. Suppression accidentelle\n- Tâche supprimée (pas archivée)\n- Doxa ne garde pas historique suppression\n- Impossible récupérer (design purpose)\n\n4. Mauvaise vue/projet\n- Vous regardez bon projet ? Bon workspace ?\n- Créé dans \"Projet A\" mais cherchez \"Projet B\" ?\n- Utilisez recherche globale (Ctrl+K) : \"Find task X\"\n\n5. Permissions changées\n- Admin a changé permis",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 13
+    }
+  },
+  {
+    "content": "\"\n\n5. Permissions changées\n- Admin a changé permissions → tâches cachées\n- Demandez admin\n\nTest :\n- Créez nouvelle tâche test → elle s'affiche ?\n- Si oui : problème vue/filtre\n- Si non : problème espace/permissions\n\n2.3 Problème : \"Les tâches d'autres pas visibles\"\nSymptôme : Collègue crée tâche, vous ne la voyez pas.\n\nSolutions :\n1. Pas member du projet\n- Collègue crée dans projet privé, vous not added\n- Solution : Admin ajoute vous au projet\n2. Refresh page\n\nDoxa\n\n\n\nParfois UI cache pas sync\n-",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 14
+    }
+  },
+  {
+    "content": " Refresh page\n\nDoxa\n\n\n\nParfois UI cache pas sync\n- F5 ou Ctrl+F5 (hard refresh)\n\n3. Permissions projet privé\n- Projet “Private” (visibility) = only members see\n- Si member mais pas visible : admin vérifiez permissions\n\n4. Tâche not assignée = non visible ?\n- Non, tâches visibles à tous members projet\n- Même si pas assignée à vous\n\nRapide test :\n- Collègue crée tâche “TEST TÂCHE VISIBLE”\n- F5 page → vous la voyez ?\n- Non → admin check permissions",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 15
+    }
+  },
+  {
+    "content": "## 3 COLLABORATION & COMMENTAIRES\n",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 16
+    }
+  },
+  {
+    "content": "### 3.1 Problème : “Messages/commentaires ne sauvegardent pas”\nSymptôme : Écrivez commentaire, cliquez envoyer, disparaît.\n\nSolutions :\n\n1. Connexion perdue\n- Réseau dropped pendant envoi\n- Solution : Vérifiez internet (wifi, data)\n- Rééssayez commentaire\n\n2. Session expirée\n- Onglet ouvert longtemps sans activité (> 30min inactif)\n- Logout automatique\n- Solution : Reconnectez-vous\n- Recopier texte si long\n\n3. Caractères spéciaux problématique\n\n\n\nEmoji, accents extrêmes, Unicode rare?\n- Solution",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 17
+    }
+  },
+  {
+    "content": "\nEmoji, accents extrêmes, Unicode rare?\n- Solution : Simplifiez texte (pas emoji pour test)\n\n4. Limite de caractère\n- Commentaire max 5000 caractères\n- Plus = rejet silencieux\n- Solution : Divisez en 2 commentaires\n\nPrévention :\n- Écrivez commentaires COURTS (< 500 char idéal)\n- Copier avant envoyer (Ctrl+C) pour safety\n- Logout et reconnectez 1x/jour (refresh session)",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 18
+    }
+  },
+  {
+    "content": "### 3.2 Problème : “Les @mentions ne marchent pas”\nSymptôme : @Alice mais elle pas reçu notification.\n\nSolutions :\n\n1. Mauvais nom?\n- Tapez “@Ali” → autocomplete ? Sélectionnez bon nom\n- Pas d’autocomplete → person pas dans espace/projet\n- Assurez alice est membre projet\n\n2. Notifications mutées\n- Alice a désactivé notifications\n- Allez Profil → Préférences → “Notifications” → réactivez\n\n3. Notification spam / email\n- Alice a peut-être reçu, mais email spam\n- Vérifiez spam/promotions\n\n4. Connect",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 19
+    }
+  },
+  {
+    "content": " email spam\n- Vérifiez spam/promotions\n\n4. Connectez avant d’écrire\n- Besoin être connecté pour @mention\n- Connectez-vous d’abord\n\n| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |\n\n\n\nRapide fix :\n\n- Utilisez format : “@alice” (pas “@Alice”)\n- Sélectionnez depuis autocomplete (pas tapez)\n- Demandez Alice vérifier notifications",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 20
+    }
+  },
+  {
+    "content": "vérifier notifications",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 21
+    }
+  },
+  {
+    "content": "## 4 INTÉGRATIONS\n",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 22
+    }
+  },
+  {
+    "content": "### 4.1 Problème : “Slack integration non marche”\nSymptôme : Pas notifications Slack, ou erreur “Authorization failed”.\n\nSolutions :\n\n1. Doxa app pas autorisée dans Slack\n\n- Allez Slack → Paramètres → “Apps”\n- Cherchez “Doxa”\n- Si pas là → Workspace admin doit autoriser\n- Contact workspace admin pour installer\n\n2. Déconnectez et reconnectez\n\n- Doxa → Paramètres → Intégrations → Slack\n- Cliquez “Déconnecter”\n- Puis “Connecter Slack”\n- Réautorisez\n\n3. Workspace Slack incorrect\n\n- Avez plusieurs Sl",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 23
+    }
+  },
+  {
+    "content": "\n3. Workspace Slack incorrect\n\n- Avez plusieurs Slack workspaces ?\n- Vérifiez connecté correct workspace\n- Déconnectez, reconnectez à bon\n\n4. Channel pas accessible\n\n- Vous choisi #private-channel mais Doxa pas member ?\n- Solution : Ajoutez Doxa au channel (@Doxa + invite)\n\n5. Pas permissions envoyer messages\n\n\n\nDoxa token/permissions pas suffisantes\n- Reconnectez (deconnect → connect) et aurorisez plein accès\n\nTest notification :\n\n1. Doxa → Paramètres → Intégrations → Slack\n2. Testez : cliquez ",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 24
+    }
+  },
+  {
+    "content": "mètres → Intégrations → Slack\n2. Testez : cliquez “Test notification”\n3. Message reçu Slack?\n4. Si oui → integration ok, problème autre\n5. Si non → reconnectez\n\n4.2 Problème : “GitHub integration - PR pas lié à tâche”\n\nSymptôme : “Closes #123” en PR description, mais pas lié.\n\nSolutions :\n\n1. Format correct?\n- PR description must have : Closes #task-123 ou Fixes #task-123\n- Pas seulement : #123 ou PR 123\n- Format exact : Closes #task-XYZ (case insensitive)\n2. Task ID correct?\n- Vérifiez task ID ",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 25
+    }
+  },
+  {
+    "content": "sensitive)\n2. Task ID correct?\n- Vérifiez task ID correct\n- Ouvrez tâche → regradez URL : https ://app.doxa.dz/task/task/XXX\n- Copy ID exact\n3. GitHub integration pas connectée\n- Paramètres → GitHub → Connecté?\n- Si non : “Connecter GitHub”\n- Autorisez Doxa access\n4. Repository pas dans authorized repos list\n- Connectez GitHub → sélectionnez repos\n- Doit inclure votre repo\n\n| | | Doxa\n\n\n\nSi pas là : reconnectez + sélectionnez\n\n5. Branch/PR before integration connected ?\n\n- Si PR créée AVANT GitH",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 26
+    }
+  },
+  {
+    "content": " integration connected ?\n\n- Si PR créée AVANT GitHub intégration setup\n- Peut pas retroactively lier\n- New PRs with closes #task-XYZ = linkés ok\n\nTest :\n\n1. Créez NEW PR\n2. Description : “Closes #task-ABC123”\n3. Submit PR\n4. Refresh Doxa task page\n5. Voyez PR lié en section “Linked” ?\n\n5 PERFORMANCE & BUGS\n\n5.1 Problème : “Doxa très lent” ou “Page freeze”\n\nSymptôme : Tableau chargement lent, interaction gelée.\n\nSolutions :\n\n1. Trop de tâches ?\n\n- Tableau avec 1000+ tâches = lent\n- Solution : Fil",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 27
+    }
+  },
+  {
+    "content": " Tableau avec 1000+ tâches = lent\n- Solution : Filtrez/archivez anciennes tâches\n- Laissez max 200-300 visibles\n\n2. Trop de colonnes custom ?\n\n- Si 50+ colonnes = UI lourde\n- Solution : Supprimez colonnes non-utilisées\n\n3. Cache navigateur plein\n\n- Ctrl+Shift+Suppr → Clear browsing data\n- Sélectionnez “Cached images” + “Cookies”\n- Juste Doxa.dz\n\nReload\n\n4. Navigateur/RAM limitation\n- Beaucoup onglets ouverts?\n- Fermez autres, redémarrez navigateur\n- Ou utilisez mode incognito (RAM fresh)\n\n5. Int",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 28
+    }
+  },
+  {
+    "content": "r\n- Ou utilisez mode incognito (RAM fresh)\n\n5. Internet lent\n- Vitesse connexion &lt; 1 Mbps?\n- Testez speedtest.net\n- Utilisez téléphone hotspot (plus rapide?)\n\n6. Pièces jointes massives\n- Tâche avec 50 fichiers 100MB?\n- Solution : Archivez vieux fichiers, ou stockez cloud autre\n- Doxa pas idéal pour huge files\n\nPerformance check :\n1. Ouvrez DevTools (F12)\n2. Onglet “Network” → mesure page load\n3. Doit être &lt; 2 sec\n4. Si &gt; 5 sec → contact support\n\n5.2 Problème : “Erreur 'Something went w",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 29
+    }
+  },
+  {
+    "content": " support\n\n5.2 Problème : “Erreur 'Something went wrong'” ou erreur 500\n\nSymptôme : Message erreur générique, ou page blanche.\n\nSolutions :\n\n1. Reload page\n- F5 (simple refresh)\n- Ctrl+F5 (hard refresh, vider cache)\n- Ctrl+Shift+Suppr (clear cookies + cache)\n\n2. Logout/Login\n\nDoxa\n\n\n\n• Paramètres → Logout\n\n• Reconnectez-vous\n\n3. Essayer autre navigateur\n\n• Chrome → Firefox\n\n• Ou mode incognito (pas extensions)\n\n4. Vérifier status Doxa\n\n• Allez status.doxa.dz\n\n• Est-ce qu’incident reporté?\n\n• Si o",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 30
+    }
+  },
+  {
+    "content": "tus.doxa.dz\n\n• Est-ce qu’incident reporté?\n\n• Si oui → wait for fix\n\n5. Clear browser extensions\n\n• Ad-blockers, password managers peuvent interfér\n\n• Désactivez temporairement\n\n• Retry\n\n6. Contact support\n\n• Si persiste : support@doxa.dz\n\n• Envoyez : screenshot error, time/timezone, navigateur/version\n\n• Include console error (F12 → Console onglet → copy messages)",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 31
+    }
+  },
+  {
+    "content": "## 6 DONNÉES & EXPORTS\n",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 32
+    }
+  },
+  {
+    "content": "### 6.1 Problème : “Impossible exporter données”\nSymptôme : Bouton export grisé ou erreur.\n\nSolutions :\n\n1. Rôle insuffisant\n\n• Besoin “Éditeur” ou mieux pour exporter\n\n• “Lecteur” pas peut exporter (security)\n\n• Contact admin pour upgrade rôle\n\n2. Trop de tâches\n\n\n\nExport > 10,000 tâches = peut timeout\n- Solution : Filtrez d’abord (par date, catégorie)\n- Exportez en chunks\n\n3. Format pas compatible\n\n- Besoin CSV mais avez JSON?\n- Solution : Utilisez autre format, import outil autre\n- Ou demande",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 33
+    }
+  },
+  {
+    "content": "isez autre format, import outil autre\n- Ou demandez format autre\n\n4. Timeout/erreur réseau\n\n- Export prend du temps (> 10s parfois)\n- Internet connection dropped?\n- Solution : Réessayez, ou contact support\n\nAlternative :\n\n- API export : Utilisez API REST pour export custom\n- Documentation : api.doxa.dz/export",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 34
+    }
+  },
+  {
+    "content": "### 6.2 Problème : “Impossible importer données (CSV)”\nSymptôme : Upload CSV, erreur ou données pas importées.\n\nSolutions :\n\n1. Format CSV incorrect\n\n- Headers must match Doxa colnames (title, assignee, due_date, etc.)\n- Encoding : UTF-8 required (pas ANSI, pas Excel default)\n- Solution : Ouvrez CSV en Notepad++ → Encoding UTF-8 → Save\n\n2. Données validation\n\n- Dates format correct? (YYYY-MM-DD, pas DD/MM/YYYY)\n- Emails valides?\n- Assignees existent dans espace?\n- Solution : Validez données avan",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 35
+    }
+  },
+  {
+    "content": "ent dans espace?\n- Solution : Validez données avant import\n\n3. File too large\n- Max upload 50 MB\n- Divisez en 2 fichiers si plus grand\n\n4. Espace full\n- Dépassez limite plan (ex : Starter max 1000 tâches)?\n- Supprimez/archivez vieilles avant import\n\nImport example :\ntitle,description,assignee_email,due_date,priority\n\"Fix login bug\", \"Authentication broken\", alice@company.com,2025-01-20,high\n\"Add dark mode\", \"New feature request\", bob@company.com,2025-02-01,normal\n\n7 ACCOUNT &amp; FACTURATION\n\n7.",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 36
+    }
+  },
+  {
+    "content": "2025-02-01,normal\n\n7 ACCOUNT &amp; FACTURATION\n\n7.1 Problème : “Facturation confuse” ou “Charge incorrecte”\n\nSymptôme : Montant inattendu, ou confusion plan.\n\nSolutions :\n\n1. Vérifiez plan actuel\n- Paramètres → “Facturation” → “Plan actuel”\n- Vu prix? Vous sur Starter (29€), Pro (79€), ou Enterprise?\n\n2. Changement plan mid-month\n- Si montez plan mid-month : crédit prorata\n- Exemple : 15€ utilisé, +50€ upgrade = facture ~35€ prochain mois\n- Normal!\n\n3. Annual vs Monthly confusion\n- Payez annuel ",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 37
+    }
+  },
+  {
+    "content": "l!\n\n3. Annual vs Monthly confusion\n- Payez annuel (débit 1x/an) vs mensuel (1x/mois)?\n- Vérifiez Facturation : quelle période?\n\n4. Pas payement détecté\n- Carte rejetée? Essayez autre méthode (PayPal, SEPA)\n- Expiré? Mettez à jour carte\n\nDoxa\n\n- Contact billing@doxa.dz si question",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 38
+    }
+  },
+  {
+    "content": "## 5. Veux remboursement?\n- 30 jours satisfaction garantie\n- Contact support@doxa.dz\n- Preuve + raison = remboursement",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 39
+    }
+  },
+  {
+    "content": "## 7.2 Problème : “Espace suspendu” ou “Accès lecture-seule”\nSymptôme : Ne pouvez pas créer tâches, message espace “lecture-seule”.",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 40
+    }
+  },
+  {
+    "content": "## Solutions :\n",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 41
+    }
+  },
+  {
+    "content": "### 1. Paiement en retard\n- Facturation non payée (7+ jours) ?\n- Espace passe automatiquement “lecture-seule”\n- Solution : Paramètres → Facturation → Payer\n- Après paiement confirmé → réactivé",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 42
+    }
+  },
+  {
+    "content": "### 2. Dépassez limite plan\n- Starter max 5 membres ? Invité 6e ?\n- Espace pause → upgrade plan\n- Solution : Starter → Pro (79€), ou supprimez membre",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 43
+    }
+  },
+  {
+    "content": "### 3. Violation ToS\n- Abus détecté (spam, malware, abuse) ?\n- Admin Doxa peut suspendre\n- Solution : Vérifiez email violation notice\n- Répondez appeal si légitime (false positive)",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 44
+    }
+  },
+  {
+    "content": "### 4. Limite tâches/stockage\n- Starter max 1000 tâches, 5 GB stockage ?\n- Solution : Archivez tâches, supprimez attachments volumineux\n\nDoxa\n\nDoxa",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 45
+    }
+  },
+  {
+    "content": "# 8 SÉCURITÉ &amp; CONFIDENTIALITÉ\n",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 46
+    }
+  },
+  {
+    "content": "## 8.1 Problème : “Je soupçonne account piraté”\n",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 47
+    }
+  },
+  {
+    "content": "### Actions immédiatement :\n1. Changez mot de passe\n- Cliquez profil → “Paramètres sécurité”\n- “Changer mot de passe”\n- STRONG password (16+ char, mélange)\n\n2. Réactivez 2FA\n- Paramètres → Sécurité → 2FA\n- Si déjà actif : bon\n- Si pas : activez (TOTP app, pas SMS)\n\n3. Signalez immédiatement\n- Email : security@doxa.dz\n- Indiquez : email account, quand vous avez remarqué anomalie\n\n4. Vérifiez activité\n- Paramètres → “Historique compte”\n- Voyez logins/activité suspecte ?\n- Forward to security@doxa.",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 48
+    }
+  },
+  {
+    "content": "ns/activité suspecte ?\n- Forward to security@doxa.dz\n\n5. Changez passwords partout\n- Si même password réutilisé : changez TOUS services\n- Utilisez password manager (LastPass, 1Password)",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 49
+    }
+  },
+  {
+    "content": "# 9 CONTACT &amp; ESCALADE\n",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 50
+    }
+  },
+  {
+    "content": "## 9.1 Niveaux support\n[tbl-0.md](tbl-0.md)\n\n9.2 Contacts\n\n- Problèmes généraux : support@doxa.dz\n- Sécurité : security@doxa.dz\n- Facturation : billing@doxa.dz\n- Urgence/Incident : emergency@doxa.dz\n- Chat : widget bas droit (9-18h CET)\n- Tutoriels vidéo : youtube.com/doxa\n\nPréparez pour contact : email account, screenshot error, pas d'infos sensibles!\n\nDoxa",
+    "meta": {
+      "source": "Troubleshooting_Support.pdf",
+      "chunk_id": 51
+    }
+  }
+]

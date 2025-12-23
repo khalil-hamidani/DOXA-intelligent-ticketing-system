@@ -1,16 +1,23 @@
-from sqlalchemy.orm import Session
-from sqlalchemy import desc
-from app.models.ticket import Ticket, TicketStatus, TicketAttachment
-from app.models.ticket_response import TicketResponse, ResponseSource
-from app.schemas.ticket import TicketCreate, TicketUpdateStatus
-from app.models.user import User, UserRole
-from fastapi import HTTPException, status, UploadFile
-from datetime import datetime
+import logging
+import os
 import random
 import string
-import os
 import uuid as uuid_module
+from datetime import datetime
 from uuid import UUID
+
+from fastapi import HTTPException, status, UploadFile
+from sqlalchemy import desc
+from sqlalchemy.orm import Session
+
+from app.models.ticket import Ticket, TicketStatus, TicketAttachment
+from app.models.ticket_response import TicketResponse, ResponseSource
+from app.models.user import User, UserRole
+from app.schemas.ticket import TicketCreate, TicketUpdateStatus
+from app.integrations.ai_client import ai_client, AI_ENABLED
+from app.core.background_tasks import start_ai_processing
+
+logger = logging.getLogger(__name__)
 
 # Base directory for attachments
 ATTACHMENTS_DIR = os.path.join(
@@ -48,6 +55,50 @@ class TicketService:
         db.add(db_ticket)
         db.commit()
         db.refresh(db_ticket)
+
+        # ─────────────────────────────────────────────────────────────────────
+        # AI INTEGRATION: Submit ticket to AI service for processing
+        # This is NON-BLOCKING - we immediately return the ticket to the user
+        # while AI processes in the background
+        # ─────────────────────────────────────────────────────────────────────
+        if AI_ENABLED:
+            try:
+                logger.info(f"Submitting ticket {db_ticket.id} to AI service")
+
+                # Submit to AI service
+                ai_response = ai_client.submit_ticket(
+                    ticket_id=str(db_ticket.id),
+                    subject=db_ticket.subject,
+                    description=db_ticket.description,
+                    category=db_ticket.category,
+                    language=getattr(ticket_in, "language", "en"),  # Default to English
+                )
+
+                # Start background polling if AI accepted the ticket
+                if ai_response.ai_ticket_id:
+                    logger.info(
+                        f"AI accepted ticket, AI ID: {ai_response.ai_ticket_id}"
+                    )
+                    start_ai_processing(db_ticket.id, ai_response.ai_ticket_id)
+                else:
+                    # AI did not return a ticket ID - escalate immediately
+                    logger.warning(
+                        f"AI did not accept ticket {db_ticket.id}, escalating"
+                    )
+                    db_ticket.status = TicketStatus.ESCALATED
+                    db.commit()
+                    db.refresh(db_ticket)
+
+            except Exception as e:
+                # On ANY error, escalate the ticket and continue
+                # NEVER let AI issues block ticket creation
+                logger.error(f"Failed to submit ticket to AI: {e}")
+                db_ticket.status = TicketStatus.ESCALATED
+                db.commit()
+                db.refresh(db_ticket)
+        else:
+            logger.info(f"AI integration disabled, ticket {db_ticket.id} stays OPEN")
+
         return db_ticket
 
     @staticmethod

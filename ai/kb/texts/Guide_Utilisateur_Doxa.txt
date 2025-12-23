@@ -1,0 +1,716 @@
+# GUIDE UTILISATEUR
+
+Doxa
+
+# GUIDE UTILISATEUR - Doxa
+
+Manuel Complet de Prise en Main
+
+Version 3.2 | Décembre 2025
+
+## Table des matières
+
+1 CHARITRE 1 : DÉMARRAGE RAPIDE 4
+1.1 1.1 Créer votre compte 4
+1.2 1.2 Premières étapes 4
+1.3 1.3 Structure d'une équipe optimale 5
+
+2 CHARITRE 2 : INTERFACE PRINCIPALE 5
+2.1 2.1 Navigation générale 5
+2.2 2.2 Recherche globale (Ctrl+K) 6
+2.3 2.3 Personnalisation interface 6
+
+3 CHARITRE 3 : GESTION DES PROJETS 7
+3.1 3.1 Créer un projet structuré 7
+3.2 3.2 Configurer projet pour équipe 7
+3.3 3.3 Vues et perspectives 8
+3.4 3.4 Préférences de projet par équipe 9
+
+4 CHARITRE 4 : ORGANISATION DES TÂCHES 9
+4.1 4.1 Anatomie d'une tâche complète 9
+4.2 4.2 Création avancée de tâches 9
+4.3 4.3 Hiérarchie et dépendances 10
+4.4 4.4 Champs personnalisés 10
+
+5 CHARITRE 5 : COLLABORATION EN TEMPS RÉEL 11
+5.1 5.1 Commentaires et @mentions 11
+5.2 5.2 Historique et audit 12
+5.3 5.3 Real-time collaboration 12
+
+6 CHARITRE 6 : WORKFLOWS ET AUTOMATISATIONS 12
+6.1 6.1 Automatisations simple 12
+6.2 6.2 Templates de projets réutilisables 13
+
+7 CHARITRE 7 : REPORTING ET ANALYTICS 13
+7.1 7.1 Rapports intégrés 13
+
+Doxa
+
+7.2 7.2 Dashboards personnalisés 14
+7.3 7.3 Export et partage rapports 15
+
+## 8 CHAPITRE 8 : INTÉGRATIONS AVANCÉES 15
+
+8.1 8.1 Intégrations courantes 15
+8.2 8.2 API REST pour développeurs 15
+
+## 9 CONSEILS D'EXPERT 16
+
+9.1 Productivité maximale 16
+9.2 Bonnes pratiques équipe 17
+
+Doxa
+
+
+
+1 CHAPITRE 1 : DÉMARRAGE RAPIDE
+
+## 1.1 1.1 Créer votre compte
+
+1. Allez sur www.doxa.dz
+
+2. Cliquez “Commencer gratuitement”
+
+3. Entrez email et créez mot de passe (min 8 caractères, 1 majuscule, 1 chiffre)
+
+4. Vérifiez votre email (lien d’activation)
+
+5. Connectez-vous
+
+6. Créez votre premier espace de travail (nom entreprise, secteur)
+
+Conseils sécurité :
+
+- Ne partagez jamais votre mot de passe
+
+- Utilisez authentification 2FA (Paramètres → Sécurité → “Activer 2FA”)
+
+- Changez mot de passe tous les 3 mois
+
+## 1.2 1.2 Premières étapes
+
+Étape 1 : Configurer l’espace de travail
+
+- Allez Paramètres → Logo & Avatar
+
+- Changez couleur et logo de l’espace
+
+- Invitez premier membre (+ 3 clics)
+
+Étape 2 : Créer premier projet
+
+- Cliquez “+ Nouveau Projet”
+
+- Nommez “Mon Premier Projet”
+
+- Choisissez modèle “Kanban” (plus simple pour débuter)
+
+- Cliquez “Créer”
+
+Étape 3 : Ajouter premières tâches
+
+- Colonne “To Do” → “+ Ajouter tâche”
+
+- Écrivez “Accueillir Alice” (assignez-vous)
+
+- Appuyez Entrée
+
+
+
+• Créez 2-3 autres tâches (test)
+
+Étape 4 : Inviter équipe
+
+• Paramètres → “Membres”
+
+• “+ Inviter membres”
+
+• Entrez emails de votre équipe (ex : alice@company.com)
+
+• Attendez qu’ils acceptent
+
+Félicitations ! Vous êtes prêt.
+
+### 1.3 1.3 Structure d’une équipe optimale
+
+Rôles typiques :
+
+• 1 Propriétaire : Gère facturation, suppression
+
+• 1-2 Admins : Gèrent paramètres, membres
+
+• Reste Éditeurs : Créent/modifient tâches
+
+Exemple pour équipe 10 personnes :
+
+```
+CEO/Fondateur (Propriétaire)
+ PM (Admin) - gère projets, backlogs
+ Dev Lead (Admin) - gère projet dev
+ Devs x 3 (Éditeurs)
+ QA (Éditeur)
+ Design Lead (Éditeur)
+ Support (Lecteur) - accès lecture uniquement
+```
+
+## 2 CHAPITRE 2 : INTERFACE PRINCIPALE
+
+### 2.1 2.1 Navigation générale
+
+Barre latérale gauche :
+
+• Logo Doxa
+
+• Menu navigation (Accueil, Favoris, Inbox, ...)
+
+• Liste projets (avec ∗) par favori
+
+• “+ Nouveau Projet” bouton
+
+• Settings, Profil, Logout
+
+En-tête supérieur :
+
+- Barre recherche globale (Ctrl+K ou Cmd+K)
+- Icône notifications (U + 1F514)
+- Paramètres espace (U + 1F527)
+- Profil menu (avatar)
+
+Contenu principal :
+
+- Vue sélectionnée (Tableau, Liste, Timeline, Dashboard, etc.)
+- Barre d'outils (Filtres, Trier, Ajouter colonne, etc.)
+
+2.2 2.2 Recherche globale (Ctrl+K)
+
+La recherche globale trouve :
+
+- Tâches : “Bug login page” → liste tous les tâches qui contiennent “bug login”
+- Projets : “Doxa v2” → trouve projet
+- Membres : “Alice” → trouve tous les membres avec ce nom
+- Documentations : “Comment archiver?” → lien aide
+
+Raccourcis clavier dans recherche :
+
+```
+Ctrl+K Ouvrir recherche
+↑↓ arrows Naviguer résultats
+Entrée Ouvrir sélection
+Esc Fermer recherche
+/ + command Recherche avancée (filtres)
+```
+
+2.3 2.3 Personnalisation interface
+
+Thème clair/sombre :
+
+Avatar → Préférences → “Apparence” → Clair / Sombre / Automatique
+
+Langue :
+
+Avatar → Préférences → “Langue” → sélectionnez (FR, EN, ES, DE, IT, PT, JA, ZH)
+
+Fuseau horaire :
+
+Avatar → Préférences → “Fuseau horaire” → auto-détecté ou manuel
+
+Densité affichage :
+
+Doxa
+
+Vue Tableau → menu “...” → “Densité” → Compact / Normal / Spacieux
+
+# 3 CHAPITRE 3 : GESTION DES PROJETS
+
+## 3.1 3.1 Créer un projet structuré
+
+Choix du modèle :
+
+[tbl-0.md](tbl-0.md)
+
+## Bonnes pratiques :
+
+- Un projet = une équipe + un objectif
+- Pas plus de 50 colonnes/statuts par projet (gestion lourde)
+- Archivez projets terminés (ne supprimez pas)
+
+## 3.2 3.2 Configurer projet pour équipe
+
+### Après création :
+
+1. Paramètres du projet → “Général”
+- Modifiez description, icône
+- Changez visibilité (“Public” = consultable hors espace, “Privé” = uniquement membres)
+
+2. Paramètres → “Membres du projet”
+- Ajoutez seulement membres pertinents
+- Assignez rôles (voir tableau rôles)
+
+3. Paramètres → “Labels”
+- Créez labels projet (ex : “Frontend”, “Backend”, “Urgent”, “Feature”)
+
+4. Paramètres → “Statuts”
+- Modifiez colonnes (ex : pour Kanban : “To Do”, “In Progress”, “Review”, “Done”)
+
+Doxa
+
+
+
+3.3 3.3 Vues et perspectives
+
+Chaque projet peut avoir plusieurs vues :
+
+Vue Tableau (Kanban style) :
+
+• Colonnes = statuts
+
+• Cartes = tâches
+
+• Déplacez cartes entre colonnes (drag-drop)
+
+• Idéal pour overview continu
+
+Vue Liste :
+
+• Tableau avec colonnes (nom, assigné, date, priorité)
+
+• Trier par n’importe quelle colonne
+
+• Filtrer rapidement
+
+• Mieux pour voir détails
+
+Vue Timeline :
+
+• Diagramme Gantt
+
+• Visualisez dépendances, chevauchements
+
+• Idéal pour planification long-terme
+
+Vue Calendrier :
+
+• Vue calendrier des tâches
+
+• Colorisées par assigné
+
+• Parfait pour deadlines
+
+Vue Dashboard :
+
+• Widgets personnalisés (graphiques, statistiques)
+
+• KPIs en temps réel
+
+• Idéal pour rapports
+
+Créer nouvelle vue :
+
+En haut du projet → “+ Ajouter vue” → choisissez type → nommez.
+
+| | | > Doxa
+
+
+
+3.4 3.4 Préférences de projet par équipe
+
+Pour chaque projet, équipe peut configurer :
+
+Paramètres → “Notifications”
+
+- Quels événements notifier ?
+- Email ou in-app ?
+
+Paramètres → “Intégrations”
+
+- Slack channel pour ce projet
+- Webhooks pour événements
+
+Paramètres → “Automatisations”
+
+- Règles automatiques (ex : “Si priorité = Critique → notifier Slack”)
+
+## 4 CHAPITRE 4 : ORGANISATION DES TÂCHES
+
+### 4.1 4.1 Anatomie d’une tâche complète
+
+```
+Titre de la tâche [Priorité] [Status]
+Assignés: Alice, Bob
+Dates: 15 déc 2025 (début) - 20 déc 2025 (fin)
+Labels: Frontend, Urgent, MVP
+Description: (Markdown support)
+Sous-tâches: 3/5 complétées (60%)
+Dépendances: Bloque "Tâche B", bloquée par "Tâche A"
+Commentaires: 8 messages
+Pièces jointes: 2 fichiers
+Historique: Créée 10 déc, modifiée 15 déc
+Champs custom: (définis par projet)
+```
+
+### 4.2 4.2 Création avancée de tâches
+
+Option 1 : Formulaire détaillé
+
+Tableau → “+ Nouvelle tâche” (en haut) → remplissez tous les champs
+
+Option 2 : Création rapide
+
+Colonne → “+ Ajouter tâche” → écrivez titre + Entrée → ouvrez pour détails
+
+Option 3 : Duplication
+
+Tâche existante → menu “…” → “Dupliquer” → modifiez
+
+Option 4 : Import email
+
+Chaque projet a une adresse email unique (ex : project-abc123@doxa.dz)
+
+Envoyez email : sujet = titre tâche, corps = description.
+
+La tâche est créée automatiquement dans "Inbox".
+
+Option 5 : API ou Zapier
+
+Pour intégrations (voir Chapitre 8).
+
+4.3 4.3 Hiérarchie et dépendances
+
+Sous-tâches :
+
+Tâche → Ajouter sous-tâche → écrivez titre → Entrée
+
+- Chaque sous-tâche a son propre assigné, dates, priorité
+- Parent suit automatiquement : % complété = % sous-tâches complétées
+- Max 3 niveaux de profondeur (tâche → sous-tâche → sous-sous-tâche)
+
+Dépendances :
+
+Ouvrez tâche → "Dépendances" → "+ Ajouter"
+
+- "Bloque" : Cette tâche doit être finie avant la suivante
+- "Bloquée par" : Cette tâche attend une autre
+- Timeline visualise automatiquement dépendances
+
+Exemple :
+
+Tâche A: Concevoir API (5 jours)
+Bloque → Tâche B: Implémenter Frontend (3 jours)
+Bloque → Tâche C: Tester intégration (2 jours)
+
+4.4 4.4 Champs personnalisés
+
+Pour adapter Doxa à votre processus :
+
+Paramètres projet → "Champs custom"
+
+Cliquez "+ Ajouter champ"
+
+Choisissez type :
+
+- Texte : Description courte
+- Nombre : Estimation effort, story points
+
+Doxa
+
+- Sélection : Choix unique (ex : Phase : Discovery/Dev/QA)
+- Multi-sélection : Plusieurs choix
+- Checkbox : Oui/Non
+- Date : Deadline custom
+- Dropdown : Liste déroulante
+
+Exemples champs custom :
+
+Projet Dev :
+- Sprint (dropdown: S1, S2, S3...)
+- Story Points (nombre: 1-13)
+- Phase (sélection: Discovery/Design/Dev/Review/Deploy)
+
+Projet Marketing :
+- Campagne (dropdown: Email/Social/Event/PR)
+- Budget alloué (nombre en DZD)
+- ROI estimé (nombre en %)
+
+# 5 CHAPITRE 5 : COLLABORATION EN TEMPS RÉEL
+
+## 5.1 Commentaires et @mentions
+
+Chaque tâche a section "Commentaires".
+
+### Écrire commentaire :
+
+1. Cliquez "Ajouter un commentaire"
+2. Tapez message (support Markdown)
+3. Tapez "@" pour mentionner (ex : "@Alice vérifies la logique?")
+4. Cliquez "Envoyer" (ou Ctrl+Entrée)
+
+### Mentions :
+
+- @nom_membre : notifie la personne
+- @role_label : notifie tous du groupe (ex : @developers)
+- Les mentionnés reçoivent notification immédiate
+
+Markdown dans commentaires :
+
+**Gras** : **texte**
+
+Doxa
+
+
+
+*Italique* : *texte*
+'Code' : 'var x = 5'
+
+Bloc code :
+def hello():
+print("Hi")
+
+Lien : [Google](https://google.com)
+Liste : - Item 1, - Item 2
+```
+
+### 5.2 5.2 Historique et audit
+
+Chaque tâche trace toutes les modifications.
+
+Menu “…” → “Historique” → voir :
+
+- Qui a modifié quoi, quand
+- Avant/après pour chaque changement
+- Peut révertir vieille version (Admin seulement)
+
+Exemple log :
+
+```
+15 déc 14:30 - Alice a changé assigné de "Bob" à "Alice"
+15 déc 14:25 - Bob a changé statut de "To Do" à "In Progress"
+14 déc 09:00 - Alice a créé la tâche
+```
+
+### 5.3 5.3 Real-time collaboration
+
+Doxa supporte collaboration simultanée :
+
+- Plusieurs personnes voient mises à jour en direct (< 1 sec)
+- Curseurs des autres apparaissent si vous éditez ensemble
+- Pas de conflit (dernière modification gagne)
+
+Conseil : Si deux personnes modifient même champ, Doxa détecte et montre alert “Changement depuis dernière actualisation”.
+
+## 6 CHAPITRE 6 : WORKFLOWS ET AUTOMATISATIONS
+
+### 6.1 6.1 Automatisations simple
+
+Paramètres projet → “Automatisations”
+
+| | | | | | | | | | | | | | | | | | | | |
+
+Créer nouvelle règle :
+
+## Exemple 1 : Auto-progression
+
+```txt
+Quand: Sous-tâche marquée complète
+Alors: Si TOUTES sous-tâches complètes → marquer tâche parent Complète
+```
+
+## Exemple 2 : Escalade critique
+
+```txt
+Quand: Priorité changée à "Critique"
+Alors: Notifier Slack #urgent-channel + assigner au Lead
+```
+
+## Exemple 3 : Rappel deadline
+
+```txt
+Quand: Date limite demain
+Alors: Notifier tous les assignés par email
+```
+
+## Exemple 4 : Nettoyage
+
+```txt
+Quand: Statut = "Complète" + 7 jours écoulés
+Alors: Archiver tâche automatiquement
+```
+
+## 6.2 6.2 Templates de projets réutilisables
+
+Une fois projet bien configuré, créez template.
+
+Paramètres → “Sauvegarder comme template”
+
+Puis pour projets futurs :
+
+“+ Nouveau projet” → choisissez template → copie structure complète.
+
+### Templates prédéfinis Doxa :
+
+- Agile Sprint (avec sprints préconfigurés)
+- Product Roadmap (timeline long-terme)
+- Bug Tracking (priorités, assignation)
+- Content Calendar (dates, statuts)
+- Event Planning (sections par étape)
+
+## 7 CHAPITRE 7 : REPORTING ET ANALYTICS
+
+### 7.1 7.1 Rapports intégrés
+
+Projet → onglet “Rapports”
+
+### Rapport d'activité :
+
+Doxa
+
+
+
+Graphique tâches complétées par jour/semaine
+- Filtrables par assigné, label
+- Identifiez patterns (quoi est rapide vs lent)
+
+Rapport d’équipe :
+- Barre par membre : tâches assignées, complétées, en retard
+- Voir qui est chargé vs libre
+- Identifier goulots
+
+Rapport de dates limite :
+- Calendrier : quand elles arrivent?
+- En retard vs à risque vs ok
+- Plan pour crises à venir
+
+Rapport burndown (Agile uniquement) :
+- Graphique sprint vs travail restant
+- Prédire si sprint sur cible
+- Historique sprints précédents
+
+### 7.2 7.2 Dashboards personnalisés
+
+Projet → onglet “Dashboard”
+
+Créez widgets :
+- KPI boxes (nb tâches, taux complète)
+- Graphiques (camembert, barres, histogrammes)
+- Tableaux top N (top 5 tâches prioritaires, personnes)
+- Burndown/velocity
+
+Dashboard stratégique pour executives :
+
+```
+Widget 1: % Projet complété (85%)
+Widget 2: Risques (tâches en retard: 3)
+Widget 3: Prochaines étapes (timeline graphique)
+Widget 4: Charge par équipe (équilibré?)
+
+7.3 7.3 Export et partage rapports
+
+Rapport → menu “...” → “Exporter”
+
+- CSV : Ouvrable Excel/Sheets
+- PDF : Imprimable, partage formels
+- JSON : Pour outils BI externes
+
+8 CHAPITRE 8 : INTÉGRATIONS AVANCÉES
+
+8.1 8.1 Intégrations courantes
+
+Slack :
+
+Paramètres espace → “Intégrations” → Slack
+
+- Notifications tâches dans channel
+- Créer tâches via /doxa slash commands
+- Snippets commentaires dans Slack
+
+Google Workspace :
+
+- Créer Google Calendar events de tâches Doxa
+- Ajouter Google Drive files à pièces jointes
+- Partager documents Google dans commentaires
+
+GitHub/GitLab :
+
+- Lier pull requests à tâches Doxa
+- Auto-progression quand PR mergée
+- Reference commits dans commentaires
+
+Zapier :
+
+- Créer tâches depuis formulaires externes
+- Envoyer données Doxa à CRM, emails, sheets
+- Déclencher workflows multi-apps
+
+8.2 8.2 API REST pour développeurs
+
+Documentation : api.doxa.dz
+
+Endpoints principaux :
+
+Doxa
+
+GET /api/workspaces/{id}/projects
+GET /api/projects/{id}/tasks
+POST /api/projects/{id}/tasks
+PUT /api/tasks/{id}
+DELETE /api/tasks/{id}
+GET /api/tasks/{id}/comments
+POST /api/tasks/{id}/comments
+
+## Exemple avec cURL :
+
+```c
+curl -H "Authorization: Bearer YOUR_API_TOKEN" \
+https://api.doxa.dz/api/projects/proj_123/tasks \
+-H "Content-Type: application/json" \
+-d '{"title": "New task", "priority": "high"}'
+```
+
+## 9 CONSEILS D'EXPERT
+
+### 9.1 Productivité maximale
+
+1. **Keyboard shortcuts :**
+- Ctrl+K : Recherche globale
+- Ctrl+N : Nouvelle tâche
+- Ctrl+Shift+M : Aller à mes tâches
+- Tab : Cycle colonnes (Kanban)
+
+2. **Templating :**
+- Créez templates de description (ex : bug report template)
+- Réutilisez pour consistency
+
+3. **Nettoyage régulier :**
+- Archivez tâches complétées &gt; 30j
+- Mettez à jour descriptions obsolètes
+- Supprimez labels/statuts inutilisés
+
+4. **Vue personnelle :**
+- Créez "Ma queue" : vue filtrée mes tâches assignées
+- Sauvegardez vue pour accès rapide
+
+Doxa
+
+9.2 Bonnes pratiques équipe
+
+1. Nommage clair :
+- Mauvais : “Fix stuff”, “Update page”
+- Bon : “Fix bug auth redirect on /dashboard”, “Update pricing page copy”
+
+2. Descriptions structurées :
+- Utilisez template : “Contexte | Problème | Solution proposée”
+
+3. Assignation claire :
+- 1 assigné = responsable principal
+- Si plusieurs = collaborateurs
+- Pas assigné = pas clair qui fait
+
+4. Priorité meaningful :
+- Max 20% Critique (sinon perd de sens)
+- Révoyez priorités hebdomadaire
+
+5. Réunions courtes avec Doxa :
+- Stand-up 15min : regardez les tâches
+- Planning : filtrez par priorité, dates
+- Rétrospective : rapport complète/velocity
+
+Doxa
