@@ -35,7 +35,7 @@ def list_users(
         except ValueError:
             raise HTTPException(
                 status_code=400,
-                detail=f"Invalid role. Must be one of: CLIENT, AGENT, ADMIN",
+                detail=f"Invalid role. Must be one of: CLIENT, AGENT, ADMIN",  # noqa: F541
             )
 
     query = query.order_by(desc(User.created_at))
@@ -59,7 +59,7 @@ def get_user_stats(
     clients = db.query(User).filter(User.role == UserRole.CLIENT).count()
     agents = db.query(User).filter(User.role == UserRole.AGENT).count()
     admins = db.query(User).filter(User.role == UserRole.ADMIN).count()
-    active = db.query(User).filter(User.is_active == True).count()
+    active = db.query(User).filter(User.is_active == True).count()  # noqa: E712
 
     return {
         "total": total,

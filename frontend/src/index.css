@@ -14,6 +14,135 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #f3f4f6;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Dark mode body */
+.dark body,
+html.dark body {
+    background-color: #111827;
+    color: #f3f4f6;
+}
+
+/* Dark mode overrides for common elements */
+.dark .bg-white {
+    background-color: #1f2937 !important;
+}
+
+.dark .bg-gray-100 {
+    background-color: #111827 !important;
+}
+
+.dark .bg-gray-50 {
+    background-color: #1f2937 !important;
+}
+
+.dark .text-gray-900 {
+    color: #f9fafb !important;
+}
+
+.dark .text-gray-800 {
+    color: #f3f4f6 !important;
+}
+
+.dark .text-gray-700 {
+    color: #e5e7eb !important;
+}
+
+.dark .text-gray-600 {
+    color: #d1d5db !important;
+}
+
+.dark .text-gray-500 {
+    color: #9ca3af !important;
+}
+
+.dark .border-gray-200 {
+    border-color: #374151 !important;
+}
+
+.dark .border-gray-300 {
+    border-color: #4b5563 !important;
+}
+
+.dark .border-gray-100 {
+    border-color: #374151 !important;
+}
+
+.dark input,
+.dark select,
+.dark textarea {
+    background-color: #374151 !important;
+    border-color: #4b5563 !important;
+    color: #f3f4f6 !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+    color: #9ca3af !important;
+}
+
+.dark .shadow-sm {
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.3) !important;
+}
+
+.dark table thead {
+    background-color: #1f2937 !important;
+}
+
+.dark table tbody tr:hover {
+    background-color: #374151 !important;
+}
+
+.dark .divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
+    border-color: #374151 !important;
+}
+
+/* Dark mode navigation */
+.dark nav {
+    background-color: #1f2937 !important;
+}
+
+/* Dark mode cards with shadows */
+.dark .rounded-xl,
+.dark .rounded-lg {
+    border-color: #374151;
+}
+
+/* Dark mode indigo backgrounds */
+.dark .bg-indigo-100 {
+    background-color: #312e81 !important;
+}
+
+.dark .text-indigo-600,
+.dark .text-indigo-700,
+.dark .text-indigo-800 {
+    color: #a5b4fc !important;
+}
+
+.dark .bg-indigo-600 {
+    background-color: #4f46e5 !important;
+}
+
+/* Dark mode for status badges */
+.dark .bg-green-100 {
+    background-color: #064e3b !important;
+}
+
+.dark .bg-yellow-100 {
+    background-color: #713f12 !important;
+}
+
+.dark .bg-red-100 {
+    background-color: #7f1d1d !important;
+}
+
+.dark .bg-blue-100 {
+    background-color: #1e3a5f !important;
+}
+
+.dark .bg-purple-100 {
+    background-color: #4c1d95 !important;
 }
 
 /* Custom focus styles */
