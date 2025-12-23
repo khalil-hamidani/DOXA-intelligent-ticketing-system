@@ -1,33 +1,21 @@
 # LLM & AI
 openai==1.12.0
 anthropic==0.18.1
-mistralai>=0.0.14
+mistralai==0.1.6
 
 # Vector DB & Embeddings
+chromadb==0.4.22
 sentence-transformers==2.5.1
-qdrant-client>=2.7.0
-haystack-ai>=1.0.0
 
 # Framework
-agno==2.3.19
 fastapi==0.109.2
-uvicorn[standard]==0.27.1
+uvicorn==0.27.1
 pydantic==2.6.1
 pydantic-settings==2.1.0
-python-socketio==5.10.0
-python-engineio==4.8.0
-
-# Document Processing & RAG
-langchain>=0.1.0
-langchain-community>=0.0.10
-langchain-text-splitters>=0.0.1
-PyPDF2>=3.17.0
-beautifulsoup4>=4.12.0
-html2text>=2024.2.26
 
 # Utilities
 python-dotenv==1.0.1
-httpx>=0.23.0,<0.26.0
+httpx==0.25.2
 loguru==0.7.2
 
 # Data processing

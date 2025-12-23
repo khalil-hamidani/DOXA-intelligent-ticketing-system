@@ -51,16 +51,41 @@ def validate_ticket(ticket: Ticket) -> Dict:
     
     Returns: {"valid": bool, "reasons": List[str], "confidence": float}.
     """
-    # Skip LLM for now - use fallback heuristic which is more reliable
-    # agent = _create_validator_agent()
+    agent = _create_validator_agent()
     
-    # Fallback heuristic validation (RELIABLE)
+    prompt = f"""Validate this support ticket:
+Subject: {ticket.subject}
+Description: {ticket.description}
+Client: {ticket.client_name}
+
+Respond with JSON containing valid (bool), reasons (list of strings), and confidence (0-1)."""
+    
+    # Run agent and parse response
+    try:
+        response = agent.run(prompt)
+        response_text = str(response.content) if hasattr(response, 'content') else str(response)
+        
+        # Extract JSON from response
+        json_start = response_text.find('{')
+        json_end = response_text.rfind('}') + 1
+        if json_start != -1 and json_end > json_start:
+            json_str = response_text[json_start:json_end]
+            result = json.loads(json_str)
+            return {
+                "valid": result.get("valid", False),
+                "reasons": result.get("reasons", []),
+                "confidence": result.get("confidence", 0.5)
+            }
+    except Exception as e:
+        # Fallback to basic validation on error
+        print(f"Validator LLM error: {e}")
+    
+    # Fallback heuristic validation
     reasons: List[str] = []
     if not ticket.subject or not ticket.subject.strip():
         reasons.append("Sujet manquant")
-    if not ticket.description or len(ticket.description.strip()) < 10:  # Lowered from 20 to 10
-        reasons.append("Description trop courte (>=10 caractères requis)")
+    if not ticket.description or len(ticket.description.strip()) < 20:
+        reasons.append("Description trop courte (>=20 caractères requis)")
     
     valid = len(reasons) == 0
-    confidence = 0.9 if valid else 0.4
-    return {"valid": valid, "reasons": reasons, "confidence": confidence}
+    return {"valid": valid, "reasons": reasons, "confidence": 0.7 if valid else 0.4}

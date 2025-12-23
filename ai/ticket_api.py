@@ -13,6 +13,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI, HTTPException, BackgroundTasks
 from pydantic import BaseModel, EmailStr, Field, ConfigDict
 from enum import Enum
+import uuid
 
 from ticket_orchestrator import (
     process_ticket_end_to_end,
@@ -222,11 +223,10 @@ def get_ticket(ticket_id: str) -> Optional[Ticket]:
 
 async def process_ticket_background(
     request: SubmitTicketRequest,
+    trace_id: str = None,
 ) -> None:
     """Process ticket asynchronously in background."""
-    
-    logger.info(f"Processing ticket in background for {request.customer_email}")
-    
+    logger.info(f"[trace_id={trace_id}] Processing ticket in background for {request.customer_email}")
     try:
         ticket = await process_ticket_end_to_end(
             source=request.source.value,
@@ -237,14 +237,16 @@ async def process_ticket_background(
             priority=request.priority.value,
             email_agent=email_agent,
         )
-        
-        # Save result
+        # attach trace_id for downstream tracing
+        try:
+            ticket.trace_id = trace_id
+        except Exception:
+            pass
+
         save_ticket(ticket)
-        
-        logger.info(f"Background processing complete for ticket {ticket.id}")
-    
+        logger.info(f"[trace_id={trace_id}] Background processing complete for ticket {ticket.id}")
     except Exception as e:
-        logger.error(f"Error processing ticket in background: {e}")
+        logger.error(f"[trace_id={trace_id}] Error processing ticket in background: {e}")
 
 
 # ============================================================================
@@ -297,8 +299,11 @@ async def submit_ticket(
     logger.info(f"Subject: {request.subject}")
     
     try:
+        # Generate a unique trace ID for this request
+        trace_id = str(uuid.uuid4())
+        
         # Process ticket in background
-        background_tasks.add_task(process_ticket_background, request)
+        background_tasks.add_task(process_ticket_background, request, trace_id)
         
         # Determine estimated response time based on priority
         priority_to_time = {

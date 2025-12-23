@@ -1,0 +1,520 @@
+Doxa
+
+# F.A.Q Doxa
+
+# FAQ - Doxa
+
+Plateforme de Gestion de Projets Collaboratifs
+
+Dernière mise à jour : Décembre 2025
+
+## 1 SECTION 1 : QUESTIONS GÉNÉRALES
+
+### 1.1 Q1. Qu'est-ce que Doxa ?
+
+Doxa est une plateforme SaaS de gestion de projets collaboratifs qui permet aux équipes de planifier, suivre et collaborer sur des projets en temps réel. Elle combine une grande simplicité d'utilisation avec des fonctionnalités puissantes d'automatisation, de suivi des tâches et de reporting.
+
+### 1.2 Q2. Quels types d'équipes peuvent utiliser Doxa ?
+
+Doxa est conçue pour des équipes de toute taille (de 1 à 500+ personnes) et de tous secteurs d'activité : agences marketing, startups tech, équipes produit, équipes RH, équipes de support client, équipes créatives, services internes IT, consultants, etc.
+
+### 1.3 Q3. Doxa est-elle accessible depuis mobile ?
+
+Oui, Doxa est accessible via une application web responsive (fonctionne sur tous les navigateurs modernes) et dispose d'applications natives iOS et Android. Les applications mobiles offrent l'essentiel des fonctionnalités de la version web, optimisées pour les petits écrans.
+
+### 1.4 Q4. Doxa supporte-t-elle les intégrations tierces ?
+
+Oui, Doxa s'intègre avec plus de 200 outils populaires : Slack, Microsoft Teams, Google Workspace, Zapier, GitHub, Figma, Stripe, Salesforce, et bien d'autres. Une API REST est également disponible pour les développeurs afin de créer des intégrations personnalisées.
+
+### 1.5 Q5. Est-ce que je peux tester Doxa gratuitement ?
+
+Oui, nous offrons un essai gratuit de 14 jours sans carte de crédit requise. L'essai gratuit inclut toutes les fonctionnalités du plan Pro. À l'issue des 14 jours, l'espace de travail devient inactif jusqu'à la souscription d'un plan payant.
+
+Doxa
+
+# 2 SECTION 2 : GESTION DES PROJETS
+
+## 2.1 Q6. Comment créer un nouveau projet ?
+
+1. Connectez-vous à votre compte Doxa.
+2. Depuis l'accueil, cliquez sur « + Nouveau projet ».
+3. Entrez le nom du projet et une description (optionnelle).
+4. Sélectionnez un modèle (Kanban, Agile, Waterfall) ou commencez avec un projet vide.
+5. Cliquez sur « Créer ».
+6. Invitez les membres de l'équipe par email.
+
+## 2.2 Q7. Quelle est la différence entre un projet Kanban, Agile et Waterfall ?
+
+- Kanban : Flux continu, sans sprints. Idéal pour les workflows continus (support client, production, maintenance).
+- Agile/Scrum : Organisation en sprints (1 à 4 semaines) avec planning, daily standups, rétrospectives. Idéal pour le développement logiciel et les projets itératifs.
+- Waterfall : Phases séquentielles (une phase après l'autre). Idéal pour les projets avec cahier des charges fixe (construction, projets réglementés).
+
+## 2.3 Q8. Combien de projets puis-je créer avec mon plan ?
+
+- Plan Starter : jusqu'à 5 projets.
+- Plan Pro : projets illimités.
+- Plan Enterprise : projets illimités + espaces de travail illimités.
+
+## 2.4 Q9. Comment archiver ou supprimer un projet ?
+
+Les projets peuvent être archivés (masqués mais conservés) ou supprimés (suppression permanente).
+
+- Pour archiver : Paramètres du projet → « Archiver ce projet ».
+
+Doxa
+
+
+
+Pour supprimer : Paramètres du projet → « Supprimer définitivement » (uniquement pour le propriétaire du projet).
+
+- Les projets supprimés ne peuvent pas être récupérés.
+
+2.5 Q10. Puis-je dupliquer un projet ?
+
+Oui. Dans les paramètres du projet, cliquez sur « Dupliquer le projet ». Vous pouvez choisir de dupliquer aussi les tâches, les commentaires et les pièces jointes ou de démarrer avec uniquement la structure (colonnes, statuts, etc.).
+
+## 3 SECTION 3 : GESTION DES TÂCHES
+
+3.1 Q11. Qu’est-ce qu’une tâche dans Doxa ?
+
+Une tâche est l’unité de travail élémentaire dans Doxa. Elle peut avoir une description, des responsables (assignés), une date limite, une priorité, des labels, des sous-tâches, des fichiers attachés, des commentaires, des checklists, ainsi que des champs personnalisés selon vos besoins.
+
+3.2 Q12. Comment créer une tâche ?
+
+Il existe plusieurs manières de créer une tâche :
+
+1. Via le tableau : cliquer sur « + Ajouter tâche » dans une colonne (vue Kanban).
+
+2. Via le formulaire : bouton « + Nouvelle tâche » en haut de la vue.
+
+3. Via l’email : envoyer un email à l’adresse unique du projet (disponible dans les paramètres du projet).
+
+4. Via Slack/Teams : commande /doxa create task "Nom de la tâche" si l’intégration est activée.
+
+3.3 Q13. Quel est le système de priorité dans Doxa ?
+
+Doxa utilise 4 niveaux de priorité :
+
+- Critique (rouge) : à traiter immédiatement, bloque d’autres tâches.
+
+- Haute (orange) : importante, à faire dans la semaine.
+
+- Normale (bleu) : standard, peut être planifiée selon la charge.
+
+- Basse (gris) : nice-to-have, peut être repoussée si nécessaire.
+
+| ||) Doxa
+
+
+
+3.4 Q14. Comment assigner une tâche à quelqu’un ?
+
+1. Ouvrez la tâche.
+
+2. Dans le panneau de droite, cliquez sur « Assignés ».
+
+3. Sélectionnez une ou plusieurs personnes (jusqu’à 5 assignés par tâche).
+
+4. La sauvegarde est automatique et la ou les personnes reçoivent une notification.
+
+### 3.5 Q15. Puis-je créer des sous-tâches ?
+
+Oui. Dans une tâche, dans la section « Détails », cliquez sur « + Ajouter sous-tâche ». Chaque sous-tâche peut avoir ses propres assignés, dates limites et statuts. Le pourcentage de progression de la tâche parente est calculé automatiquement en fonction du nombre de sous-tâches complétées.
+
+### 3.6 Q16. Comment utiliser les labels/tags ?
+
+Les labels aident à catégoriser les tâches. Chaque projet a ses propres labels.
+
+• Pour créer : Paramètres du projet → « Labels » → « + Créer label » → nommez, choisissez couleur.
+
+• Pour ajouter à une tâche : Ouvrez la tâche → « Labels » → sélectionnez.
+
+• Pour filtrer : Tableau → « Filtres » → sélectionnez labels.
+
+### 3.7 Q17. Quelles sont les dates importantes dans une tâche ?
+
+• Date de début : Quand la tâche devrait commencer.
+
+• Date limite : Deadline de la tâche.
+
+• Date d’achèvement : Auto-remplie quand statut = « Terminé ».
+
+• Les tâches en retard (passé la deadline) sont marquées en rouge.
+
+### 3.8 Q18. Comment commenter sur une tâche ?
+
+Ouvrez la tâche → section « Commentaires » → écrivez → appuyez Entrée.
+
+• Vous pouvez @mentionner des collègues (ex : « @Alice, pouvez-tu vérifier ? »).
+
+• Support Markdown (gras, italique, listes, code).
+
+| | |) Doxa
+
+
+
+Les mentions reçoivent des notifications.
+
+3.9 Q19. Puis-je ajouter des pièces jointes à une tâche ?
+
+Oui ! Ouvrez la tâche → section « Pièces jointes » → glissez-déposez ou cliquez « Ajouter fichier ». Supports : documents, images, vidéos jusqu’à 2 GB par fichier, 10 GB par tâche.
+
+3.10 Q20. Comment dupliquer une tâche ?
+
+Ouvrez la tâche → menu « ... » en haut à droite → « Dupliquer ». Vous pouvez choisir les champs à dupliquer (assignés, dates, labels, sous-tâches, etc.).
+
+## 4 SECTION 4 : COLLABORATION & COMMUNICATIONS
+
+4.1 Q21. Combien de membres peuvent rejoindre mon espace de travail ?
+
+• Plan Starter : jusqu’à 5 membres.
+
+• Plan Pro : jusqu’à 30 membres.
+
+• Plan Enterprise : nombre de membres illimité.
+
+4.2 Q22. Comment inviter des membres dans mon espace ?
+
+1. Rendez-vous dans « Paramètres de l’espace » → onglet « Membres ».
+
+2. Cliquez sur « + Inviter des membres ».
+
+3. Entrez une ou plusieurs adresses email.
+
+4. Sélectionnez le rôle (Propriétaire, Admin, Éditeur, Lecteur, Invité).
+
+5. Cliquez sur « Envoyer les invitations ».
+
+Les invités reçoivent un email avec un lien pour rejoindre l’espace de travail.
+
+4.3 Q23. Quels sont les rôles disponibles ?
+
+• Propriétaire : accès complet, peut supprimer l’espace de travail, gérer la facturation et les paramètres globaux.
+
+• Admin : peut gérer les membres, les projets et la plupart des paramètres, mais pas la facturation.
+
+| | |) Doxa
+
+
+
+• Éditeur : peut créer et modifier des projets, tâches et commentaires dans les projets auxquels il a accès.
+
+• Lecteur : accès en lecture seule aux projets qui lui sont partagés.
+
+• Invité : accès limité à un ou plusieurs projets spécifiques, généralement en lecture seule.
+
+### 4.4 Q24. Comment faire des mentions (@)?
+
+Tapez « @ » suivi du prénom dans un commentaire ou description. Les mentions génèrent des notifications à la personne mentionnée. Vous pouvez même « @ » des adresses email hors de votre espace (ils recevront une notification si autorisé).
+
+### 4.5 Q25. Doxa envoie-t-elle des notifications?
+
+Oui, sur :
+
+• Assignation à une tâche
+
+• Mentions
+
+• Commentaires sur vos tâches
+
+• Rappels de deadline
+
+• Mises à jour de tâches (status, assigné, priorité)
+
+• Notifications Slack/email selon vos préférences
+
+### 4.6 Q26. Comment configurer les notifications?
+
+Profil → « Préférences de notification » → Choisissez pour chaque type :
+
+• Email uniquement
+
+• In-app uniquement
+
+• Les deux
+
+• Aucune (mute)
+
+| | | Doxa
+
+# 5 SECTION 5 : RAPPORTS &amp; ANALYTICS
+
+## 5.1 Q27. Quels rapports sont disponibles dans Doxa ?
+
+- Rapport d'activité : récapitulatif des tâches créées, en cours, complétées ou bloquées par jour/semaine/mois.
+- Rapport d'équipe : charge de travail par personne, nombre de tâches complétées, goulots d'étranglement.
+- Rapport de capacité : comparaison entre capacité prévue et travail réellement effectué (notamment pour les équipes Agile/sprints).
+- Rapport d'échéance : tâches à risque, en retard, à venir, par projet ou par personne.
+- Rapport personnalisé : création de rapports sur mesure via filtres avancés et export des données.
+
+## 5.2 Q28. Comment exporter les données ?
+
+Depuis un tableau ou une vue de liste, ouvrez le menu « ... » puis cliquez sur « Exporter ». Choisissez ensuite le format souhaité :
+
+- CSV : ouvrable dans Excel, Google Sheets, etc.
+- PDF : format prêt à être imprimé ou partagé.
+- JSON : pour les intégrations techniques ou la réutilisation dans d'autres systèmes.
+
+L'export inclut les tâches, les assignés, les dates, les labels et, selon les vues, certains commentaires et champs personnalisés.
+
+## 5.3 Q29. Puis-je créer des dashboards personnalisés ?
+
+Oui. Dans la vue « Dashboard » de la navigation, cliquez sur « + Ajouter widget » puis choisissez parmi :
+
+- Graphiques d'activité (tâches créées, complétées, en retard).
+- Tableau des tâches à risque.
+- Timeline / diagramme de Gantt simplifié.
+- Burndown chart (pour les projets Agile).
+
+Doxa
+
+
+
+- Statistiques personnalisées basées sur des filtres (par projet, par personne, par label, etc.).
+
+## 5.4 Q30. Est-ce que je peux voir qui a modifié quoi et quand ?
+
+Oui. Chaque tâche dispose d’un « Historique d’activité ». Ouvrez la tâche, puis dans le menu « ... », cliquez sur « Historique ». Vous y verrez tous les changements (qui a changé quoi, et à quel moment).
+
+## 6 SECTION 6 : SÉCURITÉ & DONNÉES
+
+## 6.1 Q31. Mes données sont-elles sécurisées chez Doxa ?
+
+Oui. Doxa applique des standards de sécurité élevés conformes aux exigences algériennes :
+
+- Chiffrement SSL/TLS pour toutes les données en transit (norme ISO/IEC).
+- Chiffrement AES-256 pour les données au repos (standard international).
+- Centres de données situés en Algérie, certifiés ISO 27001.
+- Sauvegardes régulières et plans de reprise après sinistre (RTO/RPO définis).
+- Tests de sécurité, audits réguliers, et conformité avec Loi 25-11 & Loi 18-07.
+- Carnet d’audit automatisé : enregistrement de tous accès, modifications, suppressions de données.
+- Mesures de sécurité documentées dans registre des activités de traitement (art. 41 bis 2-3 Loi 18-07).
+
+## 6.2 Q32. Qui peut accéder à mes données ?
+
+Seuls les membres de votre espace de travail avec les permissions appropriées.
+
+Principes clés (Loi 25-11 & 18-07) :
+
+- Doxa ne partage jamais vos données avec des tiers, sauf accord juridique écrit (ATD signé).
+- L’équipe Doxa n’a pas accès à vos données (architecture de sécurité par isolement).
+
+| | | Doxa
+
+
+
+- Accès technique uniquement si vous donnez consentement exprès pour debugging/support.
+- Tout accès est enregistré en carnet d’audit (traçabilité complète).
+- Vous conservez contrôle total : vous êtes Responsable de Traitement, Doxa est Sous-traitant (art. 9 Loi 25-11).
+
+Conformité ANPDP :
+
+- Doxa coopère pleinement avec l’ANPDP en cas audit/enquête.
+- Aucun transfert de données hors Algérie sans approbation ANPDP préalable (art. 45 bis 13).
+
+### 6.3 Q33. Pouvez-vous supprimer mes données?
+
+Oui. Vous exercez vos droits selon Loi 25-11 & Loi 18-07 :
+
+Droit à la suppression (« droit à l’oubli ») :
+
+- Paramètres de l’espace → « Supprimer l’espace de travail » → confirmez par email.
+- Doxa supprime toutes vos données dans 30 jours (délai légal).
+- Les données supprimées ne peuvent pas être récupérées.
+- Sauvegardes archivées : conservées 90 jours max, puis destruction sécurisée.
+
+Autres droits exercables :
+
+- Droit d’accès (art. 32 Loi 18-07) : demandez copie complète vos données. Doxa fournit export JSON/CSV dans 14 jours.
+- Droit de rectification : corrigez données inexactes sous 10 jours.
+- Droit à la portabilité : export format portable (JSON/CSV) sur demande.
+- Droit d’opposition : refusez certains traitements (si fondement non obligatoire).
+
+Exercice des droits :
+
+- Contactez privacy@doxa.dz (délai légal : max 30 jours).
+
+| | | ) Doxa
+
+- Doxa traite comme requête prioritaire.
+- Si refus : vous pouvez saisir l'ANPDP ou le tribunal algérien.
+
+## 6.4 Q34. Doxa est-elle conforme aux réglementations algériennes ?
+
+Oui. Doxa respecte strictement les lois algériennes de protection des données :
+
+### Cadre légal applicable :
+
+- Loi n° 25-11 du 24 juillet 2025 : modernisation protection données, nouvelles obligations responsables traitement, renforcement ANPDP.
+- Loi n° 18-07 du 10 juin 2018 : protection données personnelles, droits accès/rectification/suppression principes fondamentaux.
+- Code civil &amp; Code commerce algérien : cadre contractuel, responsabilité civile.
+
+### Obligations Doxa envers vous (Loi 25-11 art. 3-4) :
+
+- Nommer Délégué à la Protection des Données (DPD) qualifié.
+- Maintenir registre des activités de traitement (transparence complète).
+- Tenir carnet d'audit automatisé (tous accès enregistrés).
+- Notifier incidents sécurité à l'ANPDP dans 5 jours (art. 41 bis 4).
+- Signer Accord de Traitement des Données (ATD) spécifiant responsabilités.
+- Effectuer audit/DPIA (étude impact) si données sensibles (art. 45 bis 9).
+
+### Vos droits reconnus légalement :
+
+- Droit accès : demandez copie données, réponse 14 jours.
+- Droit rectification : corrigez données incorrectes, correction 10 jours.
+- Droit suppression : exercez « droit à l'oubli », suppression 30 jours.
+- Droit portabilité : demandez export format portable (JSON/CSV).
+- Droit opposition : refusez traitement sans fondement obligatoire.
+
+Sanctions non-conformité (Loi 25-11 &amp; 18-07) :
+
+Doxa
+
+- Amende administrative jusqu'à 500 000 DA (non-conformité simple).
+- Poursuite pénale : 6 mois à 2 ans emprisonnement + 60 000 à 200 000 DA (infraction grave).
+- Ordonnance ANPDP : fermeture/retrait/destruction fichiers non-conformes.
+
+## Autorité de contrôle :
+
+- ANPDP (Autorité Nationale Protection Données Personnelles).
+- Pouvoirs : vérifications sur site, accès données/documents, audits, sanctions.
+- Recours : vous pouvez saisir ANPDP si violation Doxa.
+- Contact ANPDP : anpdp.dz
+
+## Engagement Doxa :
+
+Doxa s'engage à respecter intégralement Loi 25-11 et Loi 18-07. En cas violation, vous pouvez exercer recours auprès ANPDP ou des tribunaux algériens (compétence : ordre judiciaire algérien).
+
+# 7 SECTION 7 : FACTURATION &amp; PLANS
+
+## 7.1 Q35. Quels plans existent ?
+
+- Starter : 4 350 DZD/mois - 5 projets, 5 membres, Kanban, intégrations basiques.
+- Pro : 11 850 DZD/mois - Projets illimités, 30 membres, tous les types de projets, 200+ intégrations, support prioritaire.
+- Enterprise : Devis personnalisé - Membres illimités, espaces de travail illimités, SLA garanti, support dédié.
+
+## 7.2 Q36. Puis-je changer de plan ?
+
+Oui ! Paramètres de l'espace → « Facturation » → « Changer de plan ». Si vous montez de niveau, la différence au prorata est facturée. Si vous descendez, crédit appliqué au prochain cycle.
+
+## 7.3 Q37. Puis-je avoir une facture ?
+
+Oui ! Paramètres → onglet « Facturation » → « Factures » → Téléchargez les PDFs. Chaque facture contient détail du plan, montant, date, TVA si applicable.
+
+Doxa
+
+
+
+7.4 Q38. Acceptez-vous les devis/facturation annuelle ?
+
+Oui ! Pour plans Pro et Enterprise, nous offrons paiement annuel avec 20% de réduction. Contactez sales@doxa . dz pour devis.
+
+7.5 Q39. Qu’advient-il de mon accès si je n’ai pas payé ?
+
+Après 7 jours sans paiement, votre espace passe en mode « lecture seule ». Après 30 jours, l’espace est suspendu. Après 90 jours, suppression automatique. Vous recevez des avertissements avant chaque étape.
+
+7.6 Q40. Comment annuler mon abonnement ?
+
+Paramètres → onglet « Facturation » → « Annuler l’abonnement » → confirmez. L’annulation prend effet à la fin du cycle de facturation actuel. Aucuns frais d’annulation.
+
+8 SECTION 8 : INTÉGRATIONS
+
+8.1 Q41. Comment intégrer Slack à Doxa ?
+
+1. Dans Doxa, Paramètres d’intégration → « Slack ».
+
+2. Cliquez « Connecter ».
+
+3. Autorisez Doxa dans Slack.
+
+4. Choisissez les canaux où envoyer les notifications.
+
+5. Configurez les notifications (quels événements ?).
+
+6. Sauvegardez.
+
+Après, les mises à jour de tâches apparaissent dans Slack, et vous pouvez créer des tâches via /doxa commands.
+
+8.2 Q42. Comment intégrer Microsoft Teams ?
+
+Identique à Slack : Paramètres → « Microsoft Teams » → Connectez → Autorisez → Configurez les canaux → Sauvegardez.
+
+| | | Doxa
+
+
+
+8.3 Q43. Puis-je intégrer Google Workspace ?
+
+Oui ! Paramètres → « Google Workspace » → Connectez votre compte Google. Vous pouvez alors :
+
+- Créer des événements Google Calendar à partir de tâches Doxa.
+- Ajouter les pièces jointes Google Drive.
+- Utiliser Google Drive comme stockage cloud pour pièces jointes.
+
+8.4 Q44. Comment utiliser Zapier avec Doxa ?
+
+Doxa a des connecteurs Zapier publics. Vous pouvez créer des « Zaps » qui :
+
+- Créent tâches dans Doxa quand événement externe (email, formulaire web, etc.).
+- Envoient données Doxa ailleurs (CRM, email, feuilles de calcul).
+- Exemples : « Quand formulaire Typeform soumis → créer tâche dans Doxa ».
+
+8.5 Q45. Y a-t-il une API pour développeurs ?
+
+Oui ! API REST complète documentée sur api . doxa . io. Vous pouvez :
+
+- Créer/modifier/supprimer tâches programmatiquement.
+- Lire données projets, équipes, activité.
+- Construire des intégrations custom.
+- Rate limit : 1000 requêtes/heure pour plan Pro.
+
+9 SECTION 9 : TROUBLESHOOTING TECHNIQUE
+
+9.1 Q46. Je ne reçois pas les invitations par email
+
+Vérifiez :
+
+1. Dossier spam/promotions.
+
+2. Email correct ajouté.
+
+3. Paramètres notification activés.
+
+Si toujours pas : contactez support@doxa . dz avec logs (email de l’invité).
+
+| | |) Doxa
+
+9.2 Q47. Je ne vois pas certaines tâches
+
+Vérifiez :
+1. Filtres appliqués ? Réinitialisez les filtres.
+2. Permissions ? Vous avez accès au projet ?
+3. Tâches archivées ? Affichage archive activé ?
+
+Si toujours pas : rafraîchissez la page ou videz le cache (Ctrl+Shift+Suppr).
+
+9.3 Q48. Les notifications ne s'affichent pas
+
+1. Vérifiez préférences notifications (pas mutées ?).
+2. Navigateur bloquerait notifications ? Autorisez Doxa.
+3. Email activé ? Vérifiez dossier spam.
+4. Testez notification manuellement : Paramètres → « Tester notification ».
+
+9.4 Q49. Je suis lent ou gelé
+
+Essayez :
+1. Réduisez nombre colonnes/filtres affichés.
+2. Réduisez nombre tâches par vue (archivez anciennes).
+3. Videz cache (Ctrl+Shift+Suppr).
+4. Essayez autre navigateur.
+5. Consultez status.doxa.io pour panne.
+
+9.5 Q50. Comment contacter le support ?
+
+Email : support@doxa.dz (réponse &lt; 24h pour Pro, &lt; 2h pour Enterprise)
+
+Chat : Cliquez le chat icon en bas à droite (disponible 9-18h CET, lun-ven)
+
+Statut incident : status.doxa.io
+
+Doxa

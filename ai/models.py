@@ -1,6 +1,7 @@
 from pydantic import BaseModel, Field
 from typing import List, Optional
 
+
 class Ticket(BaseModel):
     id: str
     client_name: str
@@ -29,6 +30,7 @@ class Ticket(BaseModel):
     response: Optional[str] = None
     escalation_id: Optional[str] = None
     client_email: Optional[str] = None
+
 
 class Feedback(BaseModel):
     ticket_id: str

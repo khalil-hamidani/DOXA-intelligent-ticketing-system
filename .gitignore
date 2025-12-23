@@ -1,6 +1,15 @@
+# Ignore local environment files for AI workspace
+/ai/.env
+.env
+/ai/kb/.env
+this_venv/
 .venv/
-ai/.venv/
-ai/.env
-.__pycache__/
+venv/
 __pycache__/
-*.dll
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.log
+# Ignore ChromaDB local database files
+/ai/kb/chroma_db/

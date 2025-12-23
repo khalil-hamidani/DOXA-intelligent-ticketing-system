@@ -1,0 +1,657 @@
+DOxa
+
+# TROUBLESHOOTING SUPPORT
+
+# TROUBLESHOOTING &amp; SUPPORT - Doxa
+
+Solutions aux Problèmes Courants
+
+Version 2.3 | Décembre 2025
+
+## 1 AUTHENTIFICATION &amp; ACCÈS
+
+### 1.1 Problème : “Email non reconnu” ou “Mot de passe incorrect”
+
+Symptôme : Erreur lors login.
+
+**Solutions :**
+
+1. **Vérifiez email**
+- Compte avec email exact? (même casse compte)
+- Exemple : alice@company.com ≠ Alice@Company.com
+- Compte créé avec Google/Microsoft? Utilisez même option
+
+2. **Réinitialisez mot de passe**
+- Page login → “Mot de passe oublié?”
+- Email reçu : cliquez lien
+- Créez nouveau mot de passe (min 8 char, majuscule, chiffre)
+- Réessayez login
+
+3. **Compte pas activé?**
+- Devriez recevoir email “Vérifiez votre email”
+- Vérifiez spam/promotions
+- Lien expiré (24h)? Cliquez “Renvoyer email”
+
+4. **Compte avec SSO?**
+- Si company utilise SSO (Azure AD, Okta), allez login SSO (pas email/password)
+- Contact IT company si lien SSO absent
+
+Si rien marche : → support@doxa.dz (indiquez email, tentatives)
+
+Doxa
+
+1.2 Problème : “Vous n'avez pas accès à ce projet/espace”
+
+Symptôme : Page fermée, permission refusée.
+
+Causes probables :
+
+1. Pas membre de l'espace
+- Admin pas vous a invité
+- Action : Demandez à admin : Paramètres → Membres → Inviter
+
+2. Pas membre du projet
+- Admin vous a invité espace, mais pas ce projet
+- Action : Admin → Projet → Paramètres → Ajouter vous
+
+3. Mauvaise rolle
+- Vous “Lecteur” mais besoin “Éditeur” (créer tâches)
+- Action : Admin change votre rôle
+
+4. Compte suspendu
+- Paiement en retard ? Espace passe “lecture seule”
+- Action : Paramètres → Facturation → Payer facturation
+
+5. URL vieille/cassée
+- Lien projet ancien (projet supprimé/archivé)
+- Action : Allez accueil → cherchez projet
+
+Rapide test :
+- Allez accueil (doxa.dz/dashboard)
+- Voyez vous AUCUN projet/espace ?
+- Si oui → contact admin
+
+1.3 Problème : “2FA bloqué” ou “Code d'authentification invalide”
+
+Symptôme : Ne peut pas entrer code 2FA.
+
+Solutions :
+
+1. Code incorrect ?
+
+Doxa
+
+
+
+TOTP codes changent chaque 30 secondes
+- Entrez rapidement (pas plus de 30s après génération)
+- Ré-essayez nouveau code
+2. Horloge synchronisation
+- Votre téléphone horloge décalée = code invalide
+- Solution : Synchronisez l’heure (Paramètres téléphone → Date & Heure)
+- Puis regénérez code
+3. Utilisez code de secours
+- Avez codes de secours (10 codes, reçus activation 2FA) ?
+- Utilisez un code (single-use)
+- Gardez remaining codes safe
+4. 2FA cassé/Authenticator app perdu
+- Si perdu téléphone = problème !
+- Contact support@doxa.dz
+- Vérification identité requise (email account, autre proof)
+Prévention :
+- Sauvegardez codes de secours safe (password manager, papier)
+- Testez 2FA après activation (logout/login test)
+
+## 2 PROJETS & TÂCHES
+
+### 2.1 Problème : “Je n’arrive pas à créer/modifier tâches”
+
+Symptôme : Boutons grisés, “Accès refusé”, ou tâches pas sauvegardées.
+
+Solutions :
+
+1. Rôle insuffisant
+- Vous “Lecteur” ? Besoin “Éditeur”
+- Contactez admin pour upgrade rôle
+2. Projet archivé
+
+
+
+Projet archivé = lecture seule automatiquement
+- Action : Admin → Paramètres projet → Déarchiver
+
+3. Espace suspendu (paiement retard)
+- Espace dépasse plan limit?
+- Exemples : Starter max 5 projets, 5 membres
+- Action : Upgrade plan ou archivez tâches/projets
+
+4. Navigateur problème
+- Cache vieux, JavaScript désactivé
+- Solutions :
+- Vider cache (Ctrl+Shift+Suppr) → site Doxa seul
+- Reload page (Ctrl+F5)
+- Essayer autre navigateur (Chrome, Firefox, Edge)
+
+5. Offline
+- Pas internet connection?
+- Doxa nécessite connexion (pas offline mode)
+
+Diagnostic :
+1. Essayez créer tâche test simple (1 mot, pas attachments)
+2. Si échoue → navigateur/connexion problem
+3. Si succès mais avant non → data tâche (trop grande, char spécial?)
+
+2.2 Problème : “Mes tâches disparues” ou “Tâches archivées non visibles”
+
+Symptôme : Tâches existaient, plus là.
+
+Solutions :
+
+1. Filtres appliqués
+- Vue tableau → “Filtres” active?
+- Exemple : filtre “Assigné = Alice” → vous ne voyez pas vôtres
+- Action : Cliquez “Réinitialiser filtres”
+
+| | |) Doxa
+
+2. Archivage automatique
+- Quelqu'un a setup automation : "Complète + 30j → Archiver"?
+- Tâches archivées = hidden par défaut
+- Solution : Tableau → Settings → "Afficher tâches archivées"
+
+3. Suppression accidentelle
+- Tâche supprimée (pas archivée)
+- Doxa ne garde pas historique suppression
+- Impossible récupérer (design purpose)
+
+4. Mauvaise vue/projet
+- Vous regardez bon projet ? Bon workspace ?
+- Créé dans "Projet A" mais cherchez "Projet B" ?
+- Utilisez recherche globale (Ctrl+K) : "Find task X"
+
+5. Permissions changées
+- Admin a changé permissions → tâches cachées
+- Demandez admin
+
+Test :
+- Créez nouvelle tâche test → elle s'affiche ?
+- Si oui : problème vue/filtre
+- Si non : problème espace/permissions
+
+2.3 Problème : "Les tâches d'autres pas visibles"
+Symptôme : Collègue crée tâche, vous ne la voyez pas.
+
+Solutions :
+1. Pas member du projet
+- Collègue crée dans projet privé, vous not added
+- Solution : Admin ajoute vous au projet
+2. Refresh page
+
+Doxa
+
+
+
+Parfois UI cache pas sync
+- F5 ou Ctrl+F5 (hard refresh)
+
+3. Permissions projet privé
+- Projet “Private” (visibility) = only members see
+- Si member mais pas visible : admin vérifiez permissions
+
+4. Tâche not assignée = non visible ?
+- Non, tâches visibles à tous members projet
+- Même si pas assignée à vous
+
+Rapide test :
+- Collègue crée tâche “TEST TÂCHE VISIBLE”
+- F5 page → vous la voyez ?
+- Non → admin check permissions
+
+## 3 COLLABORATION & COMMENTAIRES
+
+### 3.1 Problème : “Messages/commentaires ne sauvegardent pas”
+
+Symptôme : Écrivez commentaire, cliquez envoyer, disparaît.
+
+Solutions :
+
+1. Connexion perdue
+- Réseau dropped pendant envoi
+- Solution : Vérifiez internet (wifi, data)
+- Rééssayez commentaire
+
+2. Session expirée
+- Onglet ouvert longtemps sans activité (> 30min inactif)
+- Logout automatique
+- Solution : Reconnectez-vous
+- Recopier texte si long
+
+3. Caractères spéciaux problématique
+
+
+
+Emoji, accents extrêmes, Unicode rare?
+- Solution : Simplifiez texte (pas emoji pour test)
+
+4. Limite de caractère
+- Commentaire max 5000 caractères
+- Plus = rejet silencieux
+- Solution : Divisez en 2 commentaires
+
+Prévention :
+- Écrivez commentaires COURTS (< 500 char idéal)
+- Copier avant envoyer (Ctrl+C) pour safety
+- Logout et reconnectez 1x/jour (refresh session)
+
+### 3.2 Problème : “Les @mentions ne marchent pas”
+
+Symptôme : @Alice mais elle pas reçu notification.
+
+Solutions :
+
+1. Mauvais nom?
+- Tapez “@Ali” → autocomplete ? Sélectionnez bon nom
+- Pas d’autocomplete → person pas dans espace/projet
+- Assurez alice est membre projet
+
+2. Notifications mutées
+- Alice a désactivé notifications
+- Allez Profil → Préférences → “Notifications” → réactivez
+
+3. Notification spam / email
+- Alice a peut-être reçu, mais email spam
+- Vérifiez spam/promotions
+
+4. Connectez avant d’écrire
+- Besoin être connecté pour @mention
+- Connectez-vous d’abord
+
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+
+
+
+Rapide fix :
+
+- Utilisez format : “@alice” (pas “@Alice”)
+- Sélectionnez depuis autocomplete (pas tapez)
+- Demandez Alice vérifier notifications
+
+## 4 INTÉGRATIONS
+
+### 4.1 Problème : “Slack integration non marche”
+
+Symptôme : Pas notifications Slack, ou erreur “Authorization failed”.
+
+Solutions :
+
+1. Doxa app pas autorisée dans Slack
+
+- Allez Slack → Paramètres → “Apps”
+- Cherchez “Doxa”
+- Si pas là → Workspace admin doit autoriser
+- Contact workspace admin pour installer
+
+2. Déconnectez et reconnectez
+
+- Doxa → Paramètres → Intégrations → Slack
+- Cliquez “Déconnecter”
+- Puis “Connecter Slack”
+- Réautorisez
+
+3. Workspace Slack incorrect
+
+- Avez plusieurs Slack workspaces ?
+- Vérifiez connecté correct workspace
+- Déconnectez, reconnectez à bon
+
+4. Channel pas accessible
+
+- Vous choisi #private-channel mais Doxa pas member ?
+- Solution : Ajoutez Doxa au channel (@Doxa + invite)
+
+5. Pas permissions envoyer messages
+
+
+
+Doxa token/permissions pas suffisantes
+- Reconnectez (deconnect → connect) et aurorisez plein accès
+
+Test notification :
+
+1. Doxa → Paramètres → Intégrations → Slack
+2. Testez : cliquez “Test notification”
+3. Message reçu Slack?
+4. Si oui → integration ok, problème autre
+5. Si non → reconnectez
+
+4.2 Problème : “GitHub integration - PR pas lié à tâche”
+
+Symptôme : “Closes #123” en PR description, mais pas lié.
+
+Solutions :
+
+1. Format correct?
+- PR description must have : Closes #task-123 ou Fixes #task-123
+- Pas seulement : #123 ou PR 123
+- Format exact : Closes #task-XYZ (case insensitive)
+2. Task ID correct?
+- Vérifiez task ID correct
+- Ouvrez tâche → regradez URL : https ://app.doxa.dz/task/task/XXX
+- Copy ID exact
+3. GitHub integration pas connectée
+- Paramètres → GitHub → Connecté?
+- Si non : “Connecter GitHub”
+- Autorisez Doxa access
+4. Repository pas dans authorized repos list
+- Connectez GitHub → sélectionnez repos
+- Doit inclure votre repo
+
+| | | Doxa
+
+
+
+Si pas là : reconnectez + sélectionnez
+
+5. Branch/PR before integration connected ?
+
+- Si PR créée AVANT GitHub intégration setup
+- Peut pas retroactively lier
+- New PRs with closes #task-XYZ = linkés ok
+
+Test :
+
+1. Créez NEW PR
+2. Description : “Closes #task-ABC123”
+3. Submit PR
+4. Refresh Doxa task page
+5. Voyez PR lié en section “Linked” ?
+
+5 PERFORMANCE & BUGS
+
+5.1 Problème : “Doxa très lent” ou “Page freeze”
+
+Symptôme : Tableau chargement lent, interaction gelée.
+
+Solutions :
+
+1. Trop de tâches ?
+
+- Tableau avec 1000+ tâches = lent
+- Solution : Filtrez/archivez anciennes tâches
+- Laissez max 200-300 visibles
+
+2. Trop de colonnes custom ?
+
+- Si 50+ colonnes = UI lourde
+- Solution : Supprimez colonnes non-utilisées
+
+3. Cache navigateur plein
+
+- Ctrl+Shift+Suppr → Clear browsing data
+- Sélectionnez “Cached images” + “Cookies”
+- Juste Doxa.dz
+
+Reload
+
+4. Navigateur/RAM limitation
+- Beaucoup onglets ouverts?
+- Fermez autres, redémarrez navigateur
+- Ou utilisez mode incognito (RAM fresh)
+
+5. Internet lent
+- Vitesse connexion &lt; 1 Mbps?
+- Testez speedtest.net
+- Utilisez téléphone hotspot (plus rapide?)
+
+6. Pièces jointes massives
+- Tâche avec 50 fichiers 100MB?
+- Solution : Archivez vieux fichiers, ou stockez cloud autre
+- Doxa pas idéal pour huge files
+
+Performance check :
+1. Ouvrez DevTools (F12)
+2. Onglet “Network” → mesure page load
+3. Doit être &lt; 2 sec
+4. Si &gt; 5 sec → contact support
+
+5.2 Problème : “Erreur 'Something went wrong'” ou erreur 500
+
+Symptôme : Message erreur générique, ou page blanche.
+
+Solutions :
+
+1. Reload page
+- F5 (simple refresh)
+- Ctrl+F5 (hard refresh, vider cache)
+- Ctrl+Shift+Suppr (clear cookies + cache)
+
+2. Logout/Login
+
+Doxa
+
+
+
+• Paramètres → Logout
+
+• Reconnectez-vous
+
+3. Essayer autre navigateur
+
+• Chrome → Firefox
+
+• Ou mode incognito (pas extensions)
+
+4. Vérifier status Doxa
+
+• Allez status.doxa.dz
+
+• Est-ce qu’incident reporté?
+
+• Si oui → wait for fix
+
+5. Clear browser extensions
+
+• Ad-blockers, password managers peuvent interfér
+
+• Désactivez temporairement
+
+• Retry
+
+6. Contact support
+
+• Si persiste : support@doxa.dz
+
+• Envoyez : screenshot error, time/timezone, navigateur/version
+
+• Include console error (F12 → Console onglet → copy messages)
+
+## 6 DONNÉES & EXPORTS
+
+### 6.1 Problème : “Impossible exporter données”
+
+Symptôme : Bouton export grisé ou erreur.
+
+Solutions :
+
+1. Rôle insuffisant
+
+• Besoin “Éditeur” ou mieux pour exporter
+
+• “Lecteur” pas peut exporter (security)
+
+• Contact admin pour upgrade rôle
+
+2. Trop de tâches
+
+
+
+Export > 10,000 tâches = peut timeout
+- Solution : Filtrez d’abord (par date, catégorie)
+- Exportez en chunks
+
+3. Format pas compatible
+
+- Besoin CSV mais avez JSON?
+- Solution : Utilisez autre format, import outil autre
+- Ou demandez format autre
+
+4. Timeout/erreur réseau
+
+- Export prend du temps (> 10s parfois)
+- Internet connection dropped?
+- Solution : Réessayez, ou contact support
+
+Alternative :
+
+- API export : Utilisez API REST pour export custom
+- Documentation : api.doxa.dz/export
+
+### 6.2 Problème : “Impossible importer données (CSV)”
+
+Symptôme : Upload CSV, erreur ou données pas importées.
+
+Solutions :
+
+1. Format CSV incorrect
+
+- Headers must match Doxa colnames (title, assignee, due_date, etc.)
+- Encoding : UTF-8 required (pas ANSI, pas Excel default)
+- Solution : Ouvrez CSV en Notepad++ → Encoding UTF-8 → Save
+
+2. Données validation
+
+- Dates format correct? (YYYY-MM-DD, pas DD/MM/YYYY)
+- Emails valides?
+- Assignees existent dans espace?
+- Solution : Validez données avant import
+
+3. File too large
+- Max upload 50 MB
+- Divisez en 2 fichiers si plus grand
+
+4. Espace full
+- Dépassez limite plan (ex : Starter max 1000 tâches)?
+- Supprimez/archivez vieilles avant import
+
+Import example :
+title,description,assignee_email,due_date,priority
+"Fix login bug", "Authentication broken", alice@company.com,2025-01-20,high
+"Add dark mode", "New feature request", bob@company.com,2025-02-01,normal
+
+7 ACCOUNT &amp; FACTURATION
+
+7.1 Problème : “Facturation confuse” ou “Charge incorrecte”
+
+Symptôme : Montant inattendu, ou confusion plan.
+
+Solutions :
+
+1. Vérifiez plan actuel
+- Paramètres → “Facturation” → “Plan actuel”
+- Vu prix? Vous sur Starter (29€), Pro (79€), ou Enterprise?
+
+2. Changement plan mid-month
+- Si montez plan mid-month : crédit prorata
+- Exemple : 15€ utilisé, +50€ upgrade = facture ~35€ prochain mois
+- Normal!
+
+3. Annual vs Monthly confusion
+- Payez annuel (débit 1x/an) vs mensuel (1x/mois)?
+- Vérifiez Facturation : quelle période?
+
+4. Pas payement détecté
+- Carte rejetée? Essayez autre méthode (PayPal, SEPA)
+- Expiré? Mettez à jour carte
+
+Doxa
+
+- Contact billing@doxa.dz si question
+
+## 5. Veux remboursement?
+
+- 30 jours satisfaction garantie
+- Contact support@doxa.dz
+- Preuve + raison = remboursement
+
+## 7.2 Problème : “Espace suspendu” ou “Accès lecture-seule”
+
+Symptôme : Ne pouvez pas créer tâches, message espace “lecture-seule”.
+
+## Solutions :
+
+### 1. Paiement en retard
+
+- Facturation non payée (7+ jours) ?
+- Espace passe automatiquement “lecture-seule”
+- Solution : Paramètres → Facturation → Payer
+- Après paiement confirmé → réactivé
+
+### 2. Dépassez limite plan
+
+- Starter max 5 membres ? Invité 6e ?
+- Espace pause → upgrade plan
+- Solution : Starter → Pro (79€), ou supprimez membre
+
+### 3. Violation ToS
+
+- Abus détecté (spam, malware, abuse) ?
+- Admin Doxa peut suspendre
+- Solution : Vérifiez email violation notice
+- Répondez appeal si légitime (false positive)
+
+### 4. Limite tâches/stockage
+
+- Starter max 1000 tâches, 5 GB stockage ?
+- Solution : Archivez tâches, supprimez attachments volumineux
+
+Doxa
+
+Doxa
+
+# 8 SÉCURITÉ &amp; CONFIDENTIALITÉ
+
+## 8.1 Problème : “Je soupçonne account piraté”
+
+### Actions immédiatement :
+
+1. Changez mot de passe
+- Cliquez profil → “Paramètres sécurité”
+- “Changer mot de passe”
+- STRONG password (16+ char, mélange)
+
+2. Réactivez 2FA
+- Paramètres → Sécurité → 2FA
+- Si déjà actif : bon
+- Si pas : activez (TOTP app, pas SMS)
+
+3. Signalez immédiatement
+- Email : security@doxa.dz
+- Indiquez : email account, quand vous avez remarqué anomalie
+
+4. Vérifiez activité
+- Paramètres → “Historique compte”
+- Voyez logins/activité suspecte ?
+- Forward to security@doxa.dz
+
+5. Changez passwords partout
+- Si même password réutilisé : changez TOUS services
+- Utilisez password manager (LastPass, 1Password)
+
+# 9 CONTACT &amp; ESCALADE
+
+## 9.1 Niveaux support
+
+[tbl-0.md](tbl-0.md)
+
+9.2 Contacts
+
+- Problèmes généraux : support@doxa.dz
+- Sécurité : security@doxa.dz
+- Facturation : billing@doxa.dz
+- Urgence/Incident : emergency@doxa.dz
+- Chat : widget bas droit (9-18h CET)
+- Tutoriels vidéo : youtube.com/doxa
+
+Préparez pour contact : email account, screenshot error, pas d'infos sensibles!
+
+Doxa
