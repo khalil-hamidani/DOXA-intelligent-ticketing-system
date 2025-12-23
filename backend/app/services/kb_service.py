@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import desc
 from app.models.kb import KBDocument, KBSnippet, KBUpdate
-from app.schemas.kb import KBDocumentCreate, KBUpdateCreate
+from app.schemas.kb import KBDocumentCreate, KBDocumentUpdate, KBUpdateCreate
 from app.models.user import User, UserRole
 from fastapi import HTTPException
 from uuid import UUID
@@ -64,6 +64,44 @@ class KBService:
         if not doc:
             raise HTTPException(status_code=404, detail="Document not found")
         return doc
+
+    @staticmethod
+    def update_document(
+        db: Session, doc_id: UUID, doc_update: KBDocumentUpdate, user: User
+    ) -> KBDocument:
+        if user.role != UserRole.ADMIN:
+            raise HTTPException(
+                status_code=403, detail="Only admins can update KB documents"
+            )
+
+        doc = db.query(KBDocument).filter(KBDocument.id == doc_id).first()
+        if not doc:
+            raise HTTPException(status_code=404, detail="Document not found")
+
+        update_data = doc_update.model_dump(exclude_unset=True)
+        for field, value in update_data.items():
+            setattr(doc, field, value)
+
+        db.commit()
+        db.refresh(doc)
+        return doc
+
+    @staticmethod
+    def delete_document(db: Session, doc_id: UUID, user: User) -> bool:
+        if user.role != UserRole.ADMIN:
+            raise HTTPException(
+                status_code=403, detail="Only admins can delete KB documents"
+            )
+
+        doc = db.query(KBDocument).filter(KBDocument.id == doc_id).first()
+        if not doc:
+            raise HTTPException(status_code=404, detail="Document not found")
+
+        # Delete associated snippets first
+        db.query(KBSnippet).filter(KBSnippet.doc_id == doc_id).delete()
+        db.delete(doc)
+        db.commit()
+        return True
 
     @staticmethod
     def get_snippets(db: Session, user: User, skip: int = 0, limit: int = 100):

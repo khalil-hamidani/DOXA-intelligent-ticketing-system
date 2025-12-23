@@ -7,6 +7,7 @@ import { Layout } from '../../components/Layout';
 import { StatusBadge } from '../../components/StatusBadge';
 import { LoadingSpinner } from '../../components/LoadingSpinner';
 import { ErrorMessage } from '../../components/ErrorMessage';
+import { useLanguage } from '../../context/LanguageContext';
 import {
   BarChart,
   Bar,
@@ -18,6 +19,7 @@ import {
 } from 'recharts';
 
 export const AgentDashboardPage: React.FC = () => {
+  const { t } = useLanguage();
   const [metrics, setMetrics] = useState<MetricsOverview | null>(null);
   const [recentTickets, setRecentTickets] = useState<Ticket[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -68,8 +70,8 @@ export const AgentDashboardPage: React.FC = () => {
   return (
     <Layout>
       <div className="mb-6">
-        <h1 className="text-2xl font-bold text-gray-900">Agent Dashboard</h1>
-        <p className="mt-1 text-sm text-gray-500">Key metrics and recent escalated tickets</p>
+        <h1 className="text-2xl font-bold text-gray-900">{t('dashboard.agentDashboard')}</h1>
+        <p className="mt-1 text-sm text-gray-500">{t('dashboard.subtitle')}</p>
       </div>
 
       {/* KPI Cards */}
@@ -84,7 +86,7 @@ export const AgentDashboardPage: React.FC = () => {
               </div>
               <div className="ml-5 w-0 flex-1">
                 <dl>
-                  <dt className="text-sm font-medium text-gray-500 truncate">Total Tickets</dt>
+                  <dt className="text-sm font-medium text-gray-500 truncate">{t('dashboard.totalTickets')}</dt>
                   <dd className="text-lg font-semibold text-gray-900">{metrics.total_tickets}</dd>
                 </dl>
               </div>
@@ -102,7 +104,7 @@ export const AgentDashboardPage: React.FC = () => {
               </div>
               <div className="ml-5 w-0 flex-1">
                 <dl>
-                  <dt className="text-sm font-medium text-gray-500 truncate">AI Resolution Rate</dt>
+                  <dt className="text-sm font-medium text-gray-500 truncate">{t('dashboard.aiResolutionRate')}</dt>
                   <dd className="text-lg font-semibold text-gray-900">
                     {((metrics.ai_resolution_rate || 0) * 100).toFixed(1)}%
                   </dd>
@@ -122,9 +124,9 @@ export const AgentDashboardPage: React.FC = () => {
               </div>
               <div className="ml-5 w-0 flex-1">
                 <dl>
-                  <dt className="text-sm font-medium text-gray-500 truncate">Avg Response Time</dt>
+                  <dt className="text-sm font-medium text-gray-500 truncate">{t('dashboard.avgResponseTime')}</dt>
                   <dd className="text-lg font-semibold text-gray-900">
-                    {(metrics.avg_response_time_minutes || 0).toFixed(0)} min
+                    {(metrics.avg_response_time_minutes || 0).toFixed(0)} {t('common.min')}
                   </dd>
                 </dl>
               </div>
@@ -142,7 +144,7 @@ export const AgentDashboardPage: React.FC = () => {
               </div>
               <div className="ml-5 w-0 flex-1">
                 <dl>
-                  <dt className="text-sm font-medium text-gray-500 truncate">Avg Satisfaction</dt>
+                  <dt className="text-sm font-medium text-gray-500 truncate">{t('dashboard.avgSatisfaction')}</dt>
                   <dd className="text-lg font-semibold text-gray-900">
                     {(metrics.avg_satisfaction_rating || 0).toFixed(1)} / 5
                   </dd>
@@ -158,17 +160,17 @@ export const AgentDashboardPage: React.FC = () => {
         {/* Recent Escalated Tickets - moved here */}
         <div className="bg-white shadow rounded-lg">
           <div className="px-6 py-4 border-b border-gray-200 flex justify-between items-center">
-            <h3 className="text-lg font-medium text-gray-900">Recent Escalated Tickets</h3>
+            <h3 className="text-lg font-medium text-gray-900">{t('dashboard.recentEscalated')}</h3>
             <Link
               to="/agent/tickets"
               className="text-sm text-indigo-600 hover:text-indigo-500"
             >
-              View all →
+              {t('dashboard.viewAllTickets')} →
             </Link>
           </div>
           <ul className="divide-y divide-gray-200">
             {recentTickets.length === 0 ? (
-              <li className="px-6 py-4 text-gray-500 italic">No escalated tickets</li>
+              <li className="px-6 py-4 text-gray-500 italic">{t('dashboard.noEscalatedTickets')}</li>
             ) : (
               recentTickets.map((ticket) => (
                 <li key={ticket.id}>
@@ -178,7 +180,7 @@ export const AgentDashboardPage: React.FC = () => {
                       <StatusBadge status={ticket.status} />
                     </div>
                     <div className="mt-2 flex justify-between text-sm text-gray-500">
-                      <span>{ticket.category || 'General'}</span>
+                      <span>{t(`categories.${ticket.category}`) || t('categories.general')}</span>
                       <span>{new Date(ticket.created_at).toLocaleDateString()}</span>
                     </div>
                   </Link>
@@ -189,7 +191,7 @@ export const AgentDashboardPage: React.FC = () => {
         </div>
 
         <div className="bg-white shadow rounded-lg p-6">
-          <h3 className="text-lg font-medium text-gray-900 mb-4">Tickets by Category</h3>
+          <h3 className="text-lg font-medium text-gray-900 mb-4">{t('dashboard.ticketsByCategory')}</h3>
           <ResponsiveContainer width="100%" height={250}>
             <BarChart data={categoryData}>
               <CartesianGrid strokeDasharray="3 3" />

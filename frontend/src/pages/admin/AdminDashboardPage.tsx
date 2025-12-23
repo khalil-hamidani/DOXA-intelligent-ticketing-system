@@ -6,6 +6,7 @@ import { MetricsOverview, KBDocument } from '../../types';
 import { Layout } from '../../components/Layout';
 import { LoadingSpinner } from '../../components/LoadingSpinner';
 import { ErrorMessage } from '../../components/ErrorMessage';
+import { useLanguage } from '../../context/LanguageContext';
 import {
   LineChart,
   Line,
@@ -22,6 +23,7 @@ import {
 const COLORS = ['#4F46E5', '#10B981', '#F59E0B', '#6B7280'];
 
 export const AdminDashboardPage: React.FC = () => {
+  const { t } = useLanguage();
   const [metrics, setMetrics] = useState<MetricsOverview | null>(null);
   const [kbDocs, setKbDocs] = useState<KBDocument[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -65,10 +67,10 @@ export const AdminDashboardPage: React.FC = () => {
   }
 
   const statusData = [
-    { name: 'Open', value: metrics.tickets_by_status?.OPEN || 0 },
-    { name: 'AI Answered', value: metrics.tickets_by_status?.AI_ANSWERED || 0 },
-    { name: 'Escalated', value: metrics.tickets_by_status?.ESCALATED || 0 },
-    { name: 'Closed', value: metrics.tickets_by_status?.CLOSED || 0 },
+    { name: t('status.open'), value: metrics.tickets_by_status?.OPEN || 0 },
+    { name: t('status.ai_answered'), value: metrics.tickets_by_status?.AI_ANSWERED || 0 },
+    { name: t('status.escalated'), value: metrics.tickets_by_status?.ESCALATED || 0 },
+    { name: t('status.closed'), value: metrics.tickets_by_status?.CLOSED || 0 },
   ];
 
   // Mock trend data (in a real app, this would come from the API)
@@ -85,22 +87,22 @@ export const AdminDashboardPage: React.FC = () => {
   return (
     <Layout>
       <div className="mb-6">
-        <h1 className="text-2xl font-bold text-gray-900">Admin Dashboard</h1>
-        <p className="mt-1 text-sm text-gray-500">System overview and knowledge base management</p>
+        <h1 className="text-2xl font-bold text-gray-900">{t('dashboard.adminDashboard')}</h1>
+        <p className="mt-1 text-sm text-gray-500">{t('dashboard.systemOverview')}</p>
       </div>
 
       {/* KPI Cards */}
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-5 mb-8">
         <div className="bg-white overflow-hidden shadow rounded-lg">
           <div className="p-5">
-            <dt className="text-sm font-medium text-gray-500 truncate">Total Tickets</dt>
+            <dt className="text-sm font-medium text-gray-500 truncate">{t('dashboard.totalTickets')}</dt>
             <dd className="mt-1 text-3xl font-semibold text-gray-900">{metrics.total_tickets}</dd>
           </div>
         </div>
 
         <div className="bg-white overflow-hidden shadow rounded-lg">
           <div className="p-5">
-            <dt className="text-sm font-medium text-gray-500 truncate">AI Resolution Rate</dt>
+            <dt className="text-sm font-medium text-gray-500 truncate">{t('dashboard.aiResolutionRate')}</dt>
             <dd className="mt-1 text-3xl font-semibold text-green-600">
               {((metrics.ai_resolution_rate || 0) * 100).toFixed(1)}%
             </dd>
@@ -109,16 +111,16 @@ export const AdminDashboardPage: React.FC = () => {
 
         <div className="bg-white overflow-hidden shadow rounded-lg">
           <div className="p-5">
-            <dt className="text-sm font-medium text-gray-500 truncate">Avg Response Time</dt>
+            <dt className="text-sm font-medium text-gray-500 truncate">{t('dashboard.avgResponseTime')}</dt>
             <dd className="mt-1 text-3xl font-semibold text-gray-900">
-              {(metrics.avg_response_time_minutes || 0).toFixed(0)}m
+              {(metrics.avg_response_time_minutes || 0).toFixed(0)}{t('common.min')}
             </dd>
           </div>
         </div>
 
         <div className="bg-white overflow-hidden shadow rounded-lg">
           <div className="p-5">
-            <dt className="text-sm font-medium text-gray-500 truncate">Avg Satisfaction</dt>
+            <dt className="text-sm font-medium text-gray-500 truncate">{t('dashboard.avgSatisfaction')}</dt>
             <dd className="mt-1 text-3xl font-semibold text-yellow-600">
               {(metrics.avg_satisfaction_rating || 0).toFixed(1)}/5
             </dd>
@@ -127,7 +129,7 @@ export const AdminDashboardPage: React.FC = () => {
 
         <div className="bg-white overflow-hidden shadow rounded-lg">
           <div className="p-5">
-            <dt className="text-sm font-medium text-gray-500 truncate">KB Documents</dt>
+            <dt className="text-sm font-medium text-gray-500 truncate">{t('dashboard.kbDocuments')}</dt>
             <dd className="mt-1 text-3xl font-semibold text-indigo-600">{kbDocs.length}</dd>
           </div>
         </div>
@@ -136,21 +138,21 @@ export const AdminDashboardPage: React.FC = () => {
       {/* Charts Row */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
         <div className="bg-white shadow rounded-lg p-6">
-          <h3 className="text-lg font-medium text-gray-900 mb-4">Weekly Ticket Trends</h3>
+          <h3 className="text-lg font-medium text-gray-900 mb-4">{t('dashboard.weeklyTrends')}</h3>
           <ResponsiveContainer width="100%" height={250}>
             <LineChart data={trendData}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="day" />
               <YAxis />
               <Tooltip />
-              <Line type="monotone" dataKey="tickets" stroke="#4F46E5" strokeWidth={2} name="Total" />
-              <Line type="monotone" dataKey="aiResolved" stroke="#10B981" strokeWidth={2} name="AI Resolved" />
+              <Line type="monotone" dataKey="tickets" stroke="#4F46E5" strokeWidth={2} name={t('dashboard.total')} />
+              <Line type="monotone" dataKey="aiResolved" stroke="#10B981" strokeWidth={2} name={t('dashboard.aiResolved')} />
             </LineChart>
           </ResponsiveContainer>
         </div>
 
         <div className="bg-white shadow rounded-lg p-6">
-          <h3 className="text-lg font-medium text-gray-900 mb-4">Current Ticket Distribution</h3>
+          <h3 className="text-lg font-medium text-gray-900 mb-4">{t('dashboard.ticketDistribution')}</h3>
           <ResponsiveContainer width="100%" height={250}>
             <PieChart>
               <Pie
@@ -179,24 +181,24 @@ export const AdminDashboardPage: React.FC = () => {
         {/* KB Documents Overview */}
         <div className="bg-white shadow rounded-lg">
           <div className="px-6 py-4 border-b border-gray-200 flex justify-between items-center">
-            <h3 className="text-lg font-medium text-gray-900">Knowledge Base</h3>
+            <h3 className="text-lg font-medium text-gray-900">{t('nav.knowledgeBase')}</h3>
             <Link
               to="/admin/kb"
               className="text-sm text-indigo-600 hover:text-indigo-500"
             >
-              Manage KB →
+              {t('dashboard.manageKB')} →
             </Link>
           </div>
           <div className="p-6">
             <div className="text-center p-4 bg-gray-50 rounded-lg mb-4">
               <div className="text-2xl font-bold text-gray-900">{kbDocs.length}</div>
-              <div className="text-sm text-gray-500">Total Documents</div>
+              <div className="text-sm text-gray-500">{t('dashboard.totalDocuments')}</div>
             </div>
             <Link
               to="/admin/kb/new"
               className="mt-4 w-full inline-flex justify-center items-center px-4 py-2 border border-indigo-300 text-indigo-700 rounded-md hover:bg-indigo-50"
             >
-              + Add New Document
+              + {t('kb.createDocument')}
             </Link>
           </div>
         </div>
@@ -204,36 +206,36 @@ export const AdminDashboardPage: React.FC = () => {
         {/* System Health */}
         <div className="bg-white shadow rounded-lg">
           <div className="px-6 py-4 border-b border-gray-200">
-            <h3 className="text-lg font-medium text-gray-900">System Health</h3>
+            <h3 className="text-lg font-medium text-gray-900">{t('dashboard.systemHealth')}</h3>
           </div>
           <div className="p-6">
             <ul className="space-y-3">
               <li className="flex items-center justify-between">
-                <span className="text-sm text-gray-600">API Status</span>
+                <span className="text-sm text-gray-600">{t('dashboard.apiStatus')}</span>
                 <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                  ✓ Operational
+                  ✓ {t('dashboard.operational')}
                 </span>
               </li>
               <li className="flex items-center justify-between">
-                <span className="text-sm text-gray-600">AI Service</span>
+                <span className="text-sm text-gray-600">{t('dashboard.aiService')}</span>
                 <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                  ✓ Connected
+                  ✓ {t('dashboard.connected')}
                 </span>
               </li>
               <li className="flex items-center justify-between">
-                <span className="text-sm text-gray-600">Database</span>
+                <span className="text-sm text-gray-600">{t('dashboard.database')}</span>
                 <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                  ✓ Healthy
+                  ✓ {t('dashboard.healthy')}
                 </span>
               </li>
               <li className="flex items-center justify-between">
-                <span className="text-sm text-gray-600">Escalated Tickets</span>
+                <span className="text-sm text-gray-600">{t('dashboard.escalatedTickets')}</span>
                 <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
                   (metrics.tickets_by_status?.ESCALATED || 0) > 5
                     ? 'bg-yellow-100 text-yellow-800'
                     : 'bg-green-100 text-green-800'
                 }`}>
-                  {metrics.tickets_by_status?.ESCALATED || 0} pending
+                  {metrics.tickets_by_status?.ESCALATED || 0} {t('dashboard.pending')}
                 </span>
               </li>
             </ul>

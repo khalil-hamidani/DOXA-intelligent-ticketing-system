@@ -3,11 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import { ticketsApi } from '../../api/tickets';
 import { Layout } from '../../components/Layout';
 import { TICKET_CATEGORIES } from '../../config/constants';
+import { useLanguage } from '../../context/LanguageContext';
 
 const ALLOWED_FILE_TYPES = ['image/png', 'image/jpeg', 'image/jpg', 'image/gif', 'application/pdf'];
 const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
 
 export const CreateTicketPage: React.FC = () => {
+  const { t } = useLanguage();
   const [subject, setSubject] = useState('');
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('');
@@ -89,9 +91,9 @@ export const CreateTicketPage: React.FC = () => {
       <div className="max-w-2xl mx-auto">
         <div className="md:flex md:items-center md:justify-between mb-6">
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">Create New Ticket</h1>
+            <h1 className="text-2xl font-bold text-gray-900">{t('tickets.createNewTicket')}</h1>
             <p className="mt-1 text-sm text-gray-500">
-              Submit a support request and our AI will try to help you immediately
+              {t('tickets.aiSupportDescription')}
             </p>
           </div>
         </div>
@@ -105,7 +107,7 @@ export const CreateTicketPage: React.FC = () => {
 
           <div>
             <label htmlFor="category" className="block text-sm font-medium text-gray-700">
-              Category *
+              {t('tickets.category')} *
             </label>
             <select
               id="category"
@@ -114,16 +116,16 @@ export const CreateTicketPage: React.FC = () => {
               required
               className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md border"
             >
-              <option value="">Select a category</option>
-              {Object.entries(TICKET_CATEGORIES).map(([key, label]) => (
-                <option key={key} value={key}>{label}</option>
+              <option value="">{t('tickets.selectCategory')}</option>
+              {Object.keys(TICKET_CATEGORIES).map((key) => (
+                <option key={key} value={key}>{t(`categories.${key}`)}</option>
               ))}
             </select>
           </div>
 
           <div>
             <label htmlFor="subject" className="block text-sm font-medium text-gray-700">
-              Subject *
+              {t('tickets.subject')} *
             </label>
             <input
               type="text"
@@ -132,14 +134,14 @@ export const CreateTicketPage: React.FC = () => {
               onChange={(e) => setSubject(e.target.value)}
               required
               maxLength={200}
-              placeholder="Brief summary of your issue"
+              placeholder={t('tickets.subjectPlaceholder')}
               className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
           </div>
 
           <div>
             <label htmlFor="description" className="block text-sm font-medium text-gray-700">
-              Description *
+              {t('tickets.description')} *
             </label>
             <textarea
               id="description"
@@ -147,7 +149,7 @@ export const CreateTicketPage: React.FC = () => {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               required
-              placeholder="Please describe your issue in detail. Include any relevant information that might help us assist you."
+              placeholder={t('tickets.descriptionPlaceholder')}
               className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
           </div>
@@ -155,7 +157,7 @@ export const CreateTicketPage: React.FC = () => {
           {/* Attachment Upload Section */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Attachments (optional)
+              {t('tickets.attachmentsOptional')}
             </label>
             <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-indigo-400 transition-colors">
               <input
@@ -183,12 +185,12 @@ export const CreateTicketPage: React.FC = () => {
                 </svg>
                 <p className="mt-2 text-sm text-gray-600">
                   <span className="font-semibold text-indigo-600 hover:text-indigo-500">
-                    Click to upload
+                    {t('common.clickToUpload')}
                   </span>{' '}
-                  or drag and drop
+                  {t('common.orDragDrop')}
                 </p>
                 <p className="mt-1 text-xs text-gray-500">
-                  PNG, JPG, GIF or PDF up to 10MB
+                  {t('tickets.fileTypes')}
                 </p>
               </label>
             </div>
@@ -242,7 +244,7 @@ export const CreateTicketPage: React.FC = () => {
               </div>
               <div className="ml-3">
                 <p className="text-sm text-blue-700">
-                  <strong>AI-Powered Support:</strong> Our AI assistant will analyze your request and provide an immediate response. If the AI can't fully resolve your issue, your ticket will be escalated to a human agent.
+                  <strong>{t('tickets.aiPoweredSupport')}:</strong> {t('tickets.aiSupportDescription')}
                 </p>
               </div>
             </div>
@@ -255,14 +257,14 @@ export const CreateTicketPage: React.FC = () => {
               disabled={isSubmitting}
               className="px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50"
             >
-              Cancel
+              {t('common.cancel')}
             </button>
             <button
               type="submit"
               disabled={isSubmitting}
               className="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50"
             >
-              {isSubmitting ? (uploadProgress || 'Submitting...') : 'Submit Ticket'}
+              {isSubmitting ? (uploadProgress || t('common.submitting')) : t('tickets.submitTicket')}
             </button>
           </div>
         </form>

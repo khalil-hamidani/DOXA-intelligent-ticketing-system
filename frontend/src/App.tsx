@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
+import { LanguageProvider } from './context/LanguageContext';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import { USER_ROLES } from './config/constants';
 
@@ -24,6 +25,7 @@ import { AgentTicketDetailPage } from './pages/agent/AgentTicketDetailPage';
 
 // Admin pages
 import { AdminDashboardPage } from './pages/admin/AdminDashboardPage';
+import { UsersPage } from './pages/admin/UsersPage';
 import { KBListPage } from './pages/admin/KBListPage';
 import { KBCreatePage } from './pages/admin/KBCreatePage';
 import { KBDetailPage } from './pages/admin/KBDetailPage';
@@ -141,6 +143,14 @@ const AppRoutes: React.FC = () => {
         }
       />
       <Route
+        path="/admin/users"
+        element={
+          <ProtectedRoute allowedRoles={[USER_ROLES.ADMIN]}>
+            <UsersPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/admin/kb"
         element={
           <ProtectedRoute allowedRoles={[USER_ROLES.ADMIN]}>
@@ -182,9 +192,11 @@ const AppRoutes: React.FC = () => {
 const App: React.FC = () => {
   return (
     <BrowserRouter>
-      <AuthProvider>
-        <AppRoutes />
-      </AuthProvider>
+      <LanguageProvider>
+        <AuthProvider>
+          <AppRoutes />
+        </AuthProvider>
+      </LanguageProvider>
     </BrowserRouter>
   );
 };

@@ -1,10 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useAuth } from '../../context/AuthContext';
+import { useLanguage } from '../../context/LanguageContext';
 import { Layout } from '../../components/Layout';
 import { authApi } from '../../api/auth';
 
+const LANGUAGE_OPTIONS = [
+  { code: 'en', label: 'English', flag: '🇬🇧' },
+  { code: 'fr', label: 'Français', flag: '🇫🇷' },
+  { code: 'ar', label: 'العربية', flag: '🇸🇦' },
+];
+
 export const ProfilePage: React.FC = () => {
   const { user, refreshUser } = useAuth();
+  const { setLanguage: setAppLanguage, t } = useLanguage();
   const [isEditing, setIsEditing] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -16,7 +24,22 @@ export const ProfilePage: React.FC = () => {
   const [language, setLanguage] = useState(user?.language || 'en');
   const [profilePictureUrl, setProfilePictureUrl] = useState(user?.profile_picture_url || '');
 
+  // Sync app language with user profile on mount
+  useEffect(() => {
+    if (user?.language && ['en', 'fr', 'ar'].includes(user.language)) {
+      setAppLanguage(user.language as 'en' | 'fr' | 'ar');
+    }
+  }, [user?.language, setAppLanguage]);
+
   if (!user) return null;
+
+  const handleLanguageChange = (newLang: string) => {
+    setLanguage(newLang);
+    // Immediately apply language change to UI
+    if (['en', 'fr', 'ar'].includes(newLang)) {
+      setAppLanguage(newLang as 'en' | 'fr' | 'ar');
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,7 +47,7 @@ export const ProfilePage: React.FC = () => {
     setSuccess(null);
 
     if (password && password !== confirmPassword) {
-      setError('Passwords do not match');
+      setError(t('profile.passwordMismatch'));
       return;
     }
 
@@ -39,7 +62,7 @@ export const ProfilePage: React.FC = () => {
       }
 
       if (Object.keys(updateData).length === 0) {
-        setError('No changes to save');
+        setError(t('profile.noChanges'));
         setIsLoading(false);
         return;
       }
@@ -49,12 +72,12 @@ export const ProfilePage: React.FC = () => {
       // Refresh user data
       await refreshUser();
       
-      setSuccess('Profile updated successfully!');
+      setSuccess(t('profile.updateSuccess'));
       setPassword('');
       setConfirmPassword('');
       setIsEditing(false);
     } catch {
-      setError('Failed to update profile. Please try again.');
+      setError(t('profile.updateError'));
     } finally {
       setIsLoading(false);
     }
@@ -65,6 +88,10 @@ export const ProfilePage: React.FC = () => {
     setPassword('');
     setConfirmPassword('');
     setLanguage(user.language);
+    // Revert language to user's saved preference
+    if (user.language && ['en', 'fr', 'ar'].includes(user.language)) {
+      setAppLanguage(user.language as 'en' | 'fr' | 'ar');
+    }
     setProfilePictureUrl(user.profile_picture_url || '');
     setError(null);
   };
@@ -75,7 +102,7 @@ export const ProfilePage: React.FC = () => {
         <div className="bg-white shadow rounded-lg">
           <div className="px-4 py-5 sm:p-6">
             <div className="flex items-center justify-between mb-6">
-              <h3 className="text-lg font-medium leading-6 text-gray-900">Profile Information</h3>
+              <h3 className="text-lg font-medium leading-6 text-gray-900">{t('profile.title')}</h3>
               {!isEditing && (
                 <button
                   onClick={() => setIsEditing(true)}
@@ -84,7 +111,7 @@ export const ProfilePage: React.FC = () => {
                   <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                   </svg>
-                  Edit Profile
+                  {t('profile.editProfile')}
                 </button>
               )}
             </div>
@@ -126,9 +153,42 @@ export const ProfilePage: React.FC = () => {
 
             {isEditing ? (
               <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Language Selector - Prominent Position */}
+                <div className="bg-indigo-50 rounded-lg p-4 border border-indigo-200">
+                  <label className="block text-sm font-medium text-indigo-800 mb-3">
+                    {t('profile.language')}
+                  </label>
+                  <div className="grid grid-cols-3 gap-3">
+                    {LANGUAGE_OPTIONS.map((lang) => (
+                      <button
+                        key={lang.code}
+                        type="button"
+                        onClick={() => handleLanguageChange(lang.code)}
+                        className={`flex flex-col items-center justify-center p-3 rounded-lg border-2 transition-all ${
+                          language === lang.code
+                            ? 'border-indigo-600 bg-white shadow-md'
+                            : 'border-gray-200 bg-white hover:border-indigo-300'
+                        }`}
+                      >
+                        <span className="text-2xl mb-1">{lang.flag}</span>
+                        <span className={`text-sm font-medium ${
+                          language === lang.code ? 'text-indigo-600' : 'text-gray-700'
+                        }`}>
+                          {lang.label}
+                        </span>
+                        {language === lang.code && (
+                          <svg className="w-4 h-4 text-indigo-600 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                        )}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
                 <div>
                   <label htmlFor="profilePictureUrl" className="block text-sm font-medium text-gray-700">
-                    Profile Picture URL
+                    {t('profile.profilePicture')}
                   </label>
                   <input
                     type="url"
@@ -138,55 +198,34 @@ export const ProfilePage: React.FC = () => {
                     placeholder="https://example.com/your-image.jpg"
                     className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                   />
-                  <p className="mt-1 text-xs text-gray-500">Enter the URL of your profile picture</p>
-                </div>
-
-                <div>
-                  <label htmlFor="language" className="block text-sm font-medium text-gray-700">
-                    Language
-                  </label>
-                  <select
-                    id="language"
-                    value={language}
-                    onChange={(e) => setLanguage(e.target.value)}
-                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                  >
-                    <option value="en">English</option>
-                    <option value="fr">Français</option>
-                    <option value="es">Español</option>
-                    <option value="ar">العربية</option>
-                  </select>
                 </div>
 
                 <div className="border-t border-gray-200 pt-6">
-                  <h4 className="text-sm font-medium text-gray-900 mb-4">Change Password</h4>
-                  <p className="text-xs text-gray-500 mb-4">Leave blank to keep current password</p>
+                  <h4 className="text-sm font-medium text-gray-900 mb-4">{t('profile.newPassword')}</h4>
                   
                   <div className="space-y-4">
                     <div>
                       <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-                        New Password
+                        {t('profile.newPassword')}
                       </label>
                       <input
                         type="password"
                         id="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
-                        placeholder="Enter new password"
                         className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                       />
                     </div>
 
                     <div>
                       <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">
-                        Confirm New Password
+                        {t('profile.confirmNewPassword')}
                       </label>
                       <input
                         type="password"
                         id="confirmPassword"
                         value={confirmPassword}
                         onChange={(e) => setConfirmPassword(e.target.value)}
-                        placeholder="Confirm new password"
                         className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                       />
                     </div>
@@ -199,25 +238,25 @@ export const ProfilePage: React.FC = () => {
                     onClick={handleCancel}
                     className="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50"
                   >
-                    Cancel
+                    {t('common.cancel')}
                   </button>
                   <button
                     type="submit"
                     disabled={isLoading}
                     className="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50"
                   >
-                    {isLoading ? 'Saving...' : 'Save Changes'}
+                    {isLoading ? t('common.loading') : t('common.save')}
                   </button>
                 </div>
               </form>
             ) : (
               <dl className="divide-y divide-gray-200">
                 <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4">
-                  <dt className="text-sm font-medium text-gray-500">Email</dt>
+                  <dt className="text-sm font-medium text-gray-500">{t('auth.email')}</dt>
                   <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{user.email}</dd>
                 </div>
                 <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4">
-                  <dt className="text-sm font-medium text-gray-500">Role</dt>
+                  <dt className="text-sm font-medium text-gray-500">{t('profile.role')}</dt>
                   <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
                     <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
                       {user.role}
@@ -225,16 +264,21 @@ export const ProfilePage: React.FC = () => {
                   </dd>
                 </div>
                 <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4">
-                  <dt className="text-sm font-medium text-gray-500">Language</dt>
-                  <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{user.language}</dd>
+                  <dt className="text-sm font-medium text-gray-500">{t('profile.language')}</dt>
+                  <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+                    {(() => {
+                      const lang = LANGUAGE_OPTIONS.find(l => l.code === user.language);
+                      return lang ? `${lang.flag} ${lang.label}` : user.language;
+                    })()}
+                  </dd>
                 </div>
                 <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4">
-                  <dt className="text-sm font-medium text-gray-500">Status</dt>
+                  <dt className="text-sm font-medium text-gray-500">{t('profile.status')}</dt>
                   <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
                     {user.is_active ? (
-                      <span className="text-green-600">Active</span>
+                      <span className="text-green-600">{t('profile.active')}</span>
                     ) : (
-                      <span className="text-red-600">Inactive</span>
+                      <span className="text-red-600">{t('profile.inactive')}</span>
                     )}
                   </dd>
                 </div>

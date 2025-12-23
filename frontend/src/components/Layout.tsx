@@ -1,10 +1,18 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { useLanguage, Language } from '../context/LanguageContext';
 import { USER_ROLES } from '../config/constants';
+
+const LANGUAGE_LABELS: Record<Language, string> = {
+  en: 'EN',
+  fr: 'FR',
+  ar: 'AR'
+};
 
 export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { user, logout } = useAuth();
+  const { t, isRTL, language, setLanguage } = useLanguage();
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -18,19 +26,20 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
     switch (user.role) {
       case USER_ROLES.CLIENT:
         return [
-          { to: '/client/tickets', label: 'My Tickets' },
-          { to: '/client/tickets/new', label: 'Create Ticket' },
+          { to: '/client/tickets', label: t('nav.myTickets') },
+          { to: '/client/tickets/new', label: t('nav.createTicket') },
         ];
       case USER_ROLES.AGENT:
         return [
-          { to: '/agent/dashboard', label: 'Dashboard' },
-          { to: '/agent/kb', label: 'Knowledge Base' },
+          { to: '/agent/dashboard', label: t('nav.dashboard') },
+          { to: '/agent/kb', label: t('nav.knowledgeBase') },
         ];
       case USER_ROLES.ADMIN:
         return [
-          { to: '/admin/dashboard', label: 'Dashboard' },
-          { to: '/admin/kb', label: 'Knowledge Base' },
-          { to: '/admin/kb/new', label: 'Create KB Article' },
+          { to: '/admin/dashboard', label: t('nav.dashboard') },
+          { to: '/admin/users', label: t('nav.users') },
+          { to: '/admin/kb', label: t('nav.knowledgeBase') },
+          { to: '/admin/kb/new', label: t('nav.createKBArticle') },
         ];
       default:
         return [];
@@ -38,7 +47,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className={`min-h-screen bg-gray-100 ${isRTL ? 'rtl' : 'ltr'}`} dir={isRTL ? 'rtl' : 'ltr'}>
       <nav className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
@@ -53,7 +62,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
                   <span className="text-xl font-bold text-indigo-900">Doxa</span>
                 </Link>
               </div>
-              <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
+              <div className={`hidden sm:flex sm:space-x-8 ${isRTL ? 'sm:mr-6' : 'sm:ml-6'}`}>
                 {getNavLinks().map((link) => (
                   <Link
                     key={link.to}
@@ -65,10 +74,27 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
                 ))}
               </div>
             </div>
-            <div className="flex items-center space-x-4">
+            <div className={`flex items-center ${isRTL ? 'space-x-reverse' : ''} space-x-4`}>
+              {/* Quick Language Switcher */}
+              <div className="flex items-center border border-gray-200 rounded-lg overflow-hidden">
+                {(['en', 'fr', 'ar'] as Language[]).map((lang) => (
+                  <button
+                    key={lang}
+                    onClick={() => setLanguage(lang)}
+                    className={`px-2 py-1 text-sm font-medium transition-colors ${
+                      language === lang
+                        ? 'bg-indigo-100 text-indigo-700'
+                        : 'bg-white hover:bg-gray-50 text-gray-600'
+                    }`}
+                    title={lang.toUpperCase()}
+                  >
+                    {LANGUAGE_LABELS[lang]}
+                  </button>
+                ))}
+              </div>
               {user && (
                 <>
-                  <Link to="/profile" className="flex items-center space-x-2 text-sm text-gray-600 hover:text-gray-900">
+                  <Link to="/profile" className={`flex items-center ${isRTL ? 'space-x-reverse' : ''} space-x-2 text-sm text-gray-600 hover:text-gray-900`}>
                     {user.profile_picture_url ? (
                       <img 
                         src={user.profile_picture_url} 
@@ -85,13 +111,13 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
                     <span className="hidden md:inline">{user.email}</span>
                   </Link>
                   <span className="text-xs bg-indigo-100 text-indigo-800 px-2 py-1 rounded">
-                    {user.role}
+                    {t(`roles.${user.role}`)}
                   </span>
                   <button
                     onClick={handleLogout}
                     className="text-sm text-red-600 hover:text-red-800"
                   >
-                    Logout
+                    {t('nav.logout')}
                   </button>
                 </>
               )}

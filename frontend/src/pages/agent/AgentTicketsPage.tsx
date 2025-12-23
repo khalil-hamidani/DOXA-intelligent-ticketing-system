@@ -8,8 +8,10 @@ import { LoadingSpinner } from '../../components/LoadingSpinner';
 import { EmptyState } from '../../components/EmptyState';
 import { ErrorMessage } from '../../components/ErrorMessage';
 import { TICKET_CATEGORIES } from '../../config/constants';
+import { useLanguage } from '../../context/LanguageContext';
 
 export const AgentTicketsPage: React.FC = () => {
+  const { t } = useLanguage();
   const [tickets, setTickets] = useState<Ticket[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -47,8 +49,8 @@ export const AgentTicketsPage: React.FC = () => {
     <Layout>
       <div className="sm:flex sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">All Tickets</h1>
-          <p className="mt-1 text-sm text-gray-500">Manage and respond to customer tickets</p>
+          <h1 className="text-2xl font-bold text-gray-900">{t('tickets.allTickets')}</h1>
+          <p className="mt-1 text-sm text-gray-500">{t('tickets.manageAndRespond')}</p>
         </div>
       </div>
 
@@ -66,7 +68,7 @@ export const AgentTicketsPage: React.FC = () => {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search by reference or subject..."
+              placeholder={t('tickets.searchPlaceholder')}
               className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
           </div>
@@ -74,7 +76,7 @@ export const AgentTicketsPage: React.FC = () => {
             type="submit"
             className="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 text-sm font-medium"
           >
-            Search
+            {t('common.search')}
           </button>
         </form>
 
@@ -85,37 +87,37 @@ export const AgentTicketsPage: React.FC = () => {
             onChange={(e) => setStatusFilter(e.target.value)}
             className="block w-full sm:w-48 pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md border"
           >
-            <option value="">All Statuses</option>
-            <option value="OPEN">Open</option>
-            <option value="AI_ANSWERED">AI Answered</option>
-            <option value="ESCALATED">Escalated (Priority)</option>
-            <option value="CLOSED">Closed</option>
+            <option value="">{t('tickets.allStatuses')}</option>
+            <option value="OPEN">{t('status.open')}</option>
+            <option value="AI_ANSWERED">{t('status.ai_answered')}</option>
+            <option value="ESCALATED">{t('status.escalated')}</option>
+            <option value="CLOSED">{t('status.closed')}</option>
           </select>
           <select
             value={categoryFilter}
             onChange={(e) => setCategoryFilter(e.target.value)}
             className="block w-full sm:w-48 pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md border"
           >
-            <option value="">All Categories</option>
-            {Object.entries(TICKET_CATEGORIES).map(([key, label]) => (
-              <option key={key} value={key}>{label}</option>
+            <option value="">{t('tickets.allCategories')}</option>
+            {Object.keys(TICKET_CATEGORIES).map((key) => (
+              <option key={key} value={key}>{t(`categories.${key}`)}</option>
             ))}
           </select>
           <button
             onClick={fetchTickets}
             className="px-4 py-2 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200"
           >
-            Refresh
+            {t('common.refresh')}
           </button>
         </div>
       </div>
 
       {/* Stats */}
       <div className="mt-4 flex gap-4 text-sm text-gray-500">
-        <span>{tickets.length} tickets found</span>
+        <span>{tickets.length} {t('tickets.ticketsFound')}</span>
         {statusFilter === 'ESCALATED' && (
           <span className="text-orange-600 font-medium">
-            ⚠️ Showing escalated tickets requiring attention
+            ⚠️ {t('tickets.showingEscalated')}
           </span>
         )}
       </div>
@@ -128,10 +130,10 @@ export const AgentTicketsPage: React.FC = () => {
           <ErrorMessage message={error} onRetry={fetchTickets} />
         ) : tickets.length === 0 ? (
           <EmptyState
-            title="No tickets found"
+            title={t('tickets.noTicketsFound')}
             message={statusFilter === 'ESCALATED' 
-              ? "Great job! No escalated tickets at the moment."
-              : "No tickets match the current filters."
+              ? t('tickets.noEscalatedMessage')
+              : t('tickets.noMatchingFilters')
             }
           />
         ) : (
@@ -158,11 +160,11 @@ export const AgentTicketsPage: React.FC = () => {
                         <div className="sm:flex space-x-4">
                           <p className="flex items-center text-sm text-gray-500">
                             <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
-                              {ticket.category || 'General'}
+                              {t(`categories.${ticket.category}`) || t('categories.general')}
                             </span>
                           </p>
                           <p className="text-sm text-gray-500">
-                            Client ID: {ticket.client_id}
+                            {t('tickets.clientId')}: {ticket.client_id}
                           </p>
                         </div>
                         <div className="mt-2 flex items-center text-sm text-gray-500 sm:mt-0">

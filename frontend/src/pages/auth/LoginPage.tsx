@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { authApi } from '../../api/auth';
 import { useAuth } from '../../context/AuthContext';
+import { useLanguage } from '../../context/LanguageContext';
 import { USER_ROLES } from '../../config/constants';
 
 export const LoginPage: React.FC = () => {
@@ -10,6 +11,7 @@ export const LoginPage: React.FC = () => {
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const { login } = useAuth();
+  const { t, isRTL } = useLanguage();
   const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -44,7 +46,7 @@ export const LoginPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex">
+    <div className={`min-h-screen flex ${isRTL ? 'flex-row-reverse' : ''}`} dir={isRTL ? 'rtl' : 'ltr'}>
       {/* Left Side - Branding */}
       <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-indigo-600 via-indigo-700 to-purple-800 relative overflow-hidden">
         {/* Decorative elements */}
@@ -58,13 +60,13 @@ export const LoginPage: React.FC = () => {
             <span className="text-4xl font-bold text-white">DOXA</span>
           </Link>
           <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
-            WELCOME
+            {t('auth.welcomeBack')}
           </h1>
           <p className="text-xl text-indigo-100 mb-4">
-            doxa at your service
+            {t('landing.tagline')}
           </p>
           <p className="text-indigo-200 max-w-md">
-            Your voice matters. Sign in to track your complaints and get the support you deserve.
+            {t('landing.subtitle')}
           </p>
         </div>
       </div>
@@ -84,7 +86,7 @@ export const LoginPage: React.FC = () => {
 
             {/* Desktop Logo in form */}
             <div className="hidden lg:flex items-center justify-center mb-8">
-              <div className="flex items-center space-x-2">
+              <div className={`flex items-center ${isRTL ? 'space-x-reverse' : ''} space-x-2`}>
                 <div className="flex space-x-0.5">
                   <div className="w-1 h-8 bg-indigo-600 rounded-full"></div>
                   <div className="w-1 h-8 bg-indigo-500 rounded-full"></div>
@@ -103,10 +105,10 @@ export const LoginPage: React.FC = () => {
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Email
+                  {t('auth.email')}
                 </label>
                 <div className="relative">
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <div className={`absolute inset-y-0 ${isRTL ? 'right-0 pr-3' : 'left-0 pl-3'} flex items-center pointer-events-none`}>
                     <svg className="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
@@ -116,25 +118,20 @@ export const LoginPage: React.FC = () => {
                     name="email"
                     type="email"
                     required
-                    className="block w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                    className={`block w-full ${isRTL ? 'pr-10 pl-10' : 'pl-10 pr-10'} py-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all`}
                     placeholder="olivia@example.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                   />
-                  <div className="absolute inset-y-0 right-0 pr-3 flex items-center">
-                    <svg className="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
                 </div>
               </div>
 
               <div>
                 <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
-                  Password
+                  {t('auth.password')}
                 </label>
                 <div className="relative">
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <div className={`absolute inset-y-0 ${isRTL ? 'right-0 pr-3' : 'left-0 pl-3'} flex items-center pointer-events-none`}>
                     <svg className="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
@@ -144,22 +141,17 @@ export const LoginPage: React.FC = () => {
                     name="password"
                     type="password"
                     required
-                    className="block w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                    className={`block w-full ${isRTL ? 'pr-10 pl-10' : 'pl-10 pr-10'} py-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all`}
                     placeholder="••••••••••"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />
-                  <div className="absolute inset-y-0 right-0 pr-3 flex items-center">
-                    <svg className="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
                 </div>
               </div>
 
-              <div className="text-left">
+              <div className={`${isRTL ? 'text-right' : 'text-left'}`}>
                 <button type="button" className="text-sm text-indigo-600 hover:text-indigo-500">
-                  forget your password?
+                  {t('auth.forgotPassword')}
                 </button>
               </div>
 
@@ -168,13 +160,13 @@ export const LoginPage: React.FC = () => {
                 disabled={isLoading}
                 className="w-full flex justify-center py-3 px-4 border border-transparent text-base font-semibold rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 transition-all shadow-lg shadow-indigo-200"
               >
-                {isLoading ? 'Signing in...' : 'LOG IN'}
+                {isLoading ? t('common.loading') : t('auth.login')}
               </button>
 
               <div className="text-center pt-4">
-                <span className="text-sm text-gray-600">don't have an account? </span>
+                <span className="text-sm text-gray-600">{t('auth.noAccount')} </span>
                 <Link to="/register" className="text-sm font-semibold text-indigo-600 hover:text-indigo-500">
-                  sign up
+                  {t('auth.signUp')}
                 </Link>
               </div>
             </form>

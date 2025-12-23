@@ -6,6 +6,7 @@ from app.core import deps
 from app.schemas.kb import (
     KBDocumentCreate,
     KBDocumentRead,
+    KBDocumentUpdate,
     KBSnippetRead,
     KBUpdateCreate,
     KBUpdateRead,
@@ -51,6 +52,28 @@ def read_document(
     current_user: User = Depends(deps.get_current_user),
 ):
     return KBService.get_document(db=db, doc_id=doc_id, user=current_user)
+
+
+@router.put("/documents/{doc_id}", response_model=KBDocumentRead)
+def update_document(
+    doc_id: UUID,
+    doc_update: KBDocumentUpdate,
+    db: Session = Depends(deps.get_db),
+    current_user: User = Depends(deps.get_current_user),
+):
+    return KBService.update_document(
+        db=db, doc_id=doc_id, doc_update=doc_update, user=current_user
+    )
+
+
+@router.delete("/documents/{doc_id}")
+def delete_document(
+    doc_id: UUID,
+    db: Session = Depends(deps.get_db),
+    current_user: User = Depends(deps.get_current_user),
+):
+    KBService.delete_document(db=db, doc_id=doc_id, user=current_user)
+    return {"message": "Document deleted successfully"}
 
 
 @router.get("/snippets", response_model=List[KBSnippetRead])

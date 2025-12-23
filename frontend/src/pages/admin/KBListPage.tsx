@@ -6,8 +6,10 @@ import { Layout } from '../../components/Layout';
 import { LoadingSpinner } from '../../components/LoadingSpinner';
 import { EmptyState } from '../../components/EmptyState';
 import { ErrorMessage } from '../../components/ErrorMessage';
+import { useLanguage } from '../../context/LanguageContext';
 
 export const KBListPage: React.FC = () => {
+  const { t } = useLanguage();
   const [documents, setDocuments] = useState<KBDocument[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -48,16 +50,16 @@ export const KBListPage: React.FC = () => {
     <Layout>
       <div className="sm:flex sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Knowledge Base</h1>
+          <h1 className="text-2xl font-bold text-gray-900">{t('kb.title')}</h1>
           <p className="mt-1 text-sm text-gray-500">
-            Manage documents that power AI responses
+            {t('kb.manageDocuments')}
           </p>
         </div>
         <Link
           to="/admin/kb/new"
           className="mt-4 sm:mt-0 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
         >
-          + Add Document
+          + {t('kb.addDocument')}
         </Link>
       </div>
 
@@ -68,7 +70,7 @@ export const KBListPage: React.FC = () => {
           onChange={(e) => setCategoryFilter(e.target.value)}
           className="block w-full sm:w-48 pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md border"
         >
-          <option value="">All Categories</option>
+          <option value="">{t('tickets.allCategories')}</option>
           {categories.map((category) => (
             <option key={category} value={category}>{category}</option>
           ))}
@@ -83,9 +85,9 @@ export const KBListPage: React.FC = () => {
           <ErrorMessage message={error} onRetry={fetchDocuments} />
         ) : documents.length === 0 ? (
           <EmptyState
-            title="No documents found"
-            message="Add knowledge base documents to help the AI answer customer questions"
-            actionText="Add Document"
+            title={t('kb.noDocuments')}
+            message={t('kb.addDocumentsHelp')}
+            actionText={t('kb.addDocument')}
             actionLink="/admin/kb/new"
           />
         ) : (
@@ -103,7 +105,7 @@ export const KBListPage: React.FC = () => {
                       </Link>
                       <div className="ml-2 flex-shrink-0 flex space-x-2">
                         <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
-                          {doc.category || 'Uncategorized'}
+                          {doc.category || t('kb.uncategorized')}
                         </span>
                       </div>
                     </div>
@@ -116,20 +118,20 @@ export const KBListPage: React.FC = () => {
                     </div>
                     <div className="mt-3 flex justify-between items-center">
                       <div className="text-xs text-gray-500">
-                        Created: {new Date(doc.created_at).toLocaleDateString()}
+                        {t('tickets.created')}: {new Date(doc.created_at).toLocaleDateString()}
                       </div>
                       <div className="flex space-x-2">
                         <Link
                           to={`/admin/kb/${doc.id}/edit`}
                           className="text-sm text-gray-600 hover:text-gray-800"
                         >
-                          Edit
+                          {t('common.edit')}
                         </Link>
                         <button
                           onClick={() => handleDelete(doc.id)}
                           className="text-sm text-red-600 hover:text-red-800"
                         >
-                          Delete
+                          {t('common.delete')}
                         </button>
                       </div>
                     </div>

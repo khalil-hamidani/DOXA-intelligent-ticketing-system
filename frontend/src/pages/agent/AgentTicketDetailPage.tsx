@@ -6,10 +6,12 @@ import { Layout } from '../../components/Layout';
 import { StatusBadge } from '../../components/StatusBadge';
 import { LoadingSpinner } from '../../components/LoadingSpinner';
 import { ErrorMessage } from '../../components/ErrorMessage';
+import { useLanguage } from '../../context/LanguageContext';
 
 export const AgentTicketDetailPage: React.FC = () => {
   const { ticketId } = useParams<{ ticketId: string }>();
   const navigate = useNavigate();
+  const { t } = useLanguage();
   const [ticket, setTicket] = useState<TicketDetail | null>(null);
   const [feedback, setFeedback] = useState<Feedback | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -101,7 +103,7 @@ export const AgentTicketDetailPage: React.FC = () => {
             onClick={() => navigate('/agent/tickets')}
             className="text-sm text-indigo-600 hover:text-indigo-500 mb-4"
           >
-            ← Back to Tickets
+            ← {t('common.backTo')} {t('nav.tickets')}
           </button>
           <div className="flex items-start justify-between">
             <div>
@@ -110,9 +112,9 @@ export const AgentTicketDetailPage: React.FC = () => {
               </h1>
               <div className="mt-2 flex items-center space-x-4">
                 <StatusBadge status={ticket.status} />
-                <span className="text-sm text-gray-500">{ticket.category || 'General'}</span>
+                <span className="text-sm text-gray-500">{t(`categories.${ticket.category}`) || t('categories.general')}</span>
                 <span className="text-sm text-gray-500">
-                  Client ID: {ticket.client_id}
+                  {t('tickets.clientId')}: {ticket.client_id}
                 </span>
               </div>
             </div>
@@ -124,14 +126,14 @@ export const AgentTicketDetailPage: React.FC = () => {
                       onClick={handleEscalate}
                       className="px-3 py-2 border border-orange-300 text-orange-700 rounded-md hover:bg-orange-50 text-sm"
                     >
-                      Escalate
+                      {t('tickets.escalate')}
                     </button>
                   )}
                   <button
                     onClick={handleCloseTicket}
                     className="px-3 py-2 border border-green-300 text-green-700 rounded-md hover:bg-green-50 text-sm"
                   >
-                    Close Ticket
+                    {t('tickets.closeTicket')}
                   </button>
                 </>
               )}
@@ -141,12 +143,12 @@ export const AgentTicketDetailPage: React.FC = () => {
 
         {/* Description */}
         <div className="bg-white shadow rounded-lg p-6 mb-6">
-          <h2 className="text-lg font-medium text-gray-900 mb-3">Customer Description</h2>
+          <h2 className="text-lg font-medium text-gray-900 mb-3">{t('tickets.customerDescription')}</h2>
           <p className="text-gray-700 whitespace-pre-wrap">{ticket.description}</p>
           <div className="mt-4 pt-4 border-t border-gray-200 text-sm text-gray-500">
-            Created: {new Date(ticket.created_at).toLocaleString()}
+            {t('tickets.created')}: {new Date(ticket.created_at).toLocaleString()}
             {ticket.updated_at !== ticket.created_at && (
-              <> | Updated: {new Date(ticket.updated_at).toLocaleString()}</>
+              <> | {t('tickets.updated')}: {new Date(ticket.updated_at).toLocaleString()}</>
             )}
           </div>
         </div>
@@ -154,7 +156,7 @@ export const AgentTicketDetailPage: React.FC = () => {
         {/* Attachments */}
         {ticket.attachments && ticket.attachments.length > 0 && (
           <div className="bg-white shadow rounded-lg p-6 mb-6">
-            <h2 className="text-lg font-medium text-gray-900 mb-4">Attachments</h2>
+            <h2 className="text-lg font-medium text-gray-900 mb-4">{t('tickets.attachments')}</h2>
             <ul className="space-y-2">
               {ticket.attachments.map((attachment) => (
                 <li key={attachment.id} className="flex items-center justify-between bg-gray-50 px-4 py-3 rounded-md border">
@@ -182,7 +184,7 @@ export const AgentTicketDetailPage: React.FC = () => {
                     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                     </svg>
-                    <span>Download</span>
+                    <span>{t('common.download')}</span>
                   </button>
                 </li>
               ))}
@@ -192,9 +194,9 @@ export const AgentTicketDetailPage: React.FC = () => {
 
         {/* Responses */}
         <div className="bg-white shadow rounded-lg p-6 mb-6">
-          <h2 className="text-lg font-medium text-gray-900 mb-4">Conversation History</h2>
+          <h2 className="text-lg font-medium text-gray-900 mb-4">{t('tickets.conversationHistory')}</h2>
           {ticket.responses.length === 0 ? (
-            <p className="text-gray-500 italic">No responses yet</p>
+            <p className="text-gray-500 italic">{t('tickets.noResponses')}</p>
           ) : (
             <div className="space-y-4">
               {ticket.responses.map((response) => (
@@ -210,7 +212,7 @@ export const AgentTicketDetailPage: React.FC = () => {
                     <span className={`text-sm font-medium ${
                       response.source === 'AI' ? 'text-blue-700' : 'text-green-700'
                     }`}>
-                      {response.source === 'AI' ? '🤖 AI Assistant' : '👤 Support Agent'}
+                      {response.source === 'AI' ? `🤖 ${t('tickets.aiAssistant')}` : `👤 ${t('tickets.supportAgent')}`}
                     </span>
                     <span className="text-xs text-gray-500">
                       {new Date(response.created_at).toLocaleString()}
@@ -226,13 +228,13 @@ export const AgentTicketDetailPage: React.FC = () => {
         {/* Reply Form - only if not closed */}
         {ticket.status !== 'CLOSED' && (
           <div className="bg-white shadow rounded-lg p-6 mb-6">
-            <h2 className="text-lg font-medium text-gray-900 mb-4">Add Reply</h2>
+            <h2 className="text-lg font-medium text-gray-900 mb-4">{t('tickets.addReply')}</h2>
             <form onSubmit={handleReply}>
               <textarea
                 rows={4}
                 value={replyContent}
                 onChange={(e) => setReplyContent(e.target.value)}
-                placeholder="Type your response to the customer..."
+                placeholder={t('tickets.replyPlaceholder')}
                 className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
                 required
               />
@@ -242,7 +244,7 @@ export const AgentTicketDetailPage: React.FC = () => {
                   disabled={isSubmitting || !replyContent.trim()}
                   className="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 disabled:opacity-50"
                 >
-                  {isSubmitting ? 'Sending...' : 'Send Reply'}
+                  {isSubmitting ? t('tickets.sending') : t('tickets.sendReply')}
                 </button>
               </div>
             </form>
@@ -252,18 +254,18 @@ export const AgentTicketDetailPage: React.FC = () => {
         {/* Feedback Display */}
         {feedback && (
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-            <h3 className="text-lg font-medium text-gray-900 mb-4">Customer Feedback</h3>
+            <h3 className="text-lg font-medium text-gray-900 mb-4">{t('feedback.customerFeedback')}</h3>
             <div className="flex items-center mb-2">
-              <span className="text-sm font-medium text-gray-700 mr-2">Satisfaction:</span>
+              <span className="text-sm font-medium text-gray-700 mr-2">{t('feedback.satisfaction')}:</span>
               <span className={`text-lg font-semibold ${feedback.satisfied ? 'text-green-600' : 'text-red-600'}`}>
-                {feedback.satisfied ? '👍 Satisfied' : '👎 Not Satisfied'}
+                {feedback.satisfied ? `👍 ${t('feedback.satisfied')}` : `👎 ${t('feedback.notSatisfied')}`}
               </span>
             </div>
             {feedback.comment && (
               <p className="text-gray-600 italic">"{feedback.comment}"</p>
             )}
             <p className="text-xs text-gray-500 mt-1">
-              Submitted: {new Date(feedback.created_at).toLocaleString()}
+              {t('feedback.submittedOn')}: {new Date(feedback.created_at).toLocaleString()}
             </p>
           </div>
         )}

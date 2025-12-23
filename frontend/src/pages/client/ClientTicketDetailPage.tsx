@@ -6,10 +6,12 @@ import { Layout } from '../../components/Layout';
 import { StatusBadge } from '../../components/StatusBadge';
 import { LoadingSpinner } from '../../components/LoadingSpinner';
 import { ErrorMessage } from '../../components/ErrorMessage';
+import { useLanguage } from '../../context/LanguageContext';
 
 export const ClientTicketDetailPage: React.FC = () => {
   const { ticketId } = useParams<{ ticketId: string }>();
   const navigate = useNavigate();
+  const { t } = useLanguage();
   const [ticket, setTicket] = useState<TicketDetail | null>(null);
   const [feedback, setFeedback] = useState<Feedback | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -96,16 +98,16 @@ export const ClientTicketDetailPage: React.FC = () => {
             onClick={() => navigate('/client/tickets')}
             className="text-sm text-indigo-600 hover:text-indigo-500 mb-4"
           >
-            ← Back to Tickets
+            ← {t('common.backTo')} {t('nav.tickets')}
           </button>
           <div className="flex items-start justify-between">
             <div>
               <h1 className="text-2xl font-bold text-gray-900">{ticket.subject}</h1>
               <div className="mt-2 flex items-center space-x-4">
                 <StatusBadge status={ticket.status} />
-                <span className="text-sm text-gray-500">{ticket.category || 'General'}</span>
+                <span className="text-sm text-gray-500">{t(`categories.${ticket.category}`) || t('categories.general')}</span>
                 <span className="text-sm text-gray-500">
-                  Created {new Date(ticket.created_at).toLocaleString()}
+                  {t('tickets.created')} {new Date(ticket.created_at).toLocaleString()}
                 </span>
               </div>
             </div>
@@ -114,14 +116,14 @@ export const ClientTicketDetailPage: React.FC = () => {
 
         {/* Description */}
         <div className="bg-white shadow rounded-lg p-6 mb-6">
-          <h2 className="text-lg font-medium text-gray-900 mb-3">Description</h2>
+          <h2 className="text-lg font-medium text-gray-900 mb-3">{t('tickets.description')}</h2>
           <p className="text-gray-700 whitespace-pre-wrap">{ticket.description}</p>
         </div>
 
         {/* Attachments */}
         {ticket.attachments && ticket.attachments.length > 0 && (
           <div className="bg-white shadow rounded-lg p-6 mb-6">
-            <h2 className="text-lg font-medium text-gray-900 mb-4">Attachments</h2>
+            <h2 className="text-lg font-medium text-gray-900 mb-4">{t('tickets.attachments')}</h2>
             <ul className="space-y-2">
               {ticket.attachments.map((attachment) => (
                 <li key={attachment.id} className="flex items-center justify-between bg-gray-50 px-4 py-3 rounded-md border">
@@ -149,7 +151,7 @@ export const ClientTicketDetailPage: React.FC = () => {
                     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                     </svg>
-                    <span>Download</span>
+                    <span>{t('common.download')}</span>
                   </button>
                 </li>
               ))}
@@ -159,9 +161,9 @@ export const ClientTicketDetailPage: React.FC = () => {
 
         {/* Responses */}
         <div className="bg-white shadow rounded-lg p-6 mb-6">
-          <h2 className="text-lg font-medium text-gray-900 mb-4">Responses</h2>
+          <h2 className="text-lg font-medium text-gray-900 mb-4">{t('tickets.responses')}</h2>
           {ticket.responses.length === 0 ? (
-            <p className="text-gray-500 italic">Waiting for response...</p>
+            <p className="text-gray-500 italic">{t('common.waitingForResponse')}</p>
           ) : (
             <div className="space-y-4">
               {ticket.responses.map((response) => (
@@ -177,7 +179,7 @@ export const ClientTicketDetailPage: React.FC = () => {
                     <span className={`text-sm font-medium ${
                       response.source === 'AI' ? 'text-blue-700' : 'text-gray-700'
                     }`}>
-                      {response.source === 'AI' ? '🤖 AI Assistant' : '👤 Support Agent'}
+                      {response.source === 'AI' ? `🤖 ${t('tickets.aiAssistant')}` : `👤 ${t('tickets.supportAgent')}`}
                     </span>
                     <span className="text-xs text-gray-500">
                       {new Date(response.created_at).toLocaleString()}
@@ -193,15 +195,15 @@ export const ClientTicketDetailPage: React.FC = () => {
         {/* Actions for AI_ANSWERED status */}
         {ticket.status === 'AI_ANSWERED' && latestAiResponse && (
           <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-6">
-            <h3 className="text-lg font-medium text-yellow-800 mb-2">Was this response helpful?</h3>
+            <h3 className="text-lg font-medium text-yellow-800 mb-2">{t('tickets.wasResponseHelpful')}</h3>
             <p className="text-sm text-yellow-700 mb-4">
-              If the AI response didn't resolve your issue, you can request escalation to a human agent.
+              {t('tickets.aiResponseNotHelpful')}
             </p>
             <button
               onClick={handleRequestEscalation}
               className="px-4 py-2 bg-yellow-600 text-white rounded-md hover:bg-yellow-700"
             >
-              Escalate to Human Agent
+              {t('tickets.escalateToAgent')}
             </button>
           </div>
         )}
@@ -209,11 +211,11 @@ export const ClientTicketDetailPage: React.FC = () => {
         {/* Feedback Form - only show if ticket is closed AND no feedback exists yet */}
         {ticket.status === 'CLOSED' && !feedback && (
           <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-6">
-            <h3 className="text-lg font-medium text-green-800 mb-4">Rate Your Experience</h3>
+            <h3 className="text-lg font-medium text-green-800 mb-4">{t('feedback.rateExperience')}</h3>
             <form onSubmit={handleSubmitFeedback}>
               <div className="mb-4">
                 <label className="block text-sm font-medium text-green-700 mb-2">
-                  How would you rate the support you received?
+                  {t('feedback.howWouldYouRate')}
                 </label>
                 <div className="flex space-x-2">
                   {[1, 2, 3, 4, 5].map((rating) => (
@@ -234,14 +236,14 @@ export const ClientTicketDetailPage: React.FC = () => {
               </div>
               <div className="mb-4">
                 <label className="block text-sm font-medium text-green-700 mb-2">
-                  Additional comments (optional)
+                  {t('feedback.additionalComments')}
                 </label>
                 <textarea
                   rows={3}
                   value={feedbackComment}
                   onChange={(e) => setFeedbackComment(e.target.value)}
                   className="w-full border border-green-300 rounded-md px-3 py-2"
-                  placeholder="Tell us more about your experience..."
+                  placeholder={t('feedback.commentPlaceholder')}
                 />
               </div>
               <button
@@ -249,7 +251,7 @@ export const ClientTicketDetailPage: React.FC = () => {
                 disabled={feedbackRating === 0 || isSubmittingFeedback}
                 className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 disabled:opacity-50"
               >
-                {isSubmittingFeedback ? 'Submitting...' : 'Submit Feedback'}
+                {isSubmittingFeedback ? t('common.submitting') : t('feedback.submitFeedback')}
               </button>
             </form>
           </div>
@@ -258,15 +260,15 @@ export const ClientTicketDetailPage: React.FC = () => {
         {/* Feedback Display - show when feedback exists */}
         {feedback && (
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-            <h3 className="text-lg font-medium text-gray-900 mb-2">Your Feedback</h3>
+            <h3 className="text-lg font-medium text-gray-900 mb-2">{t('feedback.yourFeedback')}</h3>
             <div className="flex items-center mb-2">
               <span className={`text-lg font-medium ${feedback.satisfied ? 'text-green-600' : 'text-red-600'}`}>
-                {feedback.satisfied ? '👍 Satisfied' : '👎 Not Satisfied'}
+                {feedback.satisfied ? `👍 ${t('feedback.satisfied')}` : `👎 ${t('feedback.notSatisfied')}`}
               </span>
             </div>
             {feedback.comment && <p className="text-gray-600 italic">"{feedback.comment}"</p>}
             <p className="text-xs text-gray-500 mt-2">
-              Submitted on {new Date(feedback.created_at).toLocaleString()}
+              {t('feedback.submittedOn')} {new Date(feedback.created_at).toLocaleString()}
             </p>
           </div>
         )}

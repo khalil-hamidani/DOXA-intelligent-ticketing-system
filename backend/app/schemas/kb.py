@@ -15,6 +15,12 @@ class KBDocumentCreate(KBDocumentBase):
     pass
 
 
+class KBDocumentUpdate(BaseModel):
+    title: Optional[str] = None
+    content: Optional[str] = None
+    category: Optional[str] = None
+
+
 class KBDocumentRead(KBDocumentBase):
     id: UUID
     created_at: datetime
