@@ -239,26 +239,4 @@ agent = Agent(
     name="CustomAgent"
 )
 ```
-
-## Future Enhancements
-
-- [ ] Add prompt caching for repeated queries
-- [ ] Implement token counting for cost tracking
-- [ ] Add streaming responses for real-time UI updates
-- [ ] Integrate knowledge base (RAG) into agent context
-- [ ] Multi-language support (FR, EN, ES)
-- [ ] Custom LLM fine-tuning for domain-specific tasks
-
-## References
-
-- [Agno Framework Documentation](https://docs.agno.ai)
-- [Mistral API Documentation](https://docs.mistral.ai)
-- [Mistral Models](https://docs.mistral.ai/capabilities/function_calling/)
-
-## Support
-
-For issues or questions:
-1. Check fallback heuristic output (agents should still work)
-2. Verify API keys in `.env`
-3. Check network connectivity to Mistral API
-4. Review agent logs for detailed error messages
+eof

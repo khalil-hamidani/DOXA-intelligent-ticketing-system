@@ -1,0 +1,21 @@
+{
+  "Team": "TEAM 3",
+  "Answers": [
+    {
+      "id": "Q001",
+      "answer": "Pour les informations tarifaires des grandes entreprises, veuillez consulter notre page de tarification ou contacter notre équipe commerciale pour un devis personnalisé basé sur vos besoins spécifiques."
+    },
+    {
+      "id": "Q002",
+      "answer": "Vous pouvez exporter vos données en accédant à la section 'Paramètres' > 'Export'. Sélectionnez le format désiré (CSV, JSON, Excel), et les données seront préparées pour téléchargement sur votre ordinateur. Tous les fichiers d'export incluent un historique complet."
+    },
+    {
+      "id": "Q003",
+      "answer": "Pour configurer une équipe par projet, accédez à 'Gestion de projets' > 'Ajouter une équipe'. Vous pouvez assigner des membres avec des rôles spécifiques (Admin, Manager, Contributor). Chaque projet peut avoir une équipe dédiée avec des permissions granulaires."
+    },
+    {
+      "id": "Q004",
+      "answer": "SSO (Single Sign-On) est une méthode d'authentification qui permet aux utilisateurs de se connecter avec un seul ensemble d'identifiants sur plusieurs applications. Notre plateforme supporte SSO via SAML 2.0 et OAuth 2.0, permettant une intégration avec vos systèmes d'annuaire existants."
+    }
+  ]
+}
