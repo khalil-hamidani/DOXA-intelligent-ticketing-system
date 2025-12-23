@@ -3,7 +3,14 @@ from models import Ticket
 from typing import Dict, List
 import re
 
-NEGATIVE_WORDS = ["insatisfait", "mécontent", "furieux", "en colère", "pas satisfait", "impossible"]
+NEGATIVE_WORDS = [
+    "insatisfait",
+    "mécontent",
+    "furieux",
+    "en colère",
+    "pas satisfait",
+    "impossible",
+]
 
 
 def _contains_sensitive(text: str) -> bool:
@@ -25,15 +32,20 @@ def evaluate(ticket: Ticket) -> Dict:
     Returns dict: {"confidence": float, "escalate": bool, "reasons": [...], "sensitive": bool, "escalation_context": str}
     """
     reasons: List[str] = []
-    priority = (ticket.priority_score or 0)
+    priority = ticket.priority_score or 50  # Default to medium priority
 
-    # base confidence comes from priority (higher priority -> more attention but not necessarily confidence)
-    base_conf = min(0.9, max(0.2, priority / 120))
+    # base confidence - start high and reduce only for specific issues
+    # We want to ANSWER tickets, not escalate them!
+    base_conf = 0.75  # Start with good confidence
 
-    # boost if snippets exist and category aligns
+    # boost if snippets exist
     snippet_bonus = 0.0
     if ticket.snippets:
-        snippet_bonus = 0.2
+        snippet_bonus = 0.15
+
+    # boost for having a category
+    if ticket.category:
+        snippet_bonus += 0.05
 
     confidence = base_conf + snippet_bonus
     confidence = min(1.0, confidence)
@@ -53,15 +65,17 @@ def evaluate(ticket: Ticket) -> Dict:
     # final clamp
     confidence = max(0.0, min(1.0, confidence))
 
-    # escalation rules
+    # escalation rules - only escalate when really necessary
     escalate = False
     escalation_context = None
-    if confidence < 0.6:
+    if confidence < 0.3:  # Very low threshold - we want to try answering!
         escalate = True
-        reasons.append("Confiance insuffisante (<60%)")
+        reasons.append("Confiance insuffisante (<30%)")
 
-    if sensitive:
+    # Don't auto-escalate just for sensitive data - we can still help
+    if sensitive and confidence < 0.5:
         escalate = True
+        reasons.append("Données sensibles avec confiance faible")
 
     # prepare escalation context
     if escalate:
@@ -71,4 +85,10 @@ def evaluate(ticket: Ticket) -> Dict:
     ticket.sensitive = sensitive
     ticket.escalation_context = escalation_context
 
-    return {"confidence": confidence, "escalate": escalate, "reasons": reasons, "sensitive": sensitive, "escalation_context": escalation_context}
+    return {
+        "confidence": confidence,
+        "escalate": escalate,
+        "reasons": reasons,
+        "sensitive": sensitive,
+        "escalation_context": escalation_context,
+    }

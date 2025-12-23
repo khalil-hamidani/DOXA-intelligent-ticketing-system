@@ -8,10 +8,96 @@ import json
 logger = logging.getLogger(__name__)
 
 KB_ENTRIES: List[Tuple[str, str, str]] = [
-    ("kb_fact_1", "facturation", "Pour les questions de facturation, contactez le service financier ou consultez la FAQ facturation."),
-    ("kb_tech_1", "technique", "Pour les bugs connus, vérifiez la configuration et redémarrez le service. Si le problème persiste, fournissez les logs."),
-    ("kb_auth_1", "authentification", "Pour les problèmes d'accès, réinitialisez votre mot de passe depuis la page de connexion."),
-    ("kb_general_1", "autre", "Merci de préciser votre demande pour que nous puissions vous aider efficacement.")
+    # Billing / Facturation
+    (
+        "kb_fact_1",
+        "facturation",
+        "Pour les questions de facturation, contactez le service financier ou consultez la FAQ facturation dans votre espace client.",
+    ),
+    (
+        "kb_fact_2",
+        "facturation",
+        "Pour un changement de forfait ou upgrade, le montant sera calculé au prorata. Connectez-vous à votre espace client > Abonnement > Changer de forfait.",
+    ),
+    (
+        "kb_fact_3",
+        "facturation",
+        "Les remboursements sont traités sous 5-10 jours ouvrés. Vérifiez votre relevé bancaire après ce délai.",
+    ),
+    (
+        "kb_fact_4",
+        "billing",
+        "For billing inquiries, check your invoice in the customer portal or contact our billing team.",
+    ),
+    (
+        "kb_fact_5",
+        "billing",
+        "Plan upgrades are prorated. The credit for unused days will be applied to your new plan.",
+    ),
+    # Technical / Technique
+    (
+        "kb_tech_1",
+        "technique",
+        "Pour les bugs connus, vérifiez la configuration et redémarrez le service. Si le problème persiste, fournissez les logs.",
+    ),
+    (
+        "kb_tech_2",
+        "technique",
+        "En cas d'erreur de connexion, videz le cache du navigateur et réessayez. Vérifiez également votre connexion internet.",
+    ),
+    (
+        "kb_tech_3",
+        "technical",
+        "For technical issues, try clearing your browser cache, restarting the application, and checking your internet connection.",
+    ),
+    (
+        "kb_tech_4",
+        "installation",
+        "Pour l'installation, téléchargez la dernière version depuis notre site et suivez le guide d'installation.",
+    ),
+    # Authentication / Authentification
+    (
+        "kb_auth_1",
+        "authentification",
+        "Pour les problèmes d'accès, réinitialisez votre mot de passe depuis la page de connexion.",
+    ),
+    (
+        "kb_auth_2",
+        "authentification",
+        "Si vous êtes bloqué après plusieurs tentatives, attendez 15 minutes ou contactez le support.",
+    ),
+    (
+        "kb_auth_3",
+        "account",
+        "For password reset, click 'Forgot Password' on the login page and follow the email instructions.",
+    ),
+    # Security / Sécurité
+    (
+        "kb_sec_1",
+        "securite",
+        "Pour signaler une faille de sécurité (breach), envoyez un email à security@company.com avec les détails.",
+    ),
+    (
+        "kb_sec_2",
+        "security",
+        "To report a security breach, contact our security team immediately at security@company.com.",
+    ),
+    (
+        "kb_sec_3",
+        "securite",
+        "Si vous suspectez une compromission de compte, changez immédiatement votre mot de passe et activez l'authentification à deux facteurs.",
+    ),
+    # General
+    (
+        "kb_general_1",
+        "autre",
+        "Notre équipe est disponible pour vous aider. Décrivez votre problème en détail pour une réponse plus rapide.",
+    ),
+    (
+        "kb_general_2",
+        "other",
+        "Our support team is here to help. Please provide as much detail as possible about your issue.",
+    ),
 ]
 
 # Try to import Chroma retriever (optional)
@@ -26,7 +112,14 @@ except Exception:
 else:
     ChromaRetriever = ChromaRetriever
 
-NEGATIVE_WORDS = ["insatisfait", "mécontent", "furieux", "en colère", "pas satisfait", "impossible"]
+NEGATIVE_WORDS = [
+    "insatisfait",
+    "mécontent",
+    "furieux",
+    "en colère",
+    "pas satisfait",
+    "impossible",
+]
 
 # Useful regexes
 EMAIL_RE = re.compile(r"\b[\w\.-]+@[\w\.-]+\.[a-z]{2,}\b", re.I)
@@ -34,6 +127,7 @@ PHONE_RE = re.compile(r"(?:\+?\d{1,3}[-.\s]?)?(?:\(?\d{2,4}\)?[-.\s]?)?\d{6,12}"
 CC_RE = re.compile(r"\b(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13})\b")
 IBAN_RE = re.compile(r"\b[A-Z]{2}[0-9]{2}[A-Z0-9]{4,30}\b", re.I)
 CVV_RE = re.compile(r"\b\d{3,4}\b")
+
 
 def _lexical_score(entry_text: str, keywords: List[str]) -> float:
     text = entry_text.lower()
@@ -44,6 +138,7 @@ def _lexical_score(entry_text: str, keywords: List[str]) -> float:
     # normalized lexical score (0..1)
     return min(1.0, score / max(1, len(keywords)))
 
+
 def _normalize_scores(candidates: List[Dict]) -> List[Dict]:
     if not candidates:
         return candidates
@@ -52,6 +147,7 @@ def _normalize_scores(candidates: List[Dict]) -> List[Dict]:
         c["score"] = round(min(1.0, c.get("raw_score", 0.0) / max_raw), 3)
     candidates.sort(key=lambda x: x["score"], reverse=True)
     return candidates
+
 
 def find_solution(ticket, top_n: int = 3, team: Optional[str] = None) -> Dict:
     """
@@ -65,22 +161,37 @@ def find_solution(ticket, top_n: int = 3, team: Optional[str] = None) -> Dict:
     # Attempt semantic retrieval if Chroma retriever is available and DB exists
     if ChromaRetriever is not None:
         try:
-            base_dir = os.path.normpath(os.path.join(os.path.dirname(__file__), "..", "kb"))
+            base_dir = os.path.normpath(
+                os.path.join(os.path.dirname(__file__), "..", "kb")
+            )
             chroma_dir = os.path.join(base_dir, "chroma_db")
             if os.path.exists(chroma_dir):
                 retriever = ChromaRetriever(persist_dir=chroma_dir)
-                docs = retriever.retrieve(" ".join(keywords) if keywords else (ticket.summary or ticket.subject or ""), k=top_n, threshold=0.0)
+                docs = retriever.retrieve(
+                    (
+                        " ".join(keywords)
+                        if keywords
+                        else (ticket.summary or ticket.subject or "")
+                    ),
+                    k=top_n,
+                    threshold=0.0,
+                )
                 for d in docs:
                     meta = d.get("meta", {}) or {}
                     content = d.get("content", "")
                     sim = float(d.get("score", 0.0))
-                    candidates.append({
-                        "id": meta.get("id") or meta.get("source", "kb") + "_" + str(meta.get("chunk_id", 0)),
-                        "category": meta.get("category", "kb"),
-                        "text": content,
-                        "snippet": content[:200],
-                        "raw_score": sim
-                    })
+                    candidates.append(
+                        {
+                            "id": meta.get("id")
+                            or meta.get("source", "kb")
+                            + "_"
+                            + str(meta.get("chunk_id", 0)),
+                            "category": meta.get("category", "kb"),
+                            "text": content,
+                            "snippet": content[:200],
+                            "raw_score": sim,
+                        }
+                    )
         except Exception:
             # fallthrough to lexical below
             candidates = []
@@ -90,13 +201,15 @@ def find_solution(ticket, top_n: int = 3, team: Optional[str] = None) -> Dict:
         for eid, cat, text in KB_ENTRIES:
             raw = 0.2 if (ticket.category and cat == ticket.category) else 0.05
             raw += _lexical_score(text, keywords)
-            candidates.append({
-                "id": eid,
-                "category": cat,
-                "text": text,
-                "snippet": text[:200],
-                "raw_score": raw
-            })
+            candidates.append(
+                {
+                    "id": eid,
+                    "category": cat,
+                    "text": text,
+                    "snippet": text[:200],
+                    "raw_score": raw,
+                }
+            )
 
     # Normalize scores to 0..1
     candidates = _normalize_scores(candidates)
@@ -104,8 +217,11 @@ def find_solution(ticket, top_n: int = 3, team: Optional[str] = None) -> Dict:
 
     # attach snippets to ticket for evaluator use
     ticket.snippets = [r["snippet"] for r in results]
-    solution_text = results[0]["text"] if results else "Aucune solution trouvée dans la KB."
+    solution_text = (
+        results[0]["text"] if results else "Aucune solution trouvée dans la KB."
+    )
     return {"results": results, "solution_text": solution_text}
+
 
 def _contains_sensitive(text: str) -> bool:
     if not text:
@@ -120,6 +236,7 @@ def _contains_sensitive(text: str) -> bool:
         return True
     return False
 
+
 def _mask_pii(text: str) -> str:
     if not text:
         return text
@@ -130,13 +247,14 @@ def _mask_pii(text: str) -> str:
     # optionally mask CVV-like standalone 3-4 digits near CC context is risky — skip broad CVV masking
     return masked
 
+
 def evaluate(ticket: Ticket) -> Dict:
     """Evaluate the proposed solution and compute confidence and escalation decision.
 
     Returns dict: {"confidence": float, "escalate": bool, "reasons": [...], "sensitive": bool, "escalation_context": str}
     """
     reasons: List[str] = []
-    priority = (ticket.priority_score or 0)
+    priority = ticket.priority_score or 0
 
     base_conf = min(0.9, max(0.2, priority / 120))
     snippet_bonus = 0.0
@@ -166,7 +284,7 @@ def evaluate(ticket: Ticket) -> Dict:
             "event": "pii_detected",
             "ticket_id": getattr(ticket, "id", None),
             "trace_id": trace_id,
-            "reasons": reasons
+            "reasons": reasons,
         }
         logger.info(json.dumps(audit))
 
@@ -188,4 +306,10 @@ def evaluate(ticket: Ticket) -> Dict:
     ticket.sensitive = sensitive
     ticket.escalation_context = escalation_context
 
-    return {"confidence": confidence, "escalate": escalate, "reasons": reasons, "sensitive": sensitive, "escalation_context": escalation_context}
+    return {
+        "confidence": confidence,
+        "escalate": escalate,
+        "reasons": reasons,
+        "sensitive": sensitive,
+        "escalation_context": escalation_context,
+    }

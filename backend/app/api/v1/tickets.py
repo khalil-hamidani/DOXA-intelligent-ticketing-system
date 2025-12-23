@@ -25,7 +25,7 @@ import shutil
 router = APIRouter()
 
 # Allowed file types
-ALLOWED_EXTENSIONS = {'.pdf', '.png', '.jpg', '.jpeg', '.gif'}
+ALLOWED_EXTENSIONS = {".pdf", ".png", ".jpg", ".jpeg", ".gif"}
 MAX_FILE_SIZE = 10 * 1024 * 1024  # 10MB
 
 
@@ -134,7 +134,9 @@ def read_feedback(
 ):
     """Get feedback for a ticket. Returns null if no feedback exists yet."""
     try:
-        return FeedbackService.get_feedback(db=db, ticket_id=ticket_id, user=current_user)
+        return FeedbackService.get_feedback(
+            db=db, ticket_id=ticket_id, user=current_user
+        )
     except HTTPException as e:
         if e.status_code == 404 and "Feedback not found" in str(e.detail):
             return None  # No feedback yet - this is normal
@@ -154,26 +156,22 @@ async def upload_attachment(
     if file_ext not in ALLOWED_EXTENSIONS:
         raise HTTPException(
             status_code=400,
-            detail=f"File type not allowed. Allowed types: {', '.join(ALLOWED_EXTENSIONS)}"
+            detail=f"File type not allowed. Allowed types: {', '.join(ALLOWED_EXTENSIONS)}",
         )
-    
+
     # Check file size (read content to check)
     content = await file.read()
     if len(content) > MAX_FILE_SIZE:
         raise HTTPException(
             status_code=400,
-            detail=f"File too large. Maximum size: {MAX_FILE_SIZE // (1024*1024)}MB"
+            detail=f"File too large. Maximum size: {MAX_FILE_SIZE // (1024*1024)}MB",
         )
-    
+
     # Reset file position
     await file.seek(0)
-    
+
     return TicketService.add_attachment(
-        db=db,
-        ticket_id=ticket_id,
-        file=file,
-        file_content=content,
-        user=current_user
+        db=db, ticket_id=ticket_id, file=file, file_content=content, user=current_user
     )
 
 
@@ -198,12 +196,12 @@ def download_attachment(
     attachment = TicketService.get_attachment(
         db=db, ticket_id=ticket_id, attachment_id=attachment_id, user=current_user
     )
-    
+
     if not os.path.exists(attachment.file_path):
         raise HTTPException(status_code=404, detail="File not found on server")
-    
+
     return FileResponse(
         path=attachment.file_path,
         filename=attachment.original_filename,
-        media_type=attachment.file_type
+        media_type=attachment.file_type,
     )
