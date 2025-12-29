@@ -1,0 +1,204 @@
+{
+  "Questions": [
+    {
+      "id": "Q001",
+      "query": "What is Doxa?"
+    },
+    {
+      "id": "Q002",
+      "query": "What is the price of the Pro plan?"
+    },
+    {
+      "id": "Q003",
+      "query": "What should I do if I receive the 'Email not recognized' error?"
+    },
+    {
+      "id": "Q004",
+      "query": "How do I create my first project?"
+    },
+    {
+      "id": "Q005",
+      "query": "What are the major differences between the Simple and Pro plans?"
+    },
+    {
+      "id": "Q006",
+      "query": "Is Doxa compliant with Law 25-11 in Algeria?"
+    },
+    {
+      "id": "Q007",
+      "query": "How can I add a member?"
+    },
+    {
+      "id": "Q008",
+      "query": "Is the system secure?"
+    },
+    {
+      "id": "Q009",
+      "query": "How can I integrate my custom accounting software?"
+    },
+    {
+      "id": "Q010",
+      "query": "Can I use Doxa to make video calls?"
+    },
+    {
+      "id": "Q011",
+      "query": "Who won the last World Cup?"
+    },
+    {
+      "id": "Q012",
+      "query": "What is the weather in Algiers today?"
+    },
+    {
+      "id": "Q013",
+      "query": "How does the system manage sprints?"
+    },
+    {
+      "id": "Q014",
+      "query": "What is the deadline for notifying the ANPDP of a security incident?"
+    },
+    {
+      "id": "Q015",
+      "query": "Can I store credit card numbers in tasks?"
+    },
+    {
+      "id": "Q016",
+      "query": "What happens after the 14-day free trial?"
+    },
+    {
+      "id": "Q017",
+      "query": "How do I permanently delete my data?"
+    },
+    {
+      "id": "Q018",
+      "query": "What are the API limits for the Pro plan?"
+    },
+    {
+      "id": "Q019",
+      "query": "My mobile app is not syncing, what should I do?"
+    },
+    {
+      "id": "Q020",
+      "query": "What are the available roles and their permissions?"
+    },
+    {
+      "id": "Q021",
+      "query": "How do I export my reports to PDF?"
+    },
+    {
+      "id": "Q022",
+      "query": "Can I use Doxa for medical data?"
+    },
+    {
+      "id": "Q023",
+      "query": "How can I automate the archiving of completed tasks?"
+    },
+    {
+      "id": "Q024",
+      "query": "Is the encryption end-to-end?"
+    },
+    {
+      "id": "Q025",
+      "query": "How much does the Enterprise plan cost?"
+    },
+    {
+      "id": "Q026",
+      "query": "What should I do if my 2FA code is rejected?"
+    },
+    {
+      "id": "Q027",
+      "query": "Does Doxa support the Tamazight language?"
+    },
+    {
+      "id": "Q028",
+      "query": "How do I link a GitHub Pull Request to a task?"
+    },
+    {
+      "id": "Q029",
+      "query": "Can I get a refund if I am not satisfied?"
+    },
+    {
+      "id": "Q030",
+      "query": "Who is responsible in the event of a data breach?"
+    },
+    {
+      "id": "Q031",
+      "query": "How can I see the history of a specific task?"
+    },
+    {
+      "id": "Q032",
+      "query": "How do I invite 50 people at once?"
+    },
+    {
+      "id": "Q033",
+      "query": "Does Doxa work without internet?"
+    },
+    {
+      "id": "Q034",
+      "query": "What are the data center certifications?"
+    },
+    {
+      "id": "Q035",
+      "query": "Can I create 'Image' type custom fields?"
+    },
+    {
+      "id": "Q036",
+      "query": "How do I configure Slack notifications for a project?"
+    },
+    {
+      "id": "Q037",
+      "query": "What is the maximum size of an attachment?"
+    },
+    {
+      "id": "Q038",
+      "query": "How can I reduce interface lag?"
+    },
+    {
+      "id": "Q039",
+      "query": "Can I pay via CCP?"
+    },
+    {
+      "id": "Q040",
+      "query": "Is a DPO mandatory for my organization?"
+    },
+    {
+      "id": "Q041",
+      "query": "How do I duplicate an entire project?"
+    },
+    {
+      "id": "Q042",
+      "query": "What is the difference between 'Archive' and 'Delete'?"
+    },
+    {
+      "id": "Q043",
+      "query": "How do I get a PDF invoice?"
+    },
+    {
+      "id": "Q044",
+      "query": "Can I transfer my data outside of Algeria?"
+    },
+    {
+      "id": "Q045",
+      "query": "How do I @mention an entire developer team?"
+    },
+    {
+      "id": "Q046",
+      "query": "My company uses Okta, can I use it?"
+    },
+    {
+      "id": "Q047",
+      "query": "What is the guaranteed uptime for the Pro plan?"
+    },
+    {
+      "id": "Q048",
+      "query": "How do I restore a task deleted by mistake?"
+    },
+    {
+      "id": "Q049",
+      "query": "Can you give me the recipe for Algerian couscous?"
+    },
+    {
+      "id": "Q050",
+      "query": "Summarize the benefits of Doxa for an IT team."
+    }
+  ]
+}

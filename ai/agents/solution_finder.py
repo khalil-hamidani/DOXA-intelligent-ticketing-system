@@ -7,6 +7,98 @@ import json
 
 logger = logging.getLogger(__name__)
 
+# Try to load environment variables
+try:
+    from dotenv import load_dotenv, find_dotenv
+
+    load_dotenv(find_dotenv())
+except ImportError:
+    pass
+
+# LLM for answer generation
+_answer_agent = None
+
+
+def _get_answer_agent():
+    """Get or create the LLM agent for answer generation."""
+    global _answer_agent
+    if _answer_agent is not None:
+        return _answer_agent
+
+    try:
+        from agno.agent import Agent
+        from agno.models.mistral import MistralChat
+
+        _mistral_key = os.environ.get("MISTRAL_API_KEY") or os.environ.get(
+            "MISTRALAI_API_KEY"
+        )
+        if _mistral_key:
+            os.environ["MISTRALAI_API_KEY"] = _mistral_key
+
+        MODEL_ID = os.environ.get("MISTRAL_MODEL_ID", "mistral-small-latest")
+        mistral_model = MistralChat(id=MODEL_ID, temperature=0.3)
+
+        instructions = """You are a helpful customer support assistant for Doxa, a SaaS project management platform.
+Your task is to answer user questions based ONLY on the provided knowledge base context.
+
+Rules:
+1. Answer in the SAME LANGUAGE as the question (French if question is in French)
+2. Be concise and direct - answer the specific question asked
+3. If the context doesn't contain relevant information, say so honestly
+4. Do NOT make up information not in the context
+5. Format your answer clearly, using bullet points if listing multiple items
+6. If the question is completely unrelated to Doxa or project management, politely indicate that"""
+
+        _answer_agent = Agent(
+            model=mistral_model, instructions=instructions, name="AnswerAgent"
+        )
+        return _answer_agent
+    except Exception as e:
+        logger.warning(f"Could not create answer agent: {e}")
+        return None
+
+
+def generate_answer_from_context(question: str, kb_context: List[str]) -> Optional[str]:
+    """Use LLM to generate a proper answer based on KB context.
+
+    Args:
+        question: The user's question
+        kb_context: List of relevant KB snippets
+
+    Returns:
+        Generated answer string or None if failed
+    """
+    agent = _get_answer_agent()
+    if not agent:
+        return None
+
+    context_text = "\n\n---\n\n".join(kb_context[:5])  # Use top 5 context chunks
+
+    prompt = f"""Based on the following knowledge base context, answer the user's question.
+
+KNOWLEDGE BASE CONTEXT:
+{context_text}
+
+USER QUESTION: {question}
+
+Provide a clear, direct answer based on the context above. If the context doesn't contain relevant information for this specific question, say so."""
+
+    try:
+        response = agent.run(prompt)
+        response_text = (
+            str(response.content) if hasattr(response, "content") else str(response)
+        )
+
+        # Clean up the response
+        response_text = response_text.strip()
+        if response_text:
+            return response_text
+    except Exception as e:
+        logger.error(f"Answer generation error: {e}")
+
+    return None
+
+
 KB_ENTRIES: List[Tuple[str, str, str]] = [
     # Billing / Facturation
     (
@@ -217,9 +309,24 @@ def find_solution(ticket, top_n: int = 3, team: Optional[str] = None) -> Dict:
 
     # attach snippets to ticket for evaluator use
     ticket.snippets = [r["snippet"] for r in results]
-    solution_text = (
-        results[0]["text"] if results else "Aucune solution trouvée dans la KB."
-    )
+
+    # Get the question from ticket
+    question = ticket.subject or ticket.description or ""
+
+    # Collect KB context texts for LLM
+    kb_context = [r["text"] for r in results if r.get("text")]
+
+    # Try to generate a proper answer using LLM
+    llm_answer = generate_answer_from_context(question, kb_context)
+
+    if llm_answer:
+        solution_text = llm_answer
+    else:
+        # Fallback to raw KB text if LLM fails
+        solution_text = (
+            results[0]["text"] if results else "Aucune solution trouvee dans la KB."
+        )
+
     return {"results": results, "solution_text": solution_text}
 
 

@@ -16,25 +16,7 @@ services:
       timeout: 5s
       retries: 5
 
-  backend:
-    build: ./backend
-    restart: always
-    depends_on:
-      db:
-        condition: service_healthy
-    environment:
-      DATABASE_URL: postgresql://user:password@db:5432/doxa_db
-      JWT_SECRET: change_this_secret_in_production
-    ports:
-      - "8000:8000"
 
-  frontend:
-    build: ./frontend
-    restart: always
-    depends_on:
-      - backend
-    ports:
-      - "80:80"
 
 volumes:
   postgres_data:

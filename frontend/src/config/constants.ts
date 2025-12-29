@@ -1,4 +1,4 @@
-export const API_BASE_URL = '/api/v1';
+export const API_BASE_URL = 'http://192.168.1.36:8000/api/v1';
 
 export const TICKET_STATUS = {
   OPEN: 'OPEN',

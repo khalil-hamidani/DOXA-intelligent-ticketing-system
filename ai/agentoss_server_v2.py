@@ -73,7 +73,7 @@ app.add_middleware(
     allow_origins=[
         "http://127.0.0.1",
         "http://localhost",
-        "http://localhost:3000",
+        "http://192.168.1.36:3000",
         "http://0.0.0.0",
         "https://os.agno.com",
         "http://os.agno.com",
