@@ -1,7 +1,6 @@
 .venv
 __pycache__/
 *.pyc
-img/
 .vscode/
 .VSCodeCounter/
 .DS_Store
