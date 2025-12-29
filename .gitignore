@@ -7,3 +7,12 @@ coverage
 htmlcov/
 .ipynb_checkpoints
 .env
+.env.*
+*.log
+migrations/
+instance/
+*.sqlite3
+/staticfiles/
+media/
+.env.example
+.idea/
