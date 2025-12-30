@@ -1,7 +1,7 @@
 # DOXA
 > AI-assisted intelligent ticketing and collaboration platform.
 
-![DOXA UI Preview](img/chrome-capture-2025-12-29.png)
+![DOXA UI Preview](img/doxa.png)
 
 ## Project Overview
 
@@ -64,6 +64,7 @@ The services communicate via RESTful HTTP endpoints, ensuring loose coupling and
 
 ## Screenshots
 
+![Login page](img/chrome-capture-2025-12-29.png)
 ![Dashboard View](img/chrome-capture-2025-12-29%20(1).png)
 ![Ticket Details](img/chrome-capture-2025-12-29%20(2).png)
 ![AI Interaction](img/chrome-capture-2025-12-29%20(3).png)
